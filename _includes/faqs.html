@@ -1,0 +1,31 @@
+<script id="faq-template" type="text/x-handlebars-template">
+	{% raw %}
+	{{#each this}}
+	<div class="card" id="card-container{{@index}}">
+		<div class="card-header" id="heading{{@index}}">
+	  		<h2 class="mb-0">
+				<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{@index}}" aria-expanded="true" aria-controls="collapse{{@index}}">
+		  			{{{question}}}
+				</button>
+	  		</h2>
+		</div>
+		<div id="collapse{{@index}}" class="collapse" aria-labelledby="heading{{@index}}" data-parent="#faq-accordion">
+	  		<div class="card-body">
+				{{{answer}}}
+				<p>
+					{{#if sources.length}}
+					Sources: 
+					{{#each sources}}
+						<a href='{{this}}'>{{this}}</a>{{~#if @last~}}{{~else~}}, {{/if}}
+					{{/each}}
+					{{/if}}
+				</p>
+	  		</div>
+		</div>
+  	</div>
+  	{{/each}}
+	{% endraw %}
+</script>
+
+<div class="accordion" id="faq-accordion">
+</div>

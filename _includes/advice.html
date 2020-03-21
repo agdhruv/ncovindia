@@ -1,0 +1,33 @@
+<div class="col-12 col-md-3">
+	<div class="list-group" id="advice-list" role="tablist">
+		<a class="list-group-item list-group-item-action active" id="list-symptoms-list" data-toggle="list" href="#list-symptoms" role="tab" aria-controls="symptoms">
+			Symptoms
+		</a>
+		<a class="list-group-item list-group-item-action" id="list-adveveryone-list" data-toggle="list" href="#list-adveveryone" role="tab" aria-controls="adveveryone">
+			Advice for everyone
+		</a>
+		<a class="list-group-item list-group-item-action" id="list-advsick-list" data-toggle="list" href="#list-advsick" role="tab" aria-controls="advsick">
+			Advice if you are sick
+		</a>
+		<a class="list-group-item list-group-item-action" id="list-exposed-list" data-toggle="list" href="#list-exposed" role="tab" aria-controls="exposed">
+			If you were exposed
+		</a>
+	</div>
+</div>
+
+<div class="col-12 col-md-9">
+  	<div class="tab-content bg-white p-4" id="nav-tabContent">
+		<div class="tab-pane fade show active" id="list-symptoms" role="tabpanel" aria-labelledby="list-symptoms-list">
+    		{% include advice/symptoms.html %}
+    	</div>
+    	<div class="tab-pane fade" id="list-adveveryone" role="tabpanel" aria-labelledby="list-adveveryone-list">
+    		{% include advice/adveveryone.html %}
+    	</div>
+    	<div class="tab-pane fade" id="list-advsick" role="tabpanel" aria-labelledby="list-advsick-list">
+	    	{% include advice/advsick.html %}
+    	</div>
+    	<div class="tab-pane fade" id="list-exposed" role="tabpanel" aria-labelledby="list-exposed-list">
+	    	{% include advice/exposed.html %}
+    	</div>
+	</div>
+</div>

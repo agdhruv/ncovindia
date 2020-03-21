@@ -1,0 +1,24 @@
+[	
+	{
+		"sectionName": "Symptoms",
+		"writeup": "<p>Fever, a dry cough, fatigue and difficulty breathing or shortness of breath.</p><p>The symptoms take 2-14 days to show up.</p><div class=\"table-responsive\" id=\"symptoms-table-container\"><table class=\"table mt-4 table-striped table-bordered\"><thead><tr><th>Symptom</th><th>COVID-19</th><th>Common Cold</th><th>Flu</th><th>Allergies</th></tr></thead><tbody><tr><td>Sneezing</td><td>Mild</td><td>Common</td><td>No</td><td>Common</td></tr><tr><td>Runny nose</td><td>Rare</td><td>Common</td><td>Sometimes</td><td>Common</td></tr><tr><td>Fever</td><td>Common</td><td>Rare</td><td>Common</td><td>Sometimes</td></tr><tr><td>DryCough</td><td>Common</td><td>Mild</td><td>Common</td><td>Sometimes</td></tr><tr><td>Shortnessofbreath</td><td>Common</td><td>No</td><td>No</td><td>Common</td></tr><tr><td>Headaches</td><td>Sometimes</td><td>Rare</td><td>Common</td><td>Sometimes</td></tr><tr><td>Achesandpains</td><td>Sometimes</td><td>Common</td><td>Common</td><td>No</td></tr><tr><td>Sorethroat</td><td>Sometimes</td><td>Common</td><td>Common</td><td>No</td></tr><tr><td>Fatigue</td><td>Sometimes</td><td>Sometimes</td><td>Common</td><td>Sometimes</td></tr><tr><td>Diarrhea</td><td>Rare</td><td>No</td><td>Sometimes</td><td>No</td></tr></tbody></table></div><p>These symptoms are usually mild. Some don't develop any symptoms; about 80% recover from the disease without needing treatment.</p><p>Around 1 in 6 become seriously ill and develop difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems, or diabetes, are more susceptible.</p>",
+		"sources": ["https://www.who.int/health-topics/coronavirus","https://www.mayoclinic.org/diseases-conditions/coronavirus/symptoms-causes/syc-20479963"]
+	},
+	{
+		"sectionName": "Advice for Everyone",
+		"writeup": "<p>You should:</p> <ul> <li>Stay home when you are sick.</li> <li>Wash your hands often with soap and water for at least 20 seconds, especially before you eat.</li> <li>Cover your cough and sneezes with a tissue and discard in a closed container.</li> <li>Clean frequently touched surfaces and objects.</li> <li>Avoid close contact with people who are sick. Keep a distance of at least 6 feet to help slow the spread of COVID-19.</li> <li>Avoid unnecessary travel.</li> </ul> <p>Keep informed and follow the advice of the local authorities, including any restrictions put in place on travel and gatherings. See the government guidelines here: <a href=\"https://www.mohfw.gov.in\" target=\"_blank\">https://www.mohfw.gov.in</a>.</p>",
+		"sources": ["https://www.who.int/health-topics/coronavirus","https://www.nhs.uk/conditions/coronavirus-covid-19/"]
+	},
+	{
+		"sectionName": "If you are sick",
+		"writeup": "<p>You should:</p> <ul> <li>Stay home.</li> <li>If you have a fever, stay home for at least 24 hours after your fever is gone without the use of fever-reducing medicines, such as acetaminophen.</li> <li>Keep sick household members away from others. If you have a separate room that is best.</li> <li>Avoid sharing personal items.</li> </ul>",
+		"sources": ["https://www.who.int/health-topics/coronavirus","https://www.nhs.uk/conditions/coronavirus-covid-19/"]
+	},
+	{
+		"sectionName": "If you were exposed",
+		"writeup": "<p>If you think you have been exposed to COVID-19 and develop a fever and symptoms, such as cough or difficulty breathing, call your doctor for medical advice.</p><p>Even if you don’t experience the typical symptoms, observe a self-quarantine for 14 days (the incubation period for the virus)</p>",
+		"sources": ["https://www.who.int/health-topics/coronavirus","https://www.nhs.uk/conditions/coronavirus-covid-19/"]
+	}
+]
+
+

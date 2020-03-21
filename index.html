@@ -1,0 +1,81 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>
+		Novel Corona Virus
+	</title>
+	
+	<!-- css -->
+	{% include imports/bootstrap_css.html %}
+	<link rel="stylesheet" href="assets/css/index.css">
+	
+	<!-- essential js -->
+	{% include imports/fontawesome.html %}
+</head>
+<body>
+	{% include navbar.html %}
+
+	<div class="container-fluid">
+		
+		<section class="row index-section advice">
+			<div class="col-12 mb-4">
+				<h1 class="display-6 my-sec-heading">
+					Advice
+				</h1>
+			</div>
+
+			{% include advice.html %}
+		</section>
+
+		<section class="row index-section faqs">
+			<div class="col-12 mb-4">
+				<h1 class="display-6 my-sec-heading">
+					FAQs
+				</h1>
+			</div>
+			
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
+				<input class="form-control" type="text" placeholder="Search" id="faq-search-bar">
+			</div>
+
+			<div class="col-12 col-md-8 offset-md-2">
+				{% include faqs.html %}
+			</div>
+		</section>
+
+		<section class="row index-section graphs">
+			<div class="col-12 mb-4">
+				<h1 class="display-6 my-sec-heading">
+					Graphs
+				</h1>
+			</div>
+
+			<!-- <div class="col-12 col-md-8 offset-md-2 mb-4">
+				{% include graphs/barun.html %}
+			</div>
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
+				{% include graphs/aastha.html %}
+			</div>
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
+				{% include graphs/archit.html %}
+			</div>
+			<div class="col-12 col-md-8 offset-md-2">
+				{% include graphs/parth.html %}
+			</div> -->
+
+		</section>
+
+	</div>
+	
+	<!-- rest of js -->
+	{% include imports/jquery.html %}
+	{% include imports/bootstrap_js.html %}
+	{% include imports/handlebars_js.html %}
+	<script src="assets/js/index.js"></script>
+</body>
+</html>

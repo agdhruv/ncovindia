@@ -1,0 +1,81 @@
+body {
+	padding-top: 72px;
+}
+
+section.index-section {
+	position: relative;
+	padding: 2rem 0;
+	background: #f3f3f3;
+}
+
+	section.index-section h1.my-sec-heading {
+		position: relative;
+	}
+
+section.index-section.graphs {
+
+}
+
+	section.index-section.graphs div.graph-overlay {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		background: transparent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+		cursor: pointer;
+	}	
+
+section.index-section.advice {
+	background: #eff9e7;
+}
+
+section.index-section.advice {
+	
+}
+
+section.index-section.faqs div#faq-accordion div.card {
+	border-radius: 0;
+	border-radius: 0;
+	margin-bottom: -1px;
+}
+
+section.index-section.faqs div#faq-accordion div.card-header button.btn {
+	text-align: left;
+}
+
+/* media queries */
+@media screen and (max-width: 767px) {
+	/*div#advice-list {
+		flex-direction: row;
+	}
+	div#advice-list a.list-group-item {
+		border-radius: 0px;
+		text-align: center;
+	}
+	div#advice-list .list-group-item+.list-group-item {
+		border-top-width: 1px;
+		border-left-width: 0;
+	}
+	div#advice-list .list-group-item+.list-group-item.active {
+		margin-left: -1px;
+	}
+	div#advice-list .list-group-item.active {
+		margin-top: 0px;
+	}*/
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		padding-top: 56px;
+	}
+
+	div#advice-list .list-group-item:last-child {
+		border-radius: 0px;
+	}
+}
+
