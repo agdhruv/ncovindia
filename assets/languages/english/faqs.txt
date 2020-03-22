@@ -1,83 +1,97 @@
 [	
 	{
+		"importance": "1",
 		"question": "Can I use currency notes, credit cards, and coins safely?",
 		"answer": "<p>Not really.</p><p>While it is not a primary mode of transmission, you are still susceptible to contracting the virus though the exchange of currency. As far as possible, try to avoid handling physical currency and try to complete transactions online.</p><p>The virus stays viable on some metals (e.g., steel) and plastic for much longer than paper or cardboard. So it is best to not use coins or credit cards!</p>",
 		"sources": ["https://www.bloomberg.com/news/articles/2020-03-11/fear-of-virus-tainted-dollars-opens-new-front-in-war-on-cash", "https://www.nejm.org/doi/10.1056/NEJMc2004973"]
 	},
 	{
+		"importance": "2",
 		"question": "COVID-19, coronavirus, SARS-CoV2, why so many names?",
 		"answer": "<p>COVID-19 (“Coronavirus disease 2019”) is the name of the disease.</p><p>SARS-CoV-2 (Severe Acute Respiratory Syndrome Coronavirus 2) is the name of the virus which causes the disease.</p><p>Just like saying “horse” could mean any kind of horse, saying “coronavirus” could mean everything from the common cold, to influenza to this. However, many people call it the “novel coronavirus”, since it appeared only months ago.</p>",
 		"sources": ["https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html"]
 	},
 	{
+		"importance": "1",
 		"question": "Can I reuse a mask?",
 		"answer": "<p>Yes.</p> <p>There are two main ways: 1) clean the masks in some way, or 2) have multiple masks and cycle them over a period (or both).</p> <p>Cleaning:</p> <ol> <li>Soak the mask in soap water or other such \"non-polar\" solvents, thoroughly.</li> <li>Wash the mask using boiling water for a few minutes.(Other coronaviruses become inactive in about a minute at 75-100 degrees C.)</li> </ol> <p>N95 masks are usually made of material that has a higher boiling point than water. So unless some subpart (e.g. an adhesive) melts, the mask should be fine.</p> <p>Washed and boiled masks should be mask free. However, we don't know if it will still be as effective as a new mask in giving protection against pollution or small particulates.</p> <p>Cycling:</p> <p>The virus lasts for less than a week on most surfaces, and lasts for less than a day on cardboard and similar material. Cycling two or three masks should also be an effective measure. However, we suggest you cycle masks AND wash them before next use to be extra cautious.<p>",
 		"sources": ["https://www-ssrl.slac.stanford.edu/content/sites/default/files/documents/nano-lab-safety.pdf","https://www.nejm.org/doi/10.1056/NEJMc2004973","https://virologyj.biomedcentral.com/articles/10.1186/1743-422X-10-289"]
 
 	},
 	{
+		"importance": "2",
 		"question": "Are there any vaccines or medicines?",
 		"answer": "<p>No. For this reason, it is important to stay at home if you are sick unless you are very unwell. You should contact your doctor and heed their advice about getting tested if necessary.</p><p>Those affected with COVID-19 should still receive care to relieve symptoms. Most patients recover.</p>",
 		"sources": ["https://www.cdc.gov/coronavirus/2019-ncov/php/risk-assessment.html","https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
 
 	},
 	{
+		"importance": "1",
 		"question": "Summer is coming. Will warmer weather stop the virus?",
 		"answer": "<p>We don't know.</p> <p>Influenza and the common cold spread more in cold and dry conditions, but it's impossible to say how this virus will respond.</p> <p>While some unpublished, preliminary studies suggest it might reduce the spread of the virus, the extent is unclear and we cannot hope for that and do nothing.</p>",
 		"sources": ["https://www.cdc.gov/coronavirus/2019-ncov/faq.html","https://www.medrxiv.org/content/10.1101/2020.03.12.20034728v1.full.pdf","https://arxiv.org/ftp/arxiv/papers/2003/2003.05003.pdf"]
 
 	},
 	{
+		"importance": "3",
 		"question": "How long does it take to show symptoms?",
 		"answer": "<p>Up to two weeks.</p><p>The WHO says that the incubation period of SARS-CoV 2, the COVID-19 virus, is 1-14 days: However, the most common period was found to be 5 days.</p>",
 		"sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
 
 	},
 	{
+		"importance": "2",
 		"question": "How can I make my own mask?",
 		"answer": "<p>Cotton dishcloth or tea-cloth! A 100% cotton shirt is only slightly less effective.</p><p>Double layer cotton dishcloth to make an effective filter. Masks made in this way will be useful and should not be discounted, especially if you are a caregiver of a household and would like to avoid spreading infection to vulnerable people at home.</p><p>Vacuum cleaner bags are nearly as effective as a surgical mask at filtering out viruses. Unfortunately, they are not very breathable. Of course even a paper mask is better than nothing.</p>",
 		"sources": ["https://smartairfilters.com/en/blog/best-materials-make-diy-face-mask-virus/?rel=1","https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic"]
 
 	},
 	{
+		"importance": "2",
 		"question": "Could I be arrested for forwarding wrong Coronavirus information on Whatsapp?",
 		"answer": "<p>Yes.</p> <p>Section 269 of the Indian Penal Code states: \"Whoever unlawfully or negligently does any act which is, and which he knows or has reason to believe to be, likely to spread the infection of any disease dangerous to life, shall be punished with imprisonment of either description for a term which may extend to six months, or with fine, or with both.\"</p> <p>This means you can be imprisoned and/or fined for acting irresponsibly in such times.</p>",
 		"sources": ["https://lawrato.com/indian-kanoon/ipc/section-269","https://www.deccanherald.com/national/south/three-arrested-for-spreading-fake-news-on-coronavirus-in-kerala-800740.html"]
 
 	},
 	{
+		"importance": "3",
 		"question": "Could I be arrested for going out when sick?",
 		"answer": "<p>Yes.</p> <p>Section 270 of the Indian Penal Code states: \"Malignant act likely to spread infection of disease danger­ous to life.—Whoever malignantly does any act which is, and which he knows or has reason to believe to be, likely to spread the infection of any disease dangerous to life, shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.\"</p> <p>This means you can be imprisoned and/or fined for acting irresponsibly in such times.</p>",
 		"sources": ["https://lawrato.com/indian-kanoon/ipc/section-270"]
 
 	},
 	{
+		"importance": "2",
 		"question": "When will a vaccine be ready?",
 		"answer": "Nobody knows. At least a year, perhaps 18 months.",
 		"sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses","https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf"]
 
 	},
 	{
+		"importance": "1",
 		"question": "Should I prefer soap or sanitiser?",
 		"answer": "<p>Soap.</p><p>It is more easily available, cheaper, and works. Soap-water dissolves certain parts of the virus (making it inactive), and also weakens the bonds formed between the virus and your skin, which helps wash the virus away.</p><p>Use a sanitiser only when soap and water is not available, such as when you are travelling.</p>",
-		"sources": []
+		"sources": ["https://www.cdc.gov/handwashing/show-me-the-science-hand-sanitizer.html#one"]
 
 	},
 	{
+		"importance": "3",
 		"question": "Does handwashing really work? How long should I wash?",
 		"answer": "<p>Only if you use soap! Alternatively, you could use an alcohol-based sanitiser.</p><p>Make sure you wash properly for 20 seconds (see the link below for instructions). People often cut corners when using a sanitiser - make sure to use plenty of sanitiser and clean your whole hand, not just a couple of fingers!</p><p>Soap is more easily available, cheaper, and works. Soap-water dissolves certain parts of the virus (making it inactive), and also weakens the bonds formed between the virus and your skin, which helps wash the virus away.</p>",
 		"sources": ["https://www.cdc.gov/handwashing/when-how-handwashing.html"]
 
 	},
 	{
+		"importance": "3",
 		"question": "Is wearing a mask useful?",
-		"answer": "<p>Yes. Wear a mask if you are showing symptoms.</p> <p>However, there is a worldwide shortage of masks, so we need to ensure supply to people who absolutely need them, such as medical professionals.</p> <p>Please do not hoard masks. People with symptoms, however, should definitely wear masks to avoid infecting others.</p>",
-		"sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+		"answer": "<p>Yes. Wear a mask if you are showing symptoms or near someone who is.</p> <p>However, there is a worldwide shortage of masks, so we need to ensure supply to people who absolutely need them, such as medical professionals.</p> <p>Please do not hoard masks. People with symptoms, however, should definitely wear masks to avoid infecting others.</p><p>Please make sure you follow the steps here when wearing masks: Wash your hands with soap first, then put on the mask, making sure there are no gaps between your face and the mask. Avoid touching the mask; wash your hands if you do.</p><p>To remove the mask: do not touch the front of mask, open it from behind. Discard immediately in a closed bin, then wash your hands again.</p><p>Replace the mask with a new one as soon as it is damp and do not re-use single-use masks.</p>",
+		"sources": ["https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks","https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
 
 	},
 	{
-		"question": "I am young and healthy. Should I care about COVID-19?",
-		"answer": "<p>Yes.</p> <p>COVID-19 causes serious illness requiring hospitalization in 20% of people who catch it in the 20-44 age group.<p/> <p>If you are infected, you may not be as severely affected, but if you act carelessly, you will be responsible for infecting tons of other people, some who may die from the disease. You must be responsible - the old and vulnerable depend on it. You may also be arrested or have to pay a fine if you act negligently.</p>",
+		"importance": "1",
+		"question": "I'm young, healthy, have good immunity. Why should I be scared?",
+		"answer": "<p>Yes.</p> <p>COVID-19 causes serious illness requiring hospitalization in 20% of people who catch it in the 20-44 age group.<p/> <p>If you are infected, you may not be as severely affected, but if you act carelessly, you will be responsible for infecting tons of other people, some who may die from the disease. You must be responsible - the old and vulnerable depend on it.</p><p>You can also be arrested or have to pay a fine if you act negligently.</p>",
 		"sources": ["https://www.cdc.gov/mmwr/volumes/69/wr/mm6912e2.htm","https://lawrato.com/indian-kanoon/ipc/section-270"]
 
 	},
@@ -88,69 +102,101 @@
 
 	},
 	{
+		"importance": "4",
 		"question": "Can I have COVID-19 without showing all the symptoms?",
 		"answer": "<p>Yes.</p><p>Most people have COVID-19 with mild symptoms, such as having a slight cough without feeling ill or feverish. This is particularly true at the early stages of the disease. So cover your mouth whenever you cough, and if you have a fever, cough, tiredness or difficulty breathing, please see a doctor.</p>",
 		"sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
 
 	},
 	{
+		"importance": "2",
 		"question": "How long does the virus stay in the environment (surfaces/air)?",
 		"answer": "<p>It can remain active for hours or even days depending on the surface.</p><p>There isn't enough information to be certain, but here are some preliminary data:</p><table class='table'><thead><tr><th>Surface</th><th>Time it remains viable</th></tr></thead><tbody><tr><td>In the air</td><td>More than 3 hours</td></tr><tr><td>Stainless steel</td><td>48 hours</td></tr><tr><td>Plastic</td><td>72 hours</td></tr><tr><td>Cardboard</td><td>24 hours</td></tr><tr><td>Copper</td><td>4 hours</td></tr></tbody></table>",
 		"sources": ["https://www.nejm.org/doi/10.1056/NEJMc2004973"]
 
 	},
 	{
+		"importance": "4",
 		"question": "Is the virus airborne?",
 		"answer": "<p>Sort of.</p> <p>The virus is not spread by air, but it remains in suspended droplets in the air and these can remain infectious for at least 3 hours.</p> <p>This is why covering your mouth when you cough, or coughing/sneezing into your elbow or a handkerchief is highly suggested. We also appeal that you practice social distancing (stay at least 6 feet away from the next person), especially if you or they are coughing/showing symptoms.</p>",
 		"sources": ["https://www.nejm.org/doi/10.1056/NEJMc2004973","https://www.cdc.gov/coronavirus/2019-ncov/php/risk-assessment.html","https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
 
 	},
 	{
+		"importance": "5",
 		"question": "Am I at high risk?",
 		"answer": "<p>You are at higher risk if you are:</p> <ul> <li>65 or older</li> <li>Pregnant</li> <li>Have pre-existing medical conditions such as:<ul><li>Lung disease</li><li>Asthma</li><li>Heart disease</li><li>Diabetes</li><li>Weakened immune system, such as with HIV</li><li>Cancer</li><li>High blood pressure</li><li>Extreme obesity</li></ul></li> </ul> <p>YOU ARE AT RISK IF YOU HAVE TRAVELLED IN THE LAST 2 WEEKS to countries that are known to be affected by the pandemic. YOU MUST INFORM RELEVANT AUTHORITIES and self-isolate immediately.</p> <p>If you have cough, fever, or difficulty breathing, contact a medical doctor. Please follow all <a href=\"https://www.mohfw.gov.in\">government</a> guidelines. We are in this together.</p><p>Government guidelines: <a href=\"https://www.mohfw.gov.in\" target=\"_blank\">https://www.mohfw.gov.in</a></p>",
 		"sources": ["https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html","https://www.cdc.gov/coronavirus/2019-ncov/faq.html#protect"]
 
 	},
 	{
+		"importance": "5",
 		"question": "What are the things we should avoid doing?",
 		"answer": "<ul> <li>DO NOT HOARD. Patients and healthcare workers need supplies such as masks, more than most of us who need it as a precautionary measure.</li> <li>Unless you are feeling very unwell, TRY TO LET THE FEVER RUN ITS COURSE WITHOUT ANTIBIOTICS. Doctors may not be able to diagnose you properly if you suppress symptoms by using antibiotics.</li> <li>DO NOT COUGH WITHOUT COVERING YOUR MOUTH to avoid risking the spread of the virus via droplets as much as we can.</li> <li>DO NOT GATHER IN LARGE NUMBERS. Practise social distancing as much as possible, it helps slow the spread down SIGNIFICANTLY!</li> </ul> <p>If you have cough, fever, or difficulty breathing, seek medical care immediately. Please follow all government guidelines. We are in this together.</p> <p>Government guidelines: <a href=\"https://www.mohfw.gov.in\" target=\"_blank\">https://www.mohfw.gov.in</a></p>",
 		"sources": ["https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html","https://www.who.int/news-room/q-a-detail/q-a-coronaviruses","https://www.nhs.uk/conditions/coronavirus-covid-19/"]
 
 	},
 	{
+		"importance": "4",
 		"question": "How do I know if a whatsapp forward is real or fake? Whom do I trust?",
-		"answer": "<p>Please do not trust WhatsApp forwards, Facebook videos, etc. There is a lot of misleading information, even on some news websites and on TV. The following sources are trustworthy:</p><ul><li>The Ministry of Health and Welfare: https://www.mohfw.gov.in/</li><li>The World Health Organization: https://www.who.int/news-room/q-a-detail/q-a-coronaviruses</li><li>US Centers for Disease Control and Prevention: https://www.cdc.gov/coronavirus/2019-ncov/index.html</li><li>UK National Health Service: https://www.nhs.uk/conditions/coronavirus-covid-19/</li><li>Johns Hopkins Coronavirus Resource Center: https://coronavirus.jhu.edu/</li><li>Harvard Coronavirus Resource Center:   https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center</li></ul>",
+		"answer": "<p>Please do not trust WhatsApp forwards, Facebook videos, etc. There is a lot of misleading information, even on some news websites and on TV. The following sources are trustworthy:</p> <ul> <li>The Ministry of Health and Welfare: <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\">https://www.mohfw.gov.in/</a></li> <li>The World Health Organization: <a target=\"_blank\" href=\"https://www.who.int/news-room/q-a-detail/q-a-coronaviruses\">https://www.who.int/news-room/q-a-detail/q-a-coronaviruses</a></li> <li>US Centers for Disease Control and Prevention: <a target=\"_blank\" href=\"https://www.cdc.gov/coronavirus/2019-ncov/index.html\">https://www.cdc.gov/coronavirus/2019-ncov/index.html</a></li> <li>UK National Health Service: <a target=\"_blank\" href=\"https://www.nhs.uk/conditions/coronavirus-covid-19/\">https://www.nhs.uk/conditions/coronavirus-covid-19/</a></li> <li>Johns Hopkins Coronavirus Resource Center: <a target=\"_blank\" href=\"https://coronavirus.jhu.edu/\">https://coronavirus.jhu.edu/</a></li> <li>Harvard Coronavirus Resource Center: <a target=\"_blank\" href=\"https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center\">https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center</a></li> </ul>",
 		"sources": []
 
 	},
 	{
+		"importance": "4",
 		"question": "What is social distancing?",
 		"answer": "<p>Social distancing aims to prevent sick people from coming in close contact with healthy people. It is a very important way to reduce the spread of COVID-19, and you can do it by taking steps like:</p><ul><li>Cancelling ot not attending group events like parties, meetings, concerts, movies, sports matches.</li><li>Closing or not going to public spaces like markets, shopping malls</li><li>Avoiding crowds and crowded areas in general</li><li>Working from home if possible</li><li>Closing or not going to school/college, places of worship, etc.</li><li>Staying at least 2 meters (6 feet) from other people - this means no hugs or handshakes.</li></ul>",
 		"sources": ["https://www.nhs.uk/conditions/coronavirus-covid-19/","https://www.cdc.gov/coronavirus/2019-ncov/php/risk-assessment.html","https://hub.jhu.edu/2020/03/13/what-is-social-distancing/"]
 
 	},
 	{
+		"importance": "4",
 		"question": "What is self isolation or quarantining?",
 		"answer": "<p>If you suspect or are sure that you are infected, you should isolate yourself from others around you so that you do not infect them. This is called self-isolation or self-quarantining.</p><p>Self-quarantining doesn't necessarily mean that you are infected, but it is a must if you think you may have been exposed to the infection. You can think of this as a more extreme form of social distancing.</p><p>You should not go to work, school, or any gatherings. Stay at home. As much as possible, stay in a specific room and away from other people in your home. Use a separate bathroom, if available. Try to regularly clean all commonly touched surfaces and use a mask. You can find more instructions at the link below.</p><p>You should definitely self-quarantine for 14 days if you have recently travelled to a country where the virus is prevalent, like Italy or the UK, or if you are sick.</p>",
 		"sources": ["https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Prepare"]
 
 	},
 	{
+		"importance": "3",
 		"question": "How can I help care for someone who is sick?",
 		"answer": "<p>There are no specific treatments for COVID-19, and in most cases hospitalisation is not necessary. Ensure that:</p> <ul> <li>The sick person gets plenty of rest, although they don’t have to stay in bed</li> <li>That they keep themselves well-hydrated</li> <li>If they are taking any medicines for cold or flu like paracetemol or acetaminophen, tell them to keep track of the doses</li> </ul> <p>You must try to keep them isolated. It is important to protect yourself also - you cannot help them if you are also ill!</p> <ul> <li>Try use separate bedrooms/bathrooms, utensils, beds and clothes</li> <li>Make sure shared spaces (such as corridors) have good airflow - open windows, use air conditioners</li> <li>Wash your hands often with soap and water</li> <li>Avoid touching your eyes, nose, or mouth with unwashed hands</li> <li>If in the same room, you and the person should both wear a mask</li> <li>Regularly do laundry, separating items that have come in direct contact with the infected person.</li> <li>Place all disposable masks, gloves, and other contaminated items in a separate container. Put them in a \"hazardous waste\" bin if possible. Wash your hands with soap after handling any such items.</li> </ul> <p>See this page for an excellent set of instructions: <a href=\"https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Caregivers\">https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Caregivers</a></p>",
 		"sources": ["https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Caregivers"]
 
 	},
 	{
+		"importance": "3",
 		"question": "Is wearing gloves useful?",
 		"answer": "<p>Not really, if you end up touching your face anyway. In fact, improper disposal of gloves could lead to further spread of the disease in the worst case.</p><p>Unless you are a medical professional, there’s no need to wear gloves. The CDC does not recommend that the general public wear disposable gloves to prevent the spread of COVID-19 or other viruses. However, the agency does recommend wearing disposable gloves if you are caring for someone who is ill, particularly when handling their laundry or potentially coming into contact with their bodily fluids.</p>",
 		"sources": ["https://medical.mit.edu/news/2020/01/2019-novel-coronavirus-updates-1","https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-prevent-spread.html"]
 
 	},
 	{
-		"question": "Is wearing gloves useful?",
-		"answer": "<p>Not really, if you end up touching your face anyway. In fact, improper disposal of gloves could lead to further spread of the disease in the worst case.</p><p>Unless you are a medical professional, there’s no need to wear gloves. The CDC does not recommend that the general public wear disposable gloves to prevent the spread of COVID-19 or other viruses. However, the agency does recommend wearing disposable gloves if you are caring for someone who is ill, particularly when handling their laundry or potentially coming into contact with their bodily fluids.</p>",
-		"sources": ["https://medical.mit.edu/news/2020/01/2019-novel-coronavirus-updates-1","https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-prevent-spread.html"]
+		"importance": "3",
+		"question": "How do I wipe my hands after washing? How do I close the tap?",
+		"answer": "<p>Carry a hand towel. Wash your hands thoroughly, then carefully dry your hands with the towel. Don’t touch the tap/faucet with your hands again. Close it using the towel. Wash this towel often, depending upon usage.</p> <p>Using disposable paper towels or tissues is even better, but may be more expensive.</p>",
+		"sources": ["https://www.nytimes.com/2020/03/13/world/how-to-wash-your-hands-coronavirus.html"]
+
+	},
+	{
+		"importance": "3",
+		"question": "How long can I keep using a mask?",
+		"answer": "<p>You can use a mask till you cannot breathe properly through it anymore, but you should dispose of single-use masks after usage, or as soon as they become damp.</p><p>Please see the questions on making your own masks and reusing masks for more options.</p>",
+		"sources": ["https://www.fda.gov/medical-devices/personal-protective-equipment-infection-control/n95-respirators-and-surgical-masks-face-masks"]
+
+	},
+	{
+		"importance": "1",
+		"question": "How long will this last?",
+		"answer": "<p>We don't know.</p> <p>The most optimistic predictions suggest that it will peak, but not end, around late April to early May. However, this data is not globally predictive, it uses data from Wuhan alone.</p> <p>Others suggest it will take many months to peak. However, even after the peak, it may take a long time for the disease to recede - possibly years. If you lift restrictions, then cases will inevitably increase again.</p> <p>Unless we can reduce the infection rate, either though a vaccine or by building up natural immunity over time, the pandemic may last for years, even after it peaks in different places.</p>",
+		"sources": ["https://www.hongkongfp.com/2020/01/28/wuhan-coronavirus-experts-say-outbreak-will-last-months-tens-thousands-affected/","https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30260-9/fulltext","https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30551-1/fulltext","https://www.bbc.com/news/health-51963486"]
+
+	},
+	{
+		"importance": "3",
+		"question": "I am sick, but am afraid to get tested since others might hate me or my family. What should I do?",
+		"answer": "<p>The social stigma built around the virus is something that can't be ignored. However, if you suspect that you or a family member might have contracted the virus, you must contact a doctor as soon as possible.</p><p>We need your help fight this virus.</p>",
+		"sources": []
 
 	}
 ]

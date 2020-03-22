@@ -2,10 +2,26 @@ body {
 	padding-top: 72px;
 }
 
+nav {
+	background: #b83027;
+}
+
+nav select#language-selector {
+	width: 100px;
+}
+
+nav.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255,255,255,.8);
+}
+
+nav.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,.9);
+}
+
 section.index-section {
 	position: relative;
 	padding: 2rem 0;
-	background: #f3f3f3;
+	background: #fafae1;
 }
 
 	section.index-section h1.my-sec-heading {
@@ -31,42 +47,29 @@ section.index-section.graphs {
 	}	
 
 section.index-section.advice {
-	background: #eff9e7;
+	background: #093863;
 }
 
 section.index-section.advice {
 	
 }
 
-section.index-section.faqs div#faq-accordion div.card {
+section.index-section.faqs div.accordion div.card {
 	border-radius: 0;
-	border-radius: 0;
-	margin-bottom: -1px;
+	border-bottom: 1px solid rgba(0,0,0,.125);
+	margin-bottom: -2px;
 }
 
-section.index-section.faqs div#faq-accordion div.card-header button.btn {
+section.index-section.faqs div.accordion>.card>.card-header {
+	margin-bottom: 0;
+}
+
+section.index-section.faqs div.accordion div.card-header button.btn {
 	text-align: left;
 }
 
-/* media queries */
-@media screen and (max-width: 767px) {
-	/*div#advice-list {
-		flex-direction: row;
-	}
-	div#advice-list a.list-group-item {
-		border-radius: 0px;
-		text-align: center;
-	}
-	div#advice-list .list-group-item+.list-group-item {
-		border-top-width: 1px;
-		border-left-width: 0;
-	}
-	div#advice-list .list-group-item+.list-group-item.active {
-		margin-left: -1px;
-	}
-	div#advice-list .list-group-item.active {
-		margin-top: 0px;
-	}*/
+footer {
+	background: #093863;
 }
 
 @media screen and (max-width: 767px) {

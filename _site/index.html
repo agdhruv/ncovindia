@@ -17,8 +17,59 @@
 	<script src="https://kit.fontawesome.com/631f0a2cf3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<!-- Navbar -->
-<nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+	<script id="nav-template" type="text/x-handlebars-template">
+	
+	<a class="navbar-brand" href="#">
+		{{title.text}}
+	</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarToggler">
+		<ul class="navbar-nav mr-auto my-md-2">
+			<li class="nav-item">
+				<a class="nav-link" href="{{faqs.href}}">{{faqs.text}}</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{advice.href}}">{{advice.text}}</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{graphs.href}}">{{graphs.text}}</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="{{more.href}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        {{more.text}}
+			    </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">
+						Estimates
+					</a>
+					<a class="dropdown-item" href="#">
+						Sources
+					</a>
+		        </div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-md-2">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="language-select">
+						<i class="fas fa-language fa-lg"></i>
+					</span>
+		      	</div>
+		    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
+		    	</select>
+		    </div>
+		</form>
+	</div>
+ 
+	
+</script>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md fixed-top navbar-dark" id="nav-container">
 
 	<a class="navbar-brand" href="#">
 		Covid-19
@@ -31,10 +82,10 @@
 	<div class="collapse navbar-collapse" id="navbarToggler">
 		<ul class="navbar-nav mr-auto my-md-2">
 			<li class="nav-item">
-				<a class="nav-link" href="#advice">Advice</a>
+				<a class="nav-link" href="#faqs">FAQs</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#faqs">FAQs</a>
+				<a class="nav-link" href="#advice">Advice</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#graphs">Graphs</a>
@@ -68,37 +119,130 @@
 </nav>
 
 	<div class="container-fluid">
-		
-		<section class="row index-section advice">
+
+		<section class="row index-section faqs">
 			<div class="col-12 mb-4">
 				<h1 class="display-6 my-sec-heading">
+					FAQs
+				</h1>
+			</div>
+			
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
+				<input class="form-control" type="text" placeholder="Search" id="faq-search-bar">
+			</div>
+
+			<div class="col-12 col-md-8 offset-md-2">
+				<script id="faqs-template" type="text/x-handlebars-template">
+	
+	{{#each this}}
+	{{#if startHiding}}
+		<div class="accordion collapse" id="collapse-faqs">
+	{{/if}}
+	<div class="card" id="card-container{{@index}}">
+		<div class="card-header" id="heading{{@index}}">
+	  		<h2 class="mb-0">
+				<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{@index}}" aria-expanded="true" aria-controls="collapse{{@index}}">
+		  			{{{question}}}
+				</button>
+	  		</h2>
+		</div>
+		<div id="collapse{{@index}}" class="collapse" aria-labelledby="heading{{@index}}" data-parent="#faq-accordion">
+	  		<div class="card-body">
+				{{{answer}}}
+				<p>
+					{{#if sources.length}}
+					Sources: 
+					{{#each sources}}
+						<a href='{{this}}'>{{this}}</a>{{~#if @last~}}{{~else~}}, {{/if}}
+					{{/each}}
+					{{/if}}
+				</p>
+	  		</div>
+		</div>
+  	</div>
+  	{{#if endHiding}}
+		</div>
+	{{/if}}
+  	{{/each}}
+	
+</script>
+
+<div class="accordion" id="faq-accordion">
+</div>
+			</div>
+
+			<div class="col-12 col-md-8 offset-md-2 mt-4 text-right">
+				<button class="btn btn-primary faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">Show All</button>
+			</div>
+		</section>
+
+		<section class="row index-section advice">
+			<div class="col-12 mb-4">
+				<h1 class="display-6 my-sec-heading text-white">
 					Advice
 				</h1>
 			</div>
 
-			<div class="col-12 col-md-3">
-	<div class="list-group" id="advice-list" role="tablist">
-		<a class="list-group-item list-group-item-action active" id="list-symptoms-list" data-toggle="list" href="#list-symptoms" role="tab" aria-controls="symptoms">
-			Symptoms
-		</a>
-		<a class="list-group-item list-group-item-action" id="list-adveveryone-list" data-toggle="list" href="#list-adveveryone" role="tab" aria-controls="adveveryone">
-			Advice for everyone
-		</a>
-		<a class="list-group-item list-group-item-action" id="list-advsick-list" data-toggle="list" href="#list-advsick" role="tab" aria-controls="advsick">
-			Advice if you are sick
-		</a>
-		<a class="list-group-item list-group-item-action" id="list-exposed-list" data-toggle="list" href="#list-exposed" role="tab" aria-controls="exposed">
-			If you were exposed
-		</a>
-	</div>
-</div>
+			<script id="advice-template" type="text/x-handlebars-template">
+	
 
-<div class="col-12 col-md-9">
-  	<div class="tab-content bg-white p-4" id="nav-tabContent">
-		<div class="tab-pane fade show active" id="list-symptoms" role="tabpanel" aria-labelledby="list-symptoms-list">
-    		Fever, a dry cough, fatigue and difficulty breathing or shortness of breath.
-<br>
-The symptoms take 2-14 days to show up.
+	<div class="col-12 col-md-3">
+		<div class="list-group" id="advice-list" role="tablist">
+		{{#each this}}
+			<a class="list-group-item list-group-item-action {{#if @first}}active{{/if}}" id="list-{{sectionID}}-list" data-toggle="list" href="#list-{{sectionID}}" role="tab" aria-controls="{{sectionID}}">
+				{{this.sectionName}}
+			</a>
+	  	{{/each}}
+		</div>
+	</div>
+
+	<div class="col-12 col-md-9">
+	  	<div class="tab-content bg-white p-4" id="advice-tabContent">
+			
+			{{#each this}}
+			<div class="tab-pane fade {{#if @first}}show active{{/if}}" id="list-{{sectionID}}" role="tabpanel" aria-labelledby="list-
+			{{sectionID}}-list">
+	    		{{{writeup}}}
+	    		<p>
+					{{#if sources.length}}
+					Sources: 
+					{{#each sources}}
+						<a href='{{this}}'>{{this}}</a>{{~#if @last~}}{{~else~}}, {{/if}}
+					{{/each}}
+					{{/if}}
+				</p>
+	    	</div>
+	    	{{/each}}
+		</div>
+	</div>
+
+	
+</script>
+
+<div class="col-12">
+	<div class="row" id="advice-container">
+		<div class="col-12 col-md-3">
+			<div class="list-group" id="advice-list" role="tablist">
+				<a class="list-group-item list-group-item-action active" id="list-symptoms-list" data-toggle="list" href="#list-symptoms" role="tab" aria-controls="symptoms">
+					Symptoms
+				</a>
+				<a class="list-group-item list-group-item-action" id="list-adveveryone-list" data-toggle="list" href="#list-adveveryone" role="tab" aria-controls="adveveryone">
+					Advice for Everyone
+				</a>
+				<a class="list-group-item list-group-item-action" id="list-advsick-list" data-toggle="list" href="#list-advsick" role="tab" aria-controls="advsick">
+					If you are sick
+				</a>
+				<a class="list-group-item list-group-item-action" id="list-exposed-list" data-toggle="list" href="#list-exposed" role="tab" aria-controls="exposed">
+					If you were exposed
+				</a>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-9">
+		  	<div class="tab-content bg-white p-4" id="advice-tabContent">
+				<div class="tab-pane fade show active" id="list-symptoms" role="tabpanel" aria-labelledby="list-symptoms-list">
+		    		<p>Fever, a dry cough, fatigue and difficulty breathing or shortness of breath.</p>
+<p>The symptoms take 2-14 days to show up.</p>
 
 <div class="table-responsive" id="symptoms-table-container">
 	<table class="table mt-4 table-striped table-bordered table-sm">
@@ -114,7 +258,7 @@ The symptoms take 2-14 days to show up.
 	    <tbody>
 	        <tr>
 	            <td>Sneezing</td>
-	            <td>No</td>
+	            <td>Mild</td>
 	            <td>Common</td>
 	            <td>No</td>
 	            <td>Common</td>
@@ -186,13 +330,13 @@ The symptoms take 2-14 days to show up.
 	</table>
 </div>
 
-These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don't feel unwell. Most people (about 80%) recover from the disease without needing special treatment.
-<br>
-Around 1 out of every 6 people who gets COVID-19 become seriously ill and develop difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems, or diabetes, are more likely to develop serious illness.
+<p>These symptoms are usually mild. Some don't develop any symptoms; about 80% recover from the disease without needing treatment.</p>
 
-    	</div>
-    	<div class="tab-pane fade" id="list-adveveryone" role="tabpanel" aria-labelledby="list-adveveryone-list">
-    		You should:
+<p>Around 1 in 6 become seriously ill and develop difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems, or diabetes, are more susceptible.</p>
+
+		    	</div>
+		    	<div class="tab-pane fade" id="list-adveveryone" role="tabpanel" aria-labelledby="list-adveveryone-list">
+		    		You should:
 <ul>
 	<li>Stay home when you are sick.</li>
 	<li>Wash your hands often with soap and water for at least 20 seconds, especially before you eat.</li>
@@ -203,69 +347,25 @@ Around 1 out of every 6 people who gets COVID-19 become seriously ill and develo
 </ul>
 
 Keep informed and follow the advice of the local authorities, including any restrictions put in place on travel and gatherings. See <a href="https://www.mohfw.gov.in" target="_blank">https://www.mohfw.gov.in</a>.
-    	</div>
-    	<div class="tab-pane fade" id="list-advsick" role="tabpanel" aria-labelledby="list-advsick-list">
-	    	You should:
+		    	</div>
+		    	<div class="tab-pane fade" id="list-advsick" role="tabpanel" aria-labelledby="list-advsick-list">
+			    	You should:
 <ul>
 	<li>Stay home.</li>
 	<li>If you have a fever, stay home for at least 24 hours after your fever is gone without the use of fever-reducing medicines, such as acetaminophen.</li>
 	<li>Keep sick household members away from others. If you have a separate room that is best.</li>
 	<li>Avoid sharing personal items.</li>
 </ul>
-    	</div>
-    	<div class="tab-pane fade" id="list-exposed" role="tabpanel" aria-labelledby="list-exposed-list">
-	    	<li>If you think you have been exposed to COVID-19 and develop a fever and symptoms, such as cough or difficulty breathing, call your healthcare provider for medical advice.</li>
+		    	</div>
+		    	<div class="tab-pane fade" id="list-exposed" role="tabpanel" aria-labelledby="list-exposed-list">
+			    	<li>If you think you have been exposed to COVID-19 and develop a fever and symptoms, such as cough or difficulty breathing, call your healthcare provider for medical advice.</li>
 <li>Even if you don’t experience the typical symptoms, observe a self-quarantine for 14 days (the incubation period for the virus)</li>
 
-    	</div>
+		    	</div>
+			</div>
+		</div>
 	</div>
 </div>
-		</section>
-
-		<section class="row index-section faqs">
-			<div class="col-12 mb-4">
-				<h1 class="display-6 my-sec-heading">
-					FAQs
-				</h1>
-			</div>
-			
-			<div class="col-12 col-md-8 offset-md-2 mb-4">
-				<input class="form-control" type="text" placeholder="Search" id="faq-search-bar">
-			</div>
-
-			<div class="col-12 col-md-8 offset-md-2">
-				<script id="faq-template" type="text/x-handlebars-template">
-	
-	{{#each this}}
-	<div class="card" id="card-container{{@index}}">
-		<div class="card-header" id="heading{{@index}}">
-	  		<h2 class="mb-0">
-				<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{@index}}" aria-expanded="true" aria-controls="collapse{{@index}}">
-		  			{{{question}}}
-				</button>
-	  		</h2>
-		</div>
-		<div id="collapse{{@index}}" class="collapse" aria-labelledby="heading{{@index}}" data-parent="#faq-accordion">
-	  		<div class="card-body">
-				{{{answer}}}
-				<p>
-					{{#if sources.length}}
-					Sources: 
-					{{#each sources}}
-						<a href='{{this}}'>{{this}}</a>{{~#if @last~}}{{~else~}}, {{/if}}
-					{{/each}}
-					{{/if}}
-				</p>
-	  		</div>
-		</div>
-  	</div>
-  	{{/each}}
-	
-</script>
-
-<div class="accordion" id="faq-accordion">
-</div>
-			</div>
 		</section>
 
 		<section class="row index-section graphs">
@@ -275,7 +375,7 @@ Keep informed and follow the advice of the local authorities, including any rest
 				</h1>
 			</div>
 
-			<!-- <div class="col-12 col-md-8 offset-md-2 mb-4">
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
 <div class='tableauPlaceholder' id='viz1584629252984' style='position: relative'>
@@ -343,34 +443,34 @@ Keep informed and follow the advice of the local authorities, including any rest
 			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
-<div class='tableauPlaceholder' id='viz1584623156911' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1584873982041' style='position: relative'>
     <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;KG&#47;KGraph-English&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
+        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15848232214340&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
     </noscript>
     <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
-        <param name='name' value='KGraph-English&#47;Sheet1' />
+        <param name='name' value='Book1_15848232214340&#47;Sheet1' />
         <param name='tabs' value='no' />
         <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;KG&#47;KGraph-English&#47;Sheet1&#47;1.png' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15848232214340&#47;Sheet1&#47;1.png' />
         <param name='animate_transition' value='yes' />
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
         <param name='display_overlay' value='yes' />
         <param name='display_count' value='yes' />
+        <param name='filter' value='publish=yes' />
     </object>
 </div>
-
 <script type='text/javascript'>
-	var divElement = document.getElementById('viz1584623156911');
-	var vizElement = divElement.getElementsByTagName('object')[0];
-	vizElement.style.width='100%';
-	vizElement.style.height=(divElement.offsetWidth*0.70)+'px';
-	var scriptElement = document.createElement('script');
-	scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-	vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    var divElement = document.getElementById('viz1584873982041');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 			</div>
 			<div class="col-12 col-md-8 offset-md-2">
@@ -405,10 +505,22 @@ Keep informed and follow the advice of the local authorities, including any rest
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-			</div> -->
+			</div>
 
 		</section>
+		
+		<footer class="row">
+	
+	<div class="col-12">
+		
+		<p class="text-center m-0 py-4 px-4 text-light">
+			This website is an effort to fight misinformation surrounding COVID-19 by students, faculty, and alumni of <a href="https://ashoka.edu.in" target="_blank" class="text-white">Ashoka University</a>.
+		</p>
 
+	</div>
+
+</footer>
+		
 	</div>
 	
 	<!-- rest of js -->
@@ -416,7 +528,7 @@ Keep informed and follow the advice of the local authorities, including any rest
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<!-- import bootstrap js -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
 	<!-- import handlebars -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
 	<script src="assets/js/index.js"></script>

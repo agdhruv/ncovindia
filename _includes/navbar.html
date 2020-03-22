@@ -1,5 +1,56 @@
+<script id="nav-template" type="text/x-handlebars-template">
+	{% raw %}
+	<a class="navbar-brand" href="#">
+		{{title.text}}
+	</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarToggler">
+		<ul class="navbar-nav mr-auto my-md-2">
+			<li class="nav-item">
+				<a class="nav-link" href="{{faqs.href}}">{{faqs.text}}</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{advice.href}}">{{advice.text}}</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{graphs.href}}">{{graphs.text}}</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="{{more.href}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        {{more.text}}
+			    </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">
+						Estimates
+					</a>
+					<a class="dropdown-item" href="#">
+						Sources
+					</a>
+		        </div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-md-2">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="language-select">
+						<i class="fas fa-language fa-lg"></i>
+					</span>
+		      	</div>
+		    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
+		    	</select>
+		    </div>
+		</form>
+	</div>
+ 
+	{% endraw %}
+</script>
+
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+<nav class="navbar navbar-expand-md fixed-top navbar-dark" id="nav-container">
 
 	<a class="navbar-brand" href="#">
 		Covid-19
@@ -12,10 +63,10 @@
 	<div class="collapse navbar-collapse" id="navbarToggler">
 		<ul class="navbar-nav mr-auto my-md-2">
 			<li class="nav-item">
-				<a class="nav-link" href="#advice">Advice</a>
+				<a class="nav-link" href="#faqs">FAQs</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#faqs">FAQs</a>
+				<a class="nav-link" href="#advice">Advice</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#graphs">Graphs</a>

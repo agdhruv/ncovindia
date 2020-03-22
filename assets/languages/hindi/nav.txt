@@ -1,0 +1,21 @@
+{
+	"title": {
+		"text": "Covid-19"
+	},
+	"advice": {
+		"text": "HAdvice",
+		"href": "#advice"
+	},
+	"faqs": {
+		"text": "HFAQs",
+		"href": "#faqs"
+	},
+	"graphs": {
+		"text": "HGraphs",
+		"href": "#graphs"
+	},
+	"more": {
+		"text": "More...",
+		"href": "#"
+	}
+}

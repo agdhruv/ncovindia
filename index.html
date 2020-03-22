@@ -21,16 +21,6 @@
 	{% include navbar.html %}
 
 	<div class="container-fluid">
-		
-		<section class="row index-section advice">
-			<div class="col-12 mb-4">
-				<h1 class="display-6 my-sec-heading">
-					Advice
-				</h1>
-			</div>
-
-			{% include advice.html %}
-		</section>
 
 		<section class="row index-section faqs">
 			<div class="col-12 mb-4">
@@ -46,6 +36,20 @@
 			<div class="col-12 col-md-8 offset-md-2">
 				{% include faqs.html %}
 			</div>
+
+			<div class="col-12 col-md-8 offset-md-2 mt-4 text-right">
+				<button class="btn btn-primary faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">Show All</button>
+			</div>
+		</section>
+
+		<section class="row index-section advice">
+			<div class="col-12 mb-4">
+				<h1 class="display-6 my-sec-heading text-white">
+					Advice
+				</h1>
+			</div>
+
+			{% include advice.html %}
 		</section>
 
 		<section class="row index-section graphs">
@@ -55,7 +59,7 @@
 				</h1>
 			</div>
 
-			<!-- <div class="col-12 col-md-8 offset-md-2 mb-4">
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				{% include graphs/barun.html %}
 			</div>
 			<div class="col-12 col-md-8 offset-md-2 mb-4">
@@ -66,10 +70,12 @@
 			</div>
 			<div class="col-12 col-md-8 offset-md-2">
 				{% include graphs/parth.html %}
-			</div> -->
+			</div>
 
 		</section>
-
+		
+		{% include footer.html %}
+		
 	</div>
 	
 	<!-- rest of js -->

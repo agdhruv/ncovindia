@@ -1,6 +1,9 @@
-<script id="faq-template" type="text/x-handlebars-template">
+<script id="faqs-template" type="text/x-handlebars-template">
 	{% raw %}
 	{{#each this}}
+	{{#if startHiding}}
+		<div class="accordion collapse" id="collapse-faqs">
+	{{/if}}
 	<div class="card" id="card-container{{@index}}">
 		<div class="card-header" id="heading{{@index}}">
 	  		<h2 class="mb-0">
@@ -23,6 +26,9 @@
 	  		</div>
 		</div>
   	</div>
+  	{{#if endHiding}}
+		</div>
+	{{/if}}
   	{{/each}}
 	{% endraw %}
 </script>
