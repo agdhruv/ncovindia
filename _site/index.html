@@ -19,16 +19,13 @@
 <body>
 	<script id="nav-template" type="text/x-handlebars-template">
 	
+	
 	<a class="navbar-brand" href="#">
 		{{title.text}}
 	</a>
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
 	<div class="collapse navbar-collapse" id="navbarToggler">
-		<ul class="navbar-nav mr-auto my-md-2">
+		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
 				<a class="nav-link" href="{{faqs.href}}">{{faqs.text}}</a>
 			</li>
@@ -52,19 +49,24 @@
 		        </div>
 			</li>
 		</ul>
-		<form class="form-inline my-2 my-md-2">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="language-select">
-						<i class="fas fa-language fa-lg"></i>
-					</span>
-		      	</div>
-		    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
-		    	</select>
-		    </div>
-		</form>
 	</div>
- 
+
+	<form class="form-inline">
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="language-select">
+					<i class="fas fa-language"></i>
+				</span>
+	      	</div>
+	    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
+	    	</select>
+	    </div>
+	</form>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
 	
 </script>
 
@@ -75,12 +77,8 @@
 		Covid-19
 	</a>
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
 	<div class="collapse navbar-collapse" id="navbarToggler">
-		<ul class="navbar-nav mr-auto my-md-2">
+		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
 				<a class="nav-link" href="#faqs">FAQs</a>
 			</li>
@@ -103,27 +101,38 @@
 					</a>
 		        </div>
 			</li>
-		</ul>
-		<form class="form-inline my-2 my-md-2">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="language-select">
-						<i class="fas fa-language fa-lg"></i>
-					</span>
-		      	</div>
-		    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
-		    	</select>
-		    </div>
-		</form>
+		</ul>	
 	</div>
+
+	<form class="form-inline">
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="language-select">
+					<i class="fas fa-language"></i>
+				</span>
+	      	</div>
+	    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
+	    	</select>
+	    </div>
+	</form>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 </nav>
 
 	<div class="container-fluid">
 
+		<!-- <section class="row index-section tickers">
+			
+			
+
+		</section> -->
+
 		<section class="row index-section faqs">
 			<div class="col-12 mb-4">
 				<h1 class="display-6 my-sec-heading">
-					FAQs
+					Frequently Asked Questions
 				</h1>
 			</div>
 			
@@ -203,7 +212,7 @@
 			<div class="tab-pane fade {{#if @first}}show active{{/if}}" id="list-{{sectionID}}" role="tabpanel" aria-labelledby="list-
 			{{sectionID}}-list">
 	    		{{{writeup}}}
-	    		<p>
+	    		<p class="text-wrap text-truncate">
 					{{#if sources.length}}
 					Sources: 
 					{{#each sources}}
@@ -378,18 +387,18 @@ Keep informed and follow the advice of the local authorities, including any rest
 			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
-<div class='tableauPlaceholder' id='viz1584629252984' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1584947625783' style='position: relative'>
     <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Coronaviruscasesbycountryfutureprediction&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
+        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
     </noscript>
     <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
-        <param name='name' value='Coronaviruscasesbycountryfutureprediction&#47;Sheet1' />
+        <param name='name' value='TotalCovid-19casesbycountryfutureprediction&#47;Sheet1' />
         <param name='tabs' value='no' />
         <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Coronaviruscasesbycountryfutureprediction&#47;Sheet1&#47;1.png' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Sheet1&#47;1.png' />
         <param name='animate_transition' value='yes' />
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
@@ -398,9 +407,8 @@ Keep informed and follow the advice of the local authorities, including any rest
         <param name='filter' value='publish=yes' />
     </object>
 </div>
-
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1584629252984');
+    var divElement = document.getElementById('viz1584947625783');
     var vizElement = divElement.getElementsByTagName('object')[0];
     vizElement.style.width = '100%';
     vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
@@ -443,18 +451,18 @@ Keep informed and follow the advice of the local authorities, including any rest
 			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
-<div class='tableauPlaceholder' id='viz1584873982041' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1584947586071' style='position: relative'>
     <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15848232214340&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
+        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;K_&#47;K_Graph&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
     </noscript>
     <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
-        <param name='name' value='Book1_15848232214340&#47;Sheet1' />
+        <param name='name' value='K_Graph&#47;Dashboard1' />
         <param name='tabs' value='no' />
         <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15848232214340&#47;Sheet1&#47;1.png' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;K_&#47;K_Graph&#47;Dashboard1&#47;1.png' />
         <param name='animate_transition' value='yes' />
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
@@ -464,10 +472,22 @@ Keep informed and follow the advice of the local authorities, including any rest
     </object>
 </div>
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1584873982041');
+    var divElement = document.getElementById('viz1584947586071');
     var vizElement = divElement.getElementsByTagName('object')[0];
-    vizElement.style.width = '100%';
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    if (divElement.offsetWidth > 800) {
+        vizElement.style.minWidth = '420px';
+        vizElement.style.maxWidth = '100%';
+        vizElement.style.minHeight = '587px';
+        vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+    } else if (divElement.offsetWidth > 500) {
+        vizElement.style.minWidth = '420px';
+        vizElement.style.maxWidth = '100%';
+        vizElement.style.minHeight = '587px';
+        vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+    } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '727px';
+    }
     var scriptElement = document.createElement('script');
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);

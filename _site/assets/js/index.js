@@ -23,13 +23,17 @@ var smoothScroll = function () {
 		e.preventDefault();
 
 		var $this = $(this),
-			navHeight = $this.outerHeight(),
+			navHeight = 56,
 			scrollToElemSelector = 'section.index-section.' + $this.attr('href').substr(1),
 			$scrollToElem = $(scrollToElemSelector);
 
 		$("html, body").animate({
-			scrollTop: $scrollToElem.offset().top - navHeight - parseInt($scrollToElem.css('padding-top'))
+			scrollTop: Math.ceil($scrollToElem.offset().top - navHeight)
 		}, 200);
+
+		// if the click on the link was in on mobile,
+		// we need to detect that and collapse the menu
+		$this.closest('div.navbar-collapse.collapse.show').toggleClass('show');
 	});
 };
 
@@ -43,8 +47,21 @@ var faqSearch = function () {
 		return jQuery(n).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
 	};
   
-  	$('#faq-search-bar').on('change keyup paste click', function () {
+  	$('#faq-search-bar').on('change keyup paste', function () {
+    	
     	searchTerm = $(this).val();
+    	var $seeAllButton = $('.faq-seeall-btn');
+
+    	// if searchterm is empty and FAQs are expanded, collapse them
+    	if (!searchTerm && $seeAllButton.text() == 'Show Less') {
+    		$('.faq-seeall-btn').click();
+    	}
+
+    	// if all FAQs are collapsed, show all, and then run the search
+    	if(searchTerm && $seeAllButton.text() == "Show All") {
+    		$('.faq-seeall-btn').click();
+    	}
+    	
     	$('#faq-accordion div.card').each(function () {
       		cardContainerId = '#' + $(this).attr('id');
       		$(cardContainerId + ':not(:containsCaseInsensitive(' + searchTerm + '))').hide();

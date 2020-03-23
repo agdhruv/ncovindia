@@ -1,15 +1,12 @@
 <script id="nav-template" type="text/x-handlebars-template">
 	{% raw %}
+	
 	<a class="navbar-brand" href="#">
 		{{title.text}}
 	</a>
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
 	<div class="collapse navbar-collapse" id="navbarToggler">
-		<ul class="navbar-nav mr-auto my-md-2">
+		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
 				<a class="nav-link" href="{{faqs.href}}">{{faqs.text}}</a>
 			</li>
@@ -33,19 +30,24 @@
 		        </div>
 			</li>
 		</ul>
-		<form class="form-inline my-2 my-md-2">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="language-select">
-						<i class="fas fa-language fa-lg"></i>
-					</span>
-		      	</div>
-		    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
-		    	</select>
-		    </div>
-		</form>
 	</div>
- 
+
+	<form class="form-inline">
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="language-select">
+					<i class="fas fa-language"></i>
+				</span>
+	      	</div>
+	    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
+	    	</select>
+	    </div>
+	</form>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
 	{% endraw %}
 </script>
 
@@ -56,12 +58,8 @@
 		Covid-19
 	</a>
 
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
 	<div class="collapse navbar-collapse" id="navbarToggler">
-		<ul class="navbar-nav mr-auto my-md-2">
+		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
 				<a class="nav-link" href="#faqs">FAQs</a>
 			</li>
@@ -84,17 +82,22 @@
 					</a>
 		        </div>
 			</li>
-		</ul>
-		<form class="form-inline my-2 my-md-2">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="language-select">
-						<i class="fas fa-language fa-lg"></i>
-					</span>
-		      	</div>
-		    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
-		    	</select>
-		    </div>
-		</form>
+		</ul>	
 	</div>
+
+	<form class="form-inline">
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="language-select">
+					<i class="fas fa-language"></i>
+				</span>
+	      	</div>
+	    	<select class="custom-select" aria-describedby="language-select" id="language-selector">
+	    	</select>
+	    </div>
+	</form>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 </nav>
