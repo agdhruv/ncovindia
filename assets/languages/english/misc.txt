@@ -1,0 +1,14 @@
+{
+	"whatisthis": "This is an effort to fight misinformation surrounding COVID-19.",
+	"disclaimer": "We have worked hard to collate reliable data, but you should talk to your doctor for medical advice. Refer to <a href='https://www.mohfw.gov.in/' target='_blank' class='text-warning'>government guidelines</a> and call 1075 for help.",
+	"india": "India",
+	"world": "World",
+	"cases": "cases",
+	"deaths": "deaths",
+	"yesterday": "Yesterday",
+	"today": "Today",
+	"tomorrow": "Tomorrow",
+	"unverified": "Unverified",
+	"shoutmessage": "Obey the lockdown. Stay at home. Don't hoard.",
+	"source": "Source"
+}

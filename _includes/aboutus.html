@@ -1,0 +1,249 @@
+<script id="aboutus-template" type="text/x-handlebars-template">
+	{% raw %}
+	<div class="col-12">
+		<p class="text-center m-0 px-2 px-md-4 text-light mb-4 shout-message">
+			{{shoutmessage}}
+		</p>
+		<p class="text-center m-0 px-2 px-md-4 text-light lead">
+			{{{whatisthis}}}
+		</p>
+		<p class="text-center text-light mb-4">
+			<small>
+				{{{disclaimer}}}
+			</small>
+		</p>
+	</div>
+
+	<div class="col-12">
+		<div class="row" id="ticker-container">
+		</div>
+	</div>
+	{% endraw %}
+</script>
+
+<script id="ticker-template" type="text/x-handlebars-template">
+	{% raw %}
+	
+	<div class="col-12 col-sm-5 offset-sm-1 col-md-4 offset-md-2 mb-3 mb-sm-0">
+		<div class="card border-danger" id="ticker-india">
+			<div class="card-header">
+				{{translations.india}} {{translations.cases}} <sup><a href="https://www.mohfw.gov.in/">{{translations.source}}</a></sup>
+			</div>
+			<div class="card-body">
+				<div class="row no-gutters">
+					<div class="col yesterday">
+						<div class="ticker-number cases">
+							{{tickerData.india.cases.yesterday}}
+						</div>
+						<div class="ticker-day">
+							{{translations.yesterday}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.india.deaths.yesterday}}
+						</div>
+					</div>
+					<div class="col today">
+						<div class="ticker-number cases">
+							{{tickerData.india.cases.today}}
+							{{setVar "value" tickerData.india.cases.percentageIncrease}}
+							<small class="ticker-percentage-increase">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small>
+						</div>
+						<div class="ticker-day">
+							{{translations.today}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.india.deaths.today}}
+							{{setVar "value" tickerData.india.deaths.percentageIncrease}}
+							<small class="ticker-percentage-increase">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small>
+						</div>
+					</div>
+					<div class="col unverified">
+						<div class="ticker-number cases">
+							{{tickerData.india.cases.unverified}}
+						</div>
+						<div class="ticker-day">
+							{{translations.unverified}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.india.deaths.unverified}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-header">
+				{{translations.india}} {{translations.deaths}}
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 col-sm-5 col-md-4">
+		<div class="card border-danger" id="ticker-world">
+			<div class="card-header">
+				{{translations.world}} {{translations.cases}} <sup><a href="https://coronavirus.jhu.edu/">{{translations.source}}</a></sup>
+			</div>
+			<div class="card-body">
+				<div class="row no-gutters">
+					<div class="col yesterday">
+						<div class="ticker-number cases">
+							{{tickerData.world.cases.yesterday}}
+						</div>
+						<div class="ticker-day">
+							{{translations.yesterday}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.world.deaths.yesterday}}
+						</div>
+					</div>
+					<div class="col today">
+						<div class="ticker-number cases">
+							{{tickerData.world.cases.today}}
+						</div>
+						<div class="ticker-day">
+							{{translations.today}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.world.deaths.today}}
+						</div>
+					</div>
+					<div class="col unverified">
+						<div class="ticker-number cases">
+							{{tickerData.world.cases.unverified}}
+						</div>
+						<div class="ticker-day">
+							{{translations.unverified}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.world.deaths.unverified}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-header">
+				{{translations.world}} {{translations.deaths}}
+			</div>
+		</div>
+	</div>
+
+	{% endraw %}
+</script>
+
+<section class="row index-section about-us">
+	
+	<!-- <div class="col-12">
+		<p class="text-center m-0 px-2 px-md-4 text-light lead">
+			This is an effort to fight misinformation surrounding COVID-19 by students, faculty, and alumni of <a href="https://ashoka.edu.in" target="_blank" class="text-warning">Ashoka University</a>.
+		</p>
+		<p class="text-center text-light mb-4">
+			<small>
+				We have worked hard to collate reliable data, but you should talk to your doctor for medical advice. Refer to <a href="https://www.mohfw.gov.in/" target="_blank" class="text-warning">government guidelines</a> and call 1075 for help.
+			</small>
+		</p>
+	</div>
+
+	<div class="col-12">
+		<div class="row" id="ticker-container">
+			<div class="col-12 col-sm-5 offset-sm-1 col-md-3 offset-md-3 mb-3 mb-sm-0">
+				<div class="card border-danger" id="ticker-india">
+					<div class="card-header">
+						India Cases
+					</div>
+					<div class="card-body">
+						<div class="row no-gutters">
+							<div class="col yesterday">
+								<div class="ticker-number cases">
+									519
+								</div>
+								<div class="ticker-day">
+									Yesterday
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col today">
+								<div class="ticker-number cases">
+									562
+								</div>
+								<div class="ticker-day">
+									Today
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col unverified">
+								<div class="ticker-number cases">
+									612
+								</div>
+								<div class="ticker-day">
+									Unverified
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-header">
+						India Deaths
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-5 col-md-3">
+				<div class="card border-danger" id="ticker-world">
+					<div class="card-header">
+						World Cases
+					</div>
+					<div class="card-body">
+						<div class="row no-gutters">
+							<div class="col yesterday">
+								<div class="ticker-number cases">
+									-
+								</div>
+								<div class="ticker-day">
+									Yesterday
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col today">
+								<div class="ticker-number cases">
+									-
+								</div>
+								<div class="ticker-day">
+									Today
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col unverified">
+								<div class="ticker-number cases">
+									-
+								</div>
+								<div class="ticker-day">
+									Unverified
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-header">
+						World Deaths
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+</section>

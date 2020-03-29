@@ -4,8 +4,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>
-		Novel Corona Virus
+		Novel Coronavirus Knowledgebase
 	</title>
+	<link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+	<!-- Primary Meta Tags -->
+<meta name="description" content="Latest numbers, common questions, and detailed graphs about COVID-19. We are translating into more and more Indian languages! This is an effort to fight misinformation surrounding COVID-19.">
+<meta name="keywords" content="COVID-19, coronavirus, knowledgebase, frequently asked questions, common questions, advice, graphs, regional languages">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ncovindia.com/">
+<meta property="og:title" content="Novel Coronavirus Knowledgebase">
+<meta property="og:description" content="Latest numbers, common questions, and detailed graphs about COVID-19. We are translating into more and more Indian languages! This is an effort to fight misinformation surrounding COVID-19.">
+<meta property="og:image" content="https://ncovindia.com/assets/img/favicon.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://ncovindia.com/">
+<meta property="twitter:title" content="Novel Coronavirus Knowledgebase">
+<meta property="twitter:description" content="Latest numbers, common questions, and detailed graphs about COVID-19. We are translating into more and more Indian languages! This is an effort to fight misinformation surrounding COVID-19.">
+<meta property="twitter:image" content="https://ncovindia.com/assets/img/favicon.png">
 	
 	<!-- css -->
 		<!-- import bootstrap css -->
@@ -15,12 +35,21 @@
 	<!-- essential js -->
 		<!-- import fontawesome -->
 	<script src="https://kit.fontawesome.com/631f0a2cf3.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161819065-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-161819065-1');
+	</script>
 </head>
 <body>
 	<script id="nav-template" type="text/x-handlebars-template">
 	
 	
-	<a class="navbar-brand" href="#">
+	<a class="navbar-brand" href="">
 		{{title.text}}
 	</a>
 
@@ -35,7 +64,7 @@
 			<li class="nav-item">
 				<a class="nav-link" href="{{graphs.href}}">{{graphs.text}}</a>
 			</li>
-			<li class="nav-item dropdown">
+			<!-- <li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="{{more.href}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			        {{more.text}}
 			    </a>
@@ -47,7 +76,7 @@
 						Sources
 					</a>
 		        </div>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 
@@ -73,8 +102,8 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md fixed-top navbar-dark" id="nav-container">
 
-	<a class="navbar-brand" href="#">
-		Covid-19
+	<a class="navbar-brand" href="">
+		COVID-19
 	</a>
 
 	<div class="collapse navbar-collapse" id="navbarToggler">
@@ -88,7 +117,7 @@
 			<li class="nav-item">
 				<a class="nav-link" href="#graphs">Graphs</a>
 			</li>
-			<li class="nav-item dropdown">
+			<!-- <li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			        More...
 			    </a>
@@ -100,7 +129,7 @@
 						Sources
 					</a>
 		        </div>
-			</li>
+			</li> -->
 		</ul>	
 	</div>
 
@@ -123,11 +152,255 @@
 
 	<div class="container-fluid">
 
-		<!-- <section class="row index-section tickers">
-			
-			
+		<script id="aboutus-template" type="text/x-handlebars-template">
+	
+	<div class="col-12">
+		<p class="text-center m-0 px-2 px-md-4 text-light mb-4 shout-message">
+			{{shoutmessage}}
+		</p>
+		<p class="text-center m-0 px-2 px-md-4 text-light lead">
+			{{{whatisthis}}}
+		</p>
+		<p class="text-center text-light mb-4">
+			<small>
+				{{{disclaimer}}}
+			</small>
+		</p>
+	</div>
 
-		</section> -->
+	<div class="col-12">
+		<div class="row" id="ticker-container">
+		</div>
+	</div>
+	
+</script>
+
+<script id="ticker-template" type="text/x-handlebars-template">
+	
+	
+	<div class="col-12 col-sm-5 offset-sm-1 col-md-4 offset-md-2 mb-3 mb-sm-0">
+		<div class="card border-danger" id="ticker-india">
+			<div class="card-header">
+				{{translations.india}} {{translations.cases}} <sup><a href="https://www.mohfw.gov.in/">{{translations.source}}</a></sup>
+			</div>
+			<div class="card-body">
+				<div class="row no-gutters">
+					<div class="col yesterday">
+						<div class="ticker-number cases">
+							{{tickerData.india.cases.yesterday}}
+						</div>
+						<div class="ticker-day">
+							{{translations.yesterday}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.india.deaths.yesterday}}
+						</div>
+					</div>
+					<div class="col today">
+						<div class="ticker-number cases">
+							{{tickerData.india.cases.today}}
+							{{setVar "value" tickerData.india.cases.percentageIncrease}}
+							<small class="ticker-percentage-increase">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small>
+						</div>
+						<div class="ticker-day">
+							{{translations.today}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.india.deaths.today}}
+							{{setVar "value" tickerData.india.deaths.percentageIncrease}}
+							<small class="ticker-percentage-increase">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small>
+						</div>
+					</div>
+					<div class="col unverified">
+						<div class="ticker-number cases">
+							{{tickerData.india.cases.unverified}}
+						</div>
+						<div class="ticker-day">
+							{{translations.unverified}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.india.deaths.unverified}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-header">
+				{{translations.india}} {{translations.deaths}}
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 col-sm-5 col-md-4">
+		<div class="card border-danger" id="ticker-world">
+			<div class="card-header">
+				{{translations.world}} {{translations.cases}} <sup><a href="https://coronavirus.jhu.edu/">{{translations.source}}</a></sup>
+			</div>
+			<div class="card-body">
+				<div class="row no-gutters">
+					<div class="col yesterday">
+						<div class="ticker-number cases">
+							{{tickerData.world.cases.yesterday}}
+						</div>
+						<div class="ticker-day">
+							{{translations.yesterday}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.world.deaths.yesterday}}
+						</div>
+					</div>
+					<div class="col today">
+						<div class="ticker-number cases">
+							{{tickerData.world.cases.today}}
+						</div>
+						<div class="ticker-day">
+							{{translations.today}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.world.deaths.today}}
+						</div>
+					</div>
+					<div class="col unverified">
+						<div class="ticker-number cases">
+							{{tickerData.world.cases.unverified}}
+						</div>
+						<div class="ticker-day">
+							{{translations.unverified}}
+						</div>
+						<div class="ticker-number deaths">
+							{{tickerData.world.deaths.unverified}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-header">
+				{{translations.world}} {{translations.deaths}}
+			</div>
+		</div>
+	</div>
+
+	
+</script>
+
+<section class="row index-section about-us">
+	
+	<!-- <div class="col-12">
+		<p class="text-center m-0 px-2 px-md-4 text-light lead">
+			This is an effort to fight misinformation surrounding COVID-19 by students, faculty, and alumni of <a href="https://ashoka.edu.in" target="_blank" class="text-warning">Ashoka University</a>.
+		</p>
+		<p class="text-center text-light mb-4">
+			<small>
+				We have worked hard to collate reliable data, but you should talk to your doctor for medical advice. Refer to <a href="https://www.mohfw.gov.in/" target="_blank" class="text-warning">government guidelines</a> and call 1075 for help.
+			</small>
+		</p>
+	</div>
+
+	<div class="col-12">
+		<div class="row" id="ticker-container">
+			<div class="col-12 col-sm-5 offset-sm-1 col-md-3 offset-md-3 mb-3 mb-sm-0">
+				<div class="card border-danger" id="ticker-india">
+					<div class="card-header">
+						India Cases
+					</div>
+					<div class="card-body">
+						<div class="row no-gutters">
+							<div class="col yesterday">
+								<div class="ticker-number cases">
+									519
+								</div>
+								<div class="ticker-day">
+									Yesterday
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col today">
+								<div class="ticker-number cases">
+									562
+								</div>
+								<div class="ticker-day">
+									Today
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col unverified">
+								<div class="ticker-number cases">
+									612
+								</div>
+								<div class="ticker-day">
+									Unverified
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-header">
+						India Deaths
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-5 col-md-3">
+				<div class="card border-danger" id="ticker-world">
+					<div class="card-header">
+						World Cases
+					</div>
+					<div class="card-body">
+						<div class="row no-gutters">
+							<div class="col yesterday">
+								<div class="ticker-number cases">
+									-
+								</div>
+								<div class="ticker-day">
+									Yesterday
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col today">
+								<div class="ticker-number cases">
+									-
+								</div>
+								<div class="ticker-day">
+									Today
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+							<div class="col unverified">
+								<div class="ticker-number cases">
+									-
+								</div>
+								<div class="ticker-day">
+									Unverified
+								</div>
+								<div class="ticker-number deaths">
+									-
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-header">
+						World Deaths
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+</section>
 
 		<section class="row index-section faqs">
 			<div class="col-12 mb-4">
@@ -138,6 +411,10 @@
 			
 			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				<input class="form-control" type="text" placeholder="Search" id="faq-search-bar">
+			</div>
+
+			<div class="col-12 col-md-8 offset-md-2 mb-4 text-right">
+				<button class="btn btn-primary faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">Show All</button>
 			</div>
 
 			<div class="col-12 col-md-8 offset-md-2">
@@ -180,9 +457,7 @@
 </div>
 			</div>
 
-			<div class="col-12 col-md-8 offset-md-2 mt-4 text-right">
-				<button class="btn btn-primary faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">Show All</button>
-			</div>
+			
 		</section>
 
 		<section class="row index-section advice">
@@ -387,71 +662,11 @@ Keep informed and follow the advice of the local authorities, including any rest
 			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
-<div class='tableauPlaceholder' id='viz1584947625783' style='position: relative'>
-    <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='TotalCovid-19casesbycountryfutureprediction&#47;Sheet1' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Sheet1&#47;1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='filter' value='publish=yes' />
-    </object>
-</div>
-<script type='text/javascript'>
-    var divElement = document.getElementById('viz1584947625783');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    vizElement.style.width = '100%';
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
-			</div>
-			<div class="col-12 col-md-8 offset-md-2 mb-4">
-				<div class="graph-overlay"></div>
+<h4 class="text-center" id="graph1-heading">
+    How are cases of COVID-19 growing in India compared to other countries? <sup><a href="https://ourworldindata.org/coronavirus-source-data">source</a></sup>
+</h4>
 
-<div class='tableauPlaceholder' id='viz1584629378970' style='position: relative'>
-    <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19_15844478892610&#47;Sheet3&#47;1_rss.png' style='border: none' /></a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='path' value='views&#47;Covid-19_15844478892610&#47;Sheet3?:embed=y&amp;:display_count=y' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19_15844478892610&#47;Sheet3&#47;1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-    </object>
-</div>
-
-<script type='text/javascript'>
-    var divElement = document.getElementById('viz1584629378970');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    vizElement.style.width = '100%';
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
-			</div>
-			<div class="col-12 col-md-8 offset-md-2 mb-4">
-				<div class="graph-overlay"></div>
-
-<div class='tableauPlaceholder' id='viz1584947586071' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1585076590223' style='position: relative'>
     <noscript>
         <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;K_&#47;K_Graph&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
     </noscript>
@@ -468,22 +683,17 @@ Keep informed and follow the advice of the local authorities, including any rest
         <param name='display_spinner' value='yes' />
         <param name='display_overlay' value='yes' />
         <param name='display_count' value='yes' />
-        <param name='filter' value='publish=yes' />
     </object>
 </div>
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1584947586071');
+    var divElement = document.getElementById('viz1585076590223');
     var vizElement = divElement.getElementsByTagName('object')[0];
     if (divElement.offsetWidth > 800) {
-        vizElement.style.minWidth = '420px';
-        vizElement.style.maxWidth = '100%';
-        vizElement.style.minHeight = '587px';
-        vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
     } else if (divElement.offsetWidth > 500) {
-        vizElement.style.minWidth = '420px';
-        vizElement.style.maxWidth = '100%';
-        vizElement.style.minHeight = '587px';
-        vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
     } else {
         vizElement.style.width = '100%';
         vizElement.style.height = '727px';
@@ -496,18 +706,22 @@ Keep informed and follow the advice of the local authorities, including any rest
 			<div class="col-12 col-md-8 offset-md-2">
 				<div class="graph-overlay"></div>
 
-<div class='tableauPlaceholder' id='viz1584713465767' style='position: relative'>
+<h4 class="text-center" id="graph2-heading">
+    How much have different countries recovered from the virus? <sup><a href="https://www.worldometers.info/coronavirus/">source</a></sup>
+</h4>
+
+<div class='tableauPlaceholder' id='viz1585076665324' style='position: relative'>
     <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15846394435730&#47;DoublingRate&#47;1_rss.png' style='border: none' /></a>
+        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19_15849470129230&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
     </noscript>
     <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
-        <param name='name' value='Book1_15846394435730&#47;DoublingRate' />
+        <param name='name' value='Covid-19_15849470129230&#47;Dashboard1' />
         <param name='tabs' value='no' />
         <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15846394435730&#47;DoublingRate&#47;1.png' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19_15849470129230&#47;Dashboard1&#47;1.png' />
         <param name='animate_transition' value='yes' />
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
@@ -517,30 +731,80 @@ Keep informed and follow the advice of the local authorities, including any rest
     </object>
 </div>
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1584713465767');
+    var divElement = document.getElementById('viz1585076665324');
     var vizElement = divElement.getElementsByTagName('object')[0];
-    vizElement.style.width = '100%';
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '727px';
+    }
     var scriptElement = document.createElement('script');
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 			</div>
+			<!-- <div class="col-12 col-md-8 offset-md-2">
+				<div class="graph-overlay"></div>
+
+<h4 class="text-center" id="graph3-heading">
+    In the future, how many cases of COVID-19 are expected in India? <sup><a href="https://ourworldindata.org/coronavirus-source-data">source</a></sup>
+</h4>
+
+<div class='tableauPlaceholder' id='viz1585076710515' style='position: relative'>
+    <noscript>
+        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+    </noscript>
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='TotalCovid-19casesbycountryfutureprediction&#47;Dashboard1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Dashboard1&#47;1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='filter' value='publish=yes' />
+    </object>
+</div>
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1585076710515');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = '727px';
+    }
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+			</div> -->
 
 		</section>
 		
 		<footer class="row">
-	
 	<div class="col-12">
-		
-		<p class="text-center m-0 py-4 px-4 text-light">
-			This website is an effort to fight misinformation surrounding COVID-19 by students, faculty, and alumni of <a href="https://ashoka.edu.in" target="_blank" class="text-white">Ashoka University</a>.
+		<p class="text-center text-light py-4 px-2 px-md-4 m-0">
+			Contact us with questions: <a href="mailto:contact@ncovindia.com" class="text-warning">contact@ncovindia.com</a><br>
+			<a href="assets/data/suggested_citation.txt" target="_blank" class="text-warning">Cite us!</a>
 		</p>
-
 	</div>
-
 </footer>
-		
+
 	</div>
 	
 	<!-- rest of js -->

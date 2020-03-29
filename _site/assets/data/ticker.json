@@ -1,0 +1,25 @@
+{"india" : {
+	"cases" : {
+		"yesterday":606,
+		"today":649,
+		"unverified":705
+	},
+	"deaths" : {
+		"yesterday" : 10,
+		"today" : 13,
+		"unverified" : 13
+	}
+	},
+"world" : {
+	"cases" : {
+		"yesterday":454398,
+		"unverified":490253,
+		"today":487648
+	},
+	"deaths" : {
+		"yesterday" : 20549,
+		"today" : 22029,
+		"unverified" : 22154
+	}
+	}
+}

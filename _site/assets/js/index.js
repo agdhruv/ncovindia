@@ -1,5 +1,34 @@
+// ##### Handlebars helpers #####
+
+Handlebars.registerHelper("setVar", function(varName, varValue, options) {
+	options.data.root[varName] = varValue;
+});
+
+Handlebars.registerHelper('tickerPercentageArrow', function (percentage) {
+	if (percentage < 0) {
+		return "&#x25BC;";
+	} else if (percentage > 0) {
+		return "&#x25B2;";
+	} else {
+		return "";
+	}
+});
+
+Handlebars.registerHelper('tickerPercentageColor', function (percentage) {
+	if (percentage < 0) {
+		return "green";
+	} else if (percentage > 0) {
+		return "#4011f5";
+	} else {
+		return "";
+	}
+});
+
+// ##### Handlebars helpers #####
+
 var CURRENT_LANGUAGE = 'english';
 var LANGUAGES_METADATA;
+var MISC_TRANSLATIONS;
 
 var getUrlParameter = function getUrlParameter(sParam) {
 	// https://stackoverflow.com/questions/19491336/get-url-parameter-jquery-or-how-to-get-query-string-values-in-js
@@ -126,16 +155,22 @@ var updateLanguageOptions = function () {
 
 };
 
-var displayFile = function (language, fileIdentifier, containerSelector, callback) {
+var displayFile = function (language, fileIdentifier, templateIdentifier, containerSelector, callback) {
 	// loads assets/languages/<language>/<fileIdentifier>.txt
-	// loads template in #<fileIdentifier>-template
+	// loads template in #<templateIdentifier>-template
 	// displays HTML is #<containerSelector>
 	$.getJSON(`assets/languages/${language}/${fileIdentifier}.txt`, function(data) {
-		var source = $(`#${fileIdentifier}-template`).html();
+		var source = $(`#${templateIdentifier}-template`).html();
 		var template = Handlebars.compile(source);
 
+		if (fileIdentifier === 'misc') {
+			if (!MISC_TRANSLATIONS) {
+				MISC_TRANSLATIONS = data;
+			}
+		}
+
 		// file specific changes to object
-		if (fileIdentifier === 'faqs') {
+		if (templateIdentifier === 'faqs') {
 			// sort by "importance"
 			data = data.sort(function (a, b) {
 				var key1 = a.importance;
@@ -147,7 +182,7 @@ var displayFile = function (language, fileIdentifier, containerSelector, callbac
 			});
 			// insert a another parameter into the 10th item
 			// called "startHiding: true" for Handlebars
-			data[9].startHiding = true;
+			data[10].startHiding = true;
 			data[data.length - 1].endHiding = true;
 		}
 
@@ -159,18 +194,43 @@ var displayFile = function (language, fileIdentifier, containerSelector, callbac
 	});
 };
 
+var displayTickerData = function () {
+	if (!MISC_TRANSLATIONS) throw new Error("Misc translations not available");
+
+	$.getJSON('assets/data/ticker.json', function (tickerData) {
+
+		// calculate increase percentage of deaths and cases
+		// india
+		tickerData.india.cases.percentageIncrease = parseInt((tickerData.india.cases.today/tickerData.india.cases.yesterday - 1) * 100);
+		tickerData.india.deaths.percentageIncrease = parseInt((tickerData.india.deaths.today/tickerData.india.deaths.yesterday - 1) * 100);
+		// world
+		tickerData.world.cases.percentageIncrease = parseInt((tickerData.world.cases.today/tickerData.world.cases.yesterday - 1) * 100);
+		tickerData.world.deaths.percentageIncrease = parseInt((tickerData.world.deaths.today/tickerData.world.deaths.yesterday - 1) * 100);
+
+		var mergedData = {
+			translations: MISC_TRANSLATIONS,
+			tickerData: tickerData
+		};
+		var source = $('#ticker-template').html();
+		var template = Handlebars.compile(source);
+		var theCompiledHtml = template(mergedData);
+		$(`#ticker-container`).html(theCompiledHtml);
+	});
+};
+
 var displayContent = function (CURRENT_LANGUAGE) {
 	
 	// nav is loaded by default in english
 	// hence, we need to load this only if the language is anything else
 	if (CURRENT_LANGUAGE !== 'english') {
-		displayFile(CURRENT_LANGUAGE, 'nav', '#nav-container', updateLanguageOptions);
+		displayFile(CURRENT_LANGUAGE, 'nav', 'nav', '#nav-container', updateLanguageOptions);
 	}
 	
 	// FAQs and advice need to be loaded from the file even in English
 	// (cuz there are too many lol)
-	displayFile(CURRENT_LANGUAGE, 'advice', '#advice-container');
-	displayFile(CURRENT_LANGUAGE, 'faqs', '#faq-accordion');
+	displayFile(CURRENT_LANGUAGE, 'misc', 'aboutus', 'section.index-section.about-us', displayTickerData);
+	displayFile(CURRENT_LANGUAGE, 'advice', 'advice', '#advice-container');
+	displayFile(CURRENT_LANGUAGE, 'faqs', 'faqs', '#faq-accordion');
 };
 
 $(document).ready(function () {

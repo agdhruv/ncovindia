@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
 body {
 	padding-top: 56px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 nav {
@@ -26,6 +29,7 @@ section.index-section {
 
 	section.index-section h1.my-sec-heading {
 		position: relative;
+		text-align: center;
 	}
 
 section.index-section.graphs {
@@ -39,11 +43,11 @@ section.index-section.graphs {
 		height: 100%;
 		width: 100%;
 		background: transparent;
-		display: flex;
 		justify-content: center;
 		align-items: center;
 		z-index: 10;
 		cursor: pointer;
+		display: none;
 	}	
 
 section.index-section.advice {
@@ -68,8 +72,90 @@ section.index-section.faqs div.accordion div.card-header button.btn {
 	text-align: left;
 }
 
+section.index-section.about-us {
+	background: #093863;
+}
+	section.index-section.about-us p.shout-message {
+		text-shadow: black 1px 1px 10px;
+		font-weight: bold;
+		font-size: 2rem;
+	}
+
+	section.index-section.about-us div.card {
+		font-size: 1.3rem;
+	}
+
+	section.index-section.about-us div.card-header {
+		border: 0;
+		padding: .2rem .5rem;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: .8rem;
+		font-weight: bold;
+	}
+
+	section.index-section.about-us div.card-body {
+		padding: 0;
+	}
+
+		section.index-section.about-us div.card-body div.col.text-muted {
+			color: #111;
+		}
+		section.index-section.about-us div.card-body div.col.today {
+			background: #ff8080;
+			color: #fff;
+			font-weight: bold;
+		}
+		section.index-section.about-us div.card-body div.col.unverified {
+			background: #ffe599;
+		}
+		section.index-section.about-us div.card-body div.col > div {
+			text-align: center;
+			padding: .1rem 0;
+		}
+		section.index-section.about-us div.card-body div.ticker-day {
+			background: rgba(0,0,0,.03);
+			text-transform: uppercase;
+			font-size: .6rem;
+		}
+		section.index-section.about-us div.card-body div.col.today div.ticker-day {
+			background: #c00;
+		}
+		section.index-section.about-us div.card-body div.col.unverified div.ticker-day {
+			background: #fbcd41;
+		}
+
+	section.index-section.about-us small.ticker-percentage-increase {
+		font-size: .7rem;
+	    color: #fff;
+	    position: absolute;
+	    margin-left: 3px;
+	    text-align: center;
+	}
+		section.index-section.about-us small.ticker-percentage-increase span.arrow {
+			display: block;
+			margin-bottom: -4px;
+		}
+
 footer {
 	background: #093863;
+}
+
+/* utilities */
+span.bold {
+	font-weight: bold;
+}
+
+span.italic {
+	font-style: italic;
+}
+
+sup {
+	font-size: .5rem;
+}
+
+#ticker-container sup {
+	font-size: .3rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -95,6 +181,10 @@ footer {
 
 	div#advice-list .list-group-item:last-child {
 		border-radius: 0px;
+	}
+
+	section.index-section.graphs div.graph-overlay {
+		display: flex;
 	}
 }
 
