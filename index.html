@@ -30,6 +30,7 @@
 	</script>
 </head>
 <body>
+	{% raw %}<?php echo("parsed"); ?>{% endraw %}
 	{% include navbar.html %}
 
 	<div class="container-fluid">
@@ -78,12 +79,12 @@
 			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				{% include graphs/archit.html %}
 			</div>
-			<div class="col-12 col-md-8 offset-md-2">
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				{% include graphs/aastha.html %}
 			</div>
-			<!-- <div class="col-12 col-md-8 offset-md-2">
-				{% include graphs/barun.html %}
-			</div> -->
+			<div class="col-12 col-md-8 offset-md-2">
+				{% include graphs/doubling.html %}
+			</div>
 
 		</section>
 		

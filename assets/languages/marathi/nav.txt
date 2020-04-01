@@ -3,15 +3,15 @@
 		"text": "COVID-19"
 	},
 	"advice": {
-		"text": "HAdvice",
+		"text": "Advice",
 		"href": "#advice"
 	},
 	"faqs": {
-		"text": "HFAQs",
+		"text": "FAQs",
 		"href": "#faqs"
 	},
 	"graphs": {
-		"text": "HGraphs",
+		"text": "Graphs",
 		"href": "#graphs"
 	},
 	"more": {

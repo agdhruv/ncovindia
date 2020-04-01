@@ -1,3 +1,3 @@
 {
-	"supported": ["english"]
+	"supported": ["english", "marathi"]
 }

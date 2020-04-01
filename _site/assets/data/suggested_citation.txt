@@ -1,6 +1,6 @@
 @misc{ncovindia,
-	author = {Dhruv Agarwal, Archit Checker, Barun Parruck, Aastha Shah, Debayan Gupta},
-	title = {Novel Coronavirus Database},
+	author = {Dhruv Agarwal, Archit Checker, Esther David, Anniruddha Jafa, Paul Kurian, Barun Parruck, Shweta Prasad, Aastha Shah, Debayan Gupta},
+	title = {Novel Coronavirus Knowledgebase},
 	year = {2020},
 	note = {Ongoing work  at \url{https://ncovindia.com}}
 }

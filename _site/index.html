@@ -46,6 +46,7 @@
 	</script>
 </head>
 <body>
+	<?php echo("parsed"); ?>
 	<script id="nav-template" type="text/x-handlebars-template">
 	
 	
@@ -185,7 +186,7 @@
 			</div>
 			<div class="card-body">
 				<div class="row no-gutters">
-					<div class="col yesterday">
+					<div class="col col-ticker yesterday">
 						<div class="ticker-number cases">
 							{{tickerData.india.cases.yesterday}}
 						</div>
@@ -196,11 +197,11 @@
 							{{tickerData.india.deaths.yesterday}}
 						</div>
 					</div>
-					<div class="col today">
+					<div class="col-5 col-ticker today">
 						<div class="ticker-number cases">
 							{{tickerData.india.cases.today}}
 							{{setVar "value" tickerData.india.cases.percentageIncrease}}
-							<small class="ticker-percentage-increase">
+							<small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
 								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
 								{{value}}%
 							</small>
@@ -211,13 +212,13 @@
 						<div class="ticker-number deaths">
 							{{tickerData.india.deaths.today}}
 							{{setVar "value" tickerData.india.deaths.percentageIncrease}}
-							<small class="ticker-percentage-increase">
+							<small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
 								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
 								{{value}}%
 							</small>
 						</div>
 					</div>
-					<div class="col unverified">
+					<div class="col col-ticker unverified">
 						<div class="ticker-number cases">
 							{{tickerData.india.cases.unverified}}
 						</div>
@@ -243,7 +244,7 @@
 			</div>
 			<div class="card-body">
 				<div class="row no-gutters">
-					<div class="col yesterday">
+					<div class="col col-ticker yesterday">
 						<div class="ticker-number cases">
 							{{tickerData.world.cases.yesterday}}
 						</div>
@@ -254,18 +255,28 @@
 							{{tickerData.world.deaths.yesterday}}
 						</div>
 					</div>
-					<div class="col today">
+					<div class="col-5 col-ticker today">
 						<div class="ticker-number cases">
 							{{tickerData.world.cases.today}}
+							{{setVar "value" tickerData.world.cases.percentageIncrease}}
+							<!-- <small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small> -->
 						</div>
 						<div class="ticker-day">
 							{{translations.today}}
 						</div>
 						<div class="ticker-number deaths">
 							{{tickerData.world.deaths.today}}
+							{{setVar "value" tickerData.world.deaths.percentageIncrease}}
+							<!-- <small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small> -->
 						</div>
 					</div>
-					<div class="col unverified">
+					<div class="col col-ticker unverified">
 						<div class="ticker-number cases">
 							{{tickerData.world.cases.unverified}}
 						</div>
@@ -703,25 +714,25 @@ Keep informed and follow the advice of the local authorities, including any rest
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 			</div>
-			<div class="col-12 col-md-8 offset-md-2">
+			<div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
 <h4 class="text-center" id="graph2-heading">
     How much have different countries recovered from the virus? <sup><a href="https://www.worldometers.info/coronavirus/">source</a></sup>
 </h4>
 
-<div class='tableauPlaceholder' id='viz1585076665324' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1585658580412' style='position: relative'>
     <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19_15849470129230&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ne&#47;new_map_15855755894370&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
     </noscript>
     <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
-        <param name='name' value='Covid-19_15849470129230&#47;Dashboard1' />
+        <param name='name' value='new_map_15855755894370&#47;Dashboard1' />
         <param name='tabs' value='no' />
         <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19_15849470129230&#47;Dashboard1&#47;1.png' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ne&#47;new_map_15855755894370&#47;Dashboard1&#47;1.png' />
         <param name='animate_transition' value='yes' />
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
@@ -731,7 +742,7 @@ Keep informed and follow the advice of the local authorities, including any rest
     </object>
 </div>
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1585076665324');
+    var divElement = document.getElementById('viz1585658580412');
     var vizElement = divElement.getElementsByTagName('object')[0];
     if (divElement.offsetWidth > 800) {
         vizElement.style.width = '100%';
@@ -748,25 +759,25 @@ Keep informed and follow the advice of the local authorities, including any rest
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 			</div>
-			<!-- <div class="col-12 col-md-8 offset-md-2">
+			<div class="col-12 col-md-8 offset-md-2">
 				<div class="graph-overlay"></div>
 
-<h4 class="text-center" id="graph3-heading">
-    In the future, how many cases of COVID-19 are expected in India? <sup><a href="https://ourworldindata.org/coronavirus-source-data">source</a></sup>
+<h4 class="text-center" id="graph1-heading">
+    How many days does it take for cases to double? <sup><a href="https://ourworldindata.org/coronavirus-source-data">source</a></sup>
 </h4>
 
-<div class='tableauPlaceholder' id='viz1585076710515' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1585658448296' style='position: relative'>
     <noscript>
-        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+        <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book2_15854996580350&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
     </noscript>
     <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
-        <param name='name' value='TotalCovid-19casesbycountryfutureprediction&#47;Dashboard1' />
+        <param name='name' value='Book2_15854996580350&#47;Dashboard1' />
         <param name='tabs' value='no' />
         <param name='toolbar' value='yes' />
-        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;To&#47;TotalCovid-19casesbycountryfutureprediction&#47;Dashboard1&#47;1.png' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book2_15854996580350&#47;Dashboard1&#47;1.png' />
         <param name='animate_transition' value='yes' />
         <param name='display_static_image' value='yes' />
         <param name='display_spinner' value='yes' />
@@ -776,7 +787,7 @@ Keep informed and follow the advice of the local authorities, including any rest
     </object>
 </div>
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1585076710515');
+    var divElement = document.getElementById('viz1585658448296');
     var vizElement = divElement.getElementsByTagName('object')[0];
     if (divElement.offsetWidth > 800) {
         vizElement.style.width = '100%';
@@ -792,7 +803,7 @@ Keep informed and follow the advice of the local authorities, including any rest
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-			</div> -->
+			</div>
 
 		</section>
 		

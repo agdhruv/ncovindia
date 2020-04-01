@@ -31,7 +31,7 @@
 			</div>
 			<div class="card-body">
 				<div class="row no-gutters">
-					<div class="col yesterday">
+					<div class="col col-ticker yesterday">
 						<div class="ticker-number cases">
 							{{tickerData.india.cases.yesterday}}
 						</div>
@@ -42,11 +42,11 @@
 							{{tickerData.india.deaths.yesterday}}
 						</div>
 					</div>
-					<div class="col today">
+					<div class="col-5 col-ticker today">
 						<div class="ticker-number cases">
 							{{tickerData.india.cases.today}}
 							{{setVar "value" tickerData.india.cases.percentageIncrease}}
-							<small class="ticker-percentage-increase">
+							<small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
 								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
 								{{value}}%
 							</small>
@@ -57,13 +57,13 @@
 						<div class="ticker-number deaths">
 							{{tickerData.india.deaths.today}}
 							{{setVar "value" tickerData.india.deaths.percentageIncrease}}
-							<small class="ticker-percentage-increase">
+							<small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
 								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
 								{{value}}%
 							</small>
 						</div>
 					</div>
-					<div class="col unverified">
+					<div class="col col-ticker unverified">
 						<div class="ticker-number cases">
 							{{tickerData.india.cases.unverified}}
 						</div>
@@ -89,7 +89,7 @@
 			</div>
 			<div class="card-body">
 				<div class="row no-gutters">
-					<div class="col yesterday">
+					<div class="col col-ticker yesterday">
 						<div class="ticker-number cases">
 							{{tickerData.world.cases.yesterday}}
 						</div>
@@ -100,18 +100,28 @@
 							{{tickerData.world.deaths.yesterday}}
 						</div>
 					</div>
-					<div class="col today">
+					<div class="col-5 col-ticker today">
 						<div class="ticker-number cases">
 							{{tickerData.world.cases.today}}
+							{{setVar "value" tickerData.world.cases.percentageIncrease}}
+							<!-- <small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small> -->
 						</div>
 						<div class="ticker-day">
 							{{translations.today}}
 						</div>
 						<div class="ticker-number deaths">
 							{{tickerData.world.deaths.today}}
+							{{setVar "value" tickerData.world.deaths.percentageIncrease}}
+							<!-- <small class="ticker-percentage-increase" style="color: {{tickerPercentageColor value}};">
+								<span class="arrow">{{{tickerPercentageArrow value}}}</span>
+								{{value}}%
+							</small> -->
 						</div>
 					</div>
-					<div class="col unverified">
+					<div class="col col-ticker unverified">
 						<div class="ticker-number cases">
 							{{tickerData.world.cases.unverified}}
 						</div>

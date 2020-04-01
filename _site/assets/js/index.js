@@ -10,7 +10,7 @@ Handlebars.registerHelper('tickerPercentageArrow', function (percentage) {
 	} else if (percentage > 0) {
 		return "&#x25B2;";
 	} else {
-		return "";
+		return "-";
 	}
 });
 
@@ -18,7 +18,7 @@ Handlebars.registerHelper('tickerPercentageColor', function (percentage) {
 	if (percentage < 0) {
 		return "green";
 	} else if (percentage > 0) {
-		return "#4011f5";
+		return "rgba(255,255,255,0.7);";
 	} else {
 		return "";
 	}
