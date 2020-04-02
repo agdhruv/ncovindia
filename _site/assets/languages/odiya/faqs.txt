@@ -1,0 +1,206 @@
+﻿[{
+                "importance": "1",
+                "question": "ମାସ୍କ ପିନ୍ଧିବା ଦରକାର କି ?",
+                "answer": "<p>ଯଦି<span class=\"bold\">only</span>ଆପଣ ବା ଆପଣକଂର କେହି ନିଜ ଲୋକ ଅସୁସ୍ଥ ଅଛନ୍ତି ତେବେ ହଁ। </p> <p><span class=\"bold\">ଦେଶରେ ମାସ୍କର ଅଭାବ ରହିଚି ତେଣୁ ଅଯଥା ମାସ୍କ ନଷ୍ଟ କରନ୍ତୁ ନାହଁି।</p> <p>ଅଧିକାଂଶ ଲୋକ ଠିକ୍ ଭାବରେ ମାସ୍କ ପିନ୍ଧନ୍ତି ନାହଁିା WHO ଦ୍ୱରା  ମାସ୍କ ପିନ୍ଧିବାର ବିଧି ଆପଣାନ୍ତୁ।ପ୍ରଥମେ ସାବୁନ୍ ରେ ହାତ ଧୁଅନ୍ତୁ ତା ପରେ ମାସ୍କ ପିନ୍ଧନ୍ତୁ। ଯେପରି ପାଟି ଓ ନାକ ମାସ୍କ ଭିତରେ ରହିବ।ମାସ୍କ ଛୁଅନ୍ତୁ ନାହଁିା ବାରମ୍ବାର ହାତ ଧୁଅନ୍ତୁ।</p> <p>ମାସ୍କ ଓଲ୍ହେଇବା ବେଳେ ପଛ ପଟରୁ ଖୋଲନ୍ତୁ।ବ୍ୟବହୃତ ମାସ୍କ ଘୋଡଣୀ ଥିବା ଡସ୍ଟବିନ୍ ରେ ଫୋପାଡନ୍ତୁ।</p><p>ସାଂଗେ ସାଂଗେ ହାତ ଧୁଅନ୍ତୁ।ଗୋଟିଏ ମାସ୍କ ଥରେ ମାତ୍ର ବ୍ୟବହାର କରନ୍ତୁ।</p>",
+                "sources": ["https://www.sst.dk/da/corona/questions-and-answers", "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks", "https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+        },
+        {
+                "importance": "2",
+                "question": "ଟଂକା , କାର୍ଡ ବ୍ୟବହାର ନିରାପଦ କି?",
+                "answer": "<p>ସତର୍କ ରୁହନ୍ତୁ।ଛୁଇଁବା ପରେ ସାଂଗେ ୨ ହାତ ଧୁଅନ୍ତୁ।</p><p>ଏଥିରେ ସଂକ୍ରମଣ ହେବାର ସଂଭାବନା ଅଛି। ଯେତେ ସଂଭବ ଦୂରେଇ ରୁହନ୍ତୁ। </p><p>ପ୍ଲାାଷ୍ଟିକ୍, ଷ୍ଟିଲ୍ ରେ ଭୂତାଣୁୁ ଅଧିକ ସମୟ ରହେ।</p>",
+                "sources": ["https://www.bloomberg.com/news/articles/2020-03-11/fear-of-virus-tainted-dollars-opens-new-front-in-war-on-cash", "https://www.nejm.org/doi/10.1056/NEJMc2004973"]
+        },
+        {
+                "importance": "2",
+                "question": "କୋରୋନା ଭୂତାଣୁର ଏତେ ଗୁଡାଏ ନାଁ କାହିଁକି?",
+                "answer": "<p>COVID- 19 (କୋରୋନ) ରୋଗର ନାଁ।</p><p>SARS - COV-2  ଭୂତାଣୁର ନାଁ।</p><p>ଯେମିତି ଗଛ କହିଲେ ଯେ କୌଣସି ଗଛକୁ ବୁଝାଏ ସେପରି CORONA କହିଲେ ଥଣ୍ଡା, ଜ୍ୱର, ଇତ୍ୟାଦିା</p>",
+                "sources": ["https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html"]
+        },
+        {
+                "importance": "1",
+                "question": "ମାସ୍କ ଥରକରୁ ଅଧିକ ବ୍ୟବହାର କରିବା ଉଚିତ୍ କି?",
+                "answer": "<p>ନା, ଉଚିତ୍ ନୁହେଁା <span class=\"bold\">only</span> ଯଦି କୌଣସି ପରିସ୍ଥିତିରେ ଦରକାର ପଡେ, ତେବେ ମାସ୍କକୁ ସାବୁନ୍ ପାଣିରେ ସଫା କରି ଫୁଟୁଥିବା ପାଣିରେ କିଛି ସମୟ ଫୁଟେଇବେ।</li> <li>ଯେହେତୁ ଭୂତାଣୁ ୧୦୦ଂ ତାପମାତ୍ରାରେ ନଷ୍ଟ ହୋଇଯାଏ।</li> </ol> <p>ଅଧିକାଂଶ ପଦାର୍ଥରେ ଏହି ଭୂତାଣୁ ସପ୍ତାହେ ଯାଏଁ ରହିଥାଏ କିନ୍ତୁ କାଗଜ ଓ କାର୍ଡ ବୋର୍ଡରେ ୨୪ ଘଣ୍ଟାରୁ କମ୍ ରହେ।</p> <p>ବିପଦରେ ୨/୩ ଟି ମାସ୍କ ପାଖରେ ରଖି ପର୍ଯାୟ କ୍ରମେ ବ୍ୟବହାର କରନ୍ତୁ।<p>",
+                "sources": ["https://www.cdc.gov/coronavirus/2019-ncov/faq.html", "https://www-ssrl.slac.stanford.edu/content/sites/default/files/documents/nano-lab-safety.pdf", "https://www.nejm.org/doi/10.1056/NEJMc2004973", "https://virologyj.biomedcentral.com/articles/10.1186/1743-422X-10-289"]
+        },
+        {
+                "importance": "2",
+                "question": "ରୋଗର କୌଣସି ଟୀକା , ଓୌଷଧ ଅଛି କି?",
+                "answer": "<p>ନା, ନାହଁିା</p><p>ସେଥିପାଇଁ ଘରେ ରହିବା ଉଚିତ୍। ଯଦି ଆପଣକଂ ଦେହ ଖରାପ ଅଛି ତେବେ ତୁରନ୍ତ ଡାକ୍ତରଂକ ପରାମର୍ଶ ନିଅନ୍ତୁ।</p><p>ICMRକଂ ପରାମର୍ଶ କ୍ରମେ Hydroxy chloroquine ଏହି ରୋଗ ପାଇଁ ବ୍ୟବହାର କରାଯାଇପାରେ।କିନ୍ତୁ ଏଥିରେ ନିଶ୍ଚିତତା ନାହଁିା ଏଇ ଓୌଷଧ କେବଳ ଡାକ୍ତରକଂ ପରାମର୍ଶ କ୍ରମେ ଦିଆଯାଇପାରେ।</p><p>କୋଣସି ଭଲ ଡାକ୍ତରକଂ ପରୀମର୍ଶ କ୍ରମେ ହଁି ଓୌଷଧ ନିଅନ୍ତୁ ଏବଂ ସମସ୍ତକଂ ଠାରୁ ଦୂରେଇ ରୁହନ୍ତୁ।</p>",
+                "sources": ["https://icmr.nic.in/sites/default/files/upload_documents/HCQ_Recommendation_22March_final_MM_V2.pdf", "https://www.cdc.gov/coronavirus/2019-ncov/php/risk-assessment.html", "https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+
+
+        },
+        {
+                "importance": "1",
+                "question": "ଖରାଦିନେ ଭୂତାଣୁ ସଂକ୍ରମଣ କମିଯିବ କି?",
+                "answer": "<p>ଖରାଦିନେ ସଂକ୍ରମଣ କମିଯିବାର ସମ୍ଭାବନା ଅଛି କିନ୍ତୁ ସଂପୂର୍ଣ ଭାବେ ନୁହେଁା</p> <p>ଏବେ କହିବା ସମ୍ଭବପର ନୁହେଁା</p><p>WHO କହିବା ଅନୁସାରେ ଥଣ୍ଡା ଜଳବାୟୁରେ ଏହା ଅଧିକ ବ୍ୟାପିଥାଏ କିନ୍ତୁ ସବୁ ଜଳବାୟୁରେ ଏହା ବ୍ୟାପିପାରୋ।</p>",
+                "sources": ["https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters", "https://www.cdc.gov/coronavirus/2019-ncov/faq.html", "https://www.medrxiv.org/content/10.1101/2020.03.12.20034728v1.full.pdf", "https://arxiv.org/ftp/arxiv/papers/2003/2003.05003.pdf"]
+
+
+        },
+        {
+                "importance": "3",
+                "question": "ଏହାର ଲକ୍ଷଣ କେତେ ଦିନରେ ପ୍ରକାଶ ପାଏ?",
+                "answer": "<p>ପ୍ରାୟ ୨ ସପ୍ତାହ ମଧ୍ୟରେ (୧ ରୁ ୧୪ ଦିନ) ଏହାର ଲକ୍ଷଣ ପ୍ରକାଶ ପାଏ।</p><p>କିନ୍ତୁ ସାଧାରଣତଃ ୫ ଦିନ ଭିତରେ ଲକ୍ଷଣ ଦେଖାଯାଏା</p>",
+                "sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+
+
+        },
+        {
+                "importance": "2",
+                "question": "ମୁ ନିଜର ମାସ୍କ‌ କିପରି ତିଆରି କରି ପାରିବି?",
+                "answer": "<p>ନିଜେ କିମ୍ବା ନିଜର କେହି ଅସୁସ୍ଥ ଥିଲେ ମାସ୍କ ପିଂଧଂନ୍ତୁ ।</p><p>ଯଦି ଆପଣଙ୍କ ପାଖରେ ମାସ୍କ ନାହିଂ   ତେବେ କୈାଣସି ସୁତା କପଡା ବ୍ୟବହାର କରିପାରିବେ।</p>",
+                "sources": ["https://www.sst.dk/da/corona/questions-and-answers", "https://smartairfilters.com/en/blog/best-materials-make-diy-face-mask-virus/?rel=1", "https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic", "https://www.deaconess.com/How-to-make-a-Face-Mask/Documents-Mask/Mask-Information"]
+        },
+        {
+                "importance": "2",
+                "question": "ସୋସିଆଲ ମିଡ଼ିଆ ରେ ମିଥ୍ୟା ତଥ୍ୟ ଦେଇ ମୁଁ ଗିରଫ ହେଇପାରେ କି ?",
+                "answer": "<p>ସଂଭାବନା ଅଛୀ</p> <p>ଆଇନ କୁହେ :  \"ଏହା ପାଇଁ ୬ ମାସ ଡଣ୍ଡ କିମ୍ବା ଜୋରିମାନା ଳାଗୁ ହେବ\"</p> <p>ସେଥିପାଇଁ ଦାୟିତ୍ୱହୀନ କାମ କରନ୍ତୁ ନାହିଁ ।</p>",
+                "sources": ["https://lawrato.com/indian-kanoon/ipc/section-269", "https://www.deccanherald.com/national/south/three-arrested-for-spreading-fake-news-on-coronavirus-in-kerala-800740.html"]
+        },
+        {
+                "importance": "3",
+                "question": "ସଂକ୍ରମିତ ବ୍ୟକ୍ତି ବାହାରକୁ ଗଳେ ଗିରଫ ହେବାର ସଂଭାବନା ଅଛି କି ?",
+                "answer": "<p>Yes.</p> <p>ଆଇନ ଅନୁସାରେ : \"ଏହି ଭଳି କାମର ଡଣ୍ଡ ୨ ବର୍ଷ ଜେଲ ଉ ଜୋରିମାନା\"</p> <p>ସେଥିପାଇଁ ଦାୟିତ୍ୱହୀନ କାମ କରନ୍ତୁ ନାହିଁ</p>",
+                "sources": ["https://lawrato.com/indian-kanoon/ipc/section-270"]
+        },
+        {
+                "importance": "2",
+                "question": "ଟିକା କିମ୍ବା ଊଷଧ କେବେ ଆସିବ ?",
+                "answer": "କହିବା ଅସଂଭବ। ନିହାତି ୧ ବର୍ଷ ଲାଗିପାରେ",
+                "sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses", "https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf"]
+        },
+        {
+                "importance": "1",
+                "question": "ସାବୁନ କି ସାନିଟାଇଯର କୈଟା ଉଚିତ ?",
+                "answer": "<p>୨ ଟା ଯାକ।</p><p>ସାବୁନ ସାଧାରଣ ଭାବେ ମିଳେ, କମ ଟଙ୍କା ପଡ଼େ ଏବଂ ଭୁତାଣୁ ମାରିବାରେ କାମ ଦିଏ। </p><p>ସାବୁନ କି ପାଣି ପାଖରେ ନ ଥିଲେ ସାନିଟାଇଯର ବ୍ୟବହାର କରାଯାଏ ।</p>",
+                "sources": ["https://www.cdc.gov/handwashing/show-me-the-science-hand-sanitizer.html#one"]
+        },
+        {
+                "importance": "3",
+                "question": "ହାତ କୈ ଭଳି ଧୋଇବା କଥା ?",
+                "answer": "ସାବୁନ କି ସାନିଟାଇଯର ହିଁ ବ୍ୟବହାର କରନ୍ତୁ</p><p>ସଂପୂର୍ଣ୍ଣ ହାତକୁ ୨୦ ସେକେଣ୍ଡ ପାଇଁ ଭଲଭାବରେ ଧୁଅନ୍ତୁ</p><p>ସାବୁନ ସାଧାରଣ ଭାବେ ମିଳେ, କମ ଟଙ୍କା ପଡ଼େ ଏବଂ ଭୁତାଣୁ ମାରିବାରେ କାମ ଦିଏ।</p>",
+                "sources": ["https://www.cdc.gov/handwashing/when-how-handwashing.html"]
+        },
+        {
+                "importance": "1",
+                "question": "ସ୍ୱତ୍ସ୍ଥ ଯୁବକ ମାନଙ୍କୁ କୁ ରୋଗର ଡର ?",
+                "answer": "<p>ଡର ସମସ୍ତଙ୍କ ଅଛି। </p> <p>୨୦-୪୪ ବର୍ଷ ଭିତରେ ଥିବା ୨୦% ଲୋକଙ୍କୁ ଚିକିତ୍ସା ଦରକାର ହୁଏ ।<p/> <p>ଡର କେବଳ ଆପଣଙ୍କୁ ନୁହେଁ। ଆପଣଙ୍କ  ଦାୟିତ୍ବହୀନତା ପାଇଁ ଅନେକ ଲୋକ ମାନଙ୍କ ଯିବନ ବିପଦରେ ପଡ଼ିପାରେ ।</p><p>ଏହା ପାଇଁ ଡଣ୍ଡ-ଜୋରିମାନା ଭି ଅଛି।</p>",
+                "sources": ["https://www.propublica.org/article/a-medical-worker-describes--terrifying-lung-failure-from-covid19-even-in-his-young-patients", "https://www.cdc.gov/mmwr/volumes/69/wr/mm6912e2.htm", "https://lawrato.com/indian-kanoon/ipc/section-270"]
+
+
+        },
+        {
+                "question": "ମାସ୍କ ଯାଗାରେ କପଡା କାମ ଦବ କି?",
+                "answer": "<p>ମାସ୍କ <span class=\"bold\">ତେବେ ହିଁ ପିଂଧଂନ୍ତୁ</span>ଜଦି ଆପଣଙ୍କୁ କିମ୍ବା ଆପଣଙ୍କ ପାଖରେ କାହାକୁ ରୋଗର ସଂଭାବନା ଅଛି। ବାହାରକୁ ଗଲା ବେଳେ ଭି ମାସ୍କ ପିଂଧଂନ୍ତୁ। </p> <p>ତିଆରି କରାଯାଇଥିବା ମାସ୍କ ନ ମିଳିଲେ ସଫା ସୁତା କପଡା ର ମାସ୍କ ବନେଇପାରିବେ</p>",
+                "sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses", "https://www.researchgate.net/publication/258525804_Testing_the_Efficacy_of_Homemade_Masks_Would_They_Protect_in_an_Influenza_Pandemic", "https://virologyj.biomedcentral.com/articles/10.1186/1743-422X-10-289"]
+
+
+        },
+        {
+                "importance": "4",
+                "question": "ଲକ୍ଷ୍ମଣ ନ ଦିଶିଲେ ଭି ସଂକ୍ରମଣ ହେଇଥାଇପାରେ କି ?",
+                "answer": "<p>ସଂଭାବନା ଅଛି।</p><p>ବହୁତ ଲୋକଙ୍କର ଲକ୍ଷ୍ୟଣ ଡେରି ରେ ଦେଖିବାକୁ ମିଳେ। ସେଥିପାଇଁ ମୁହଁ ଘୋଡେ଼ଇ କାଶନ୍ତୁ। ଜ୍ୱର କିମ୍ବା ଅସୁସ୍ଥ ଲାଗିଲେ ଡାକ୍ତରଙ୍କୁ ଯୋଗୋଯୋଗ କରନ୍ତୁ। </p>",
+                "sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+
+
+        },
+        {
+                "importance": "2",
+                "question": "ବାୟୁମଣ୍ଡଳର ଭୁତାଣୁ କେତେ ସମୟ ରହିପାରେ ?",
+                "answer": "<p>କିଛି ଘଣ୍ଟା ରୁ କିଛି ଦିନ ଯାଏଁ।</p><p>ଏହି ଟେବଲ ଦେଖନ୍ତୁ :</p><table class='table'><thead><tr><th>Surface</th><th>ସମୟ</th></tr></thead><tbody><tr><td>ବାୟୁମଣ୍ଡଳର</td><td>୩ ଘଣ୍ଟା ଠୁବେସୀ</td></tr><tr><td>ସ୍ଟିଲ</td><td>୪୮ ଘଣ୍ଟା</td></tr><tr><td>ପ୍ଳାସ୍ଟିକ</td><td>୭୨ ଘଣ୍ଟା</td></tr><tr><td>କାର୍ଡ ବୋର୍ଡ</td><td>୨୪ ଘଣ୍ଟା</td></tr><tr><td>ତମ୍ବା</td><td>୪ ଘଣ୍ଟା</td></tr></tbody></table><p>କୈାଣସି ସଂକ୍ରମିତ ଜିନିଷ ସଂସ୍ପର୍ଶରେ ଆସିଲେ ତାକୁ ସାଂଗେ ସାଂଗେ ଧୁଅନ୍ତୁ ଏବଂ ନିଜ ହାତ କୁ ଭି ବାରମ୍ବାର ଧୁଅନ୍ତୁ।</p>",
+                "sources": ["https://www.nejm.org/doi/10.1056/NEJMc2004973"]
+
+
+        },
+        {
+                "importance": "4",
+                "question": "ଭୁତାଣୁ ବାୟୁ ମାଧ୍ୟମରେ ଆସିପାରେ କି ?",
+                "answer": "<p>ଆସିପାରେ</p> <p>ଭୁତାଣୁ ବାୟୁରେ ବ୍ୟାପେନି କିନ୍ତୁ ପବନରେ ଏହାର କଣିକା କିଛି ସମୟ ରହିପାରେ। ସଂକ୍ରମଣ ର ସଂଭାବନା ରହିପାରେ । </p> <p> ସେଥିପାଇଁ ମୁହଁ ଘୋଡେ଼ଇ କାଶନ୍ତୁ। ଅନ୍ୟାମାନଙ୍କ ଠାରୁ ଦୁରତା ରଖନ୍ତୁ। ଏହା ହିଁ କରିବା ସବୁଠାରେ ଉଚିତ୍।</p>",
+                "sources": ["https://www.nejm.org/doi/10.1056/NEJMc2004973", "https://www.cdc.gov/coronavirus/2019-ncov/php/risk-assessment.html", "https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+
+
+        },
+        {
+                "importance": "5",
+                "question": "ମୋ ପାଇଁ ବହୁତ ବିପଦ କି?",
+                "answer": "<p>ଏହିମାନକୁଂ ବିପଦର ସମ୍ଭାବନା ଅଧିକ - </p> <ul> <li>୬୫ ବର୍ଷରୁ ଅଧିକ ବୟସ ବ୍ୟକ୍ତି।</li> <li>ଗର୍ଭବତୀ ମହିଳା।</li> <li>ହୃଦରୋଗୀ।<ul><li>ଫୁସ୍ଫଫୁସ୍ ରୋଗୀ, ଆଜମା ରୋଗୀ।</li><li>ମଧୁମେହ ରୋଗୀ।</li><li>ଦୁର୍ବଳ ରୋଗ ପ୍ରଚିରୋଧକ  ଶକ୍ତି ଥିବା ବ୍ୟକ୍ତି ଯେପରି କି, ଏଡ୍ସ, କ୍ୟାନସର୍, ଉଚ୍ଚ ରକ୍ତଚ୍ଚାପ , ମୋଟାପା।</li></ul></li> </ul> <p>ଯେଉଁମାନେ ପୂର୍ବ ୨ ସପ୍ତାହ ଭିତରେ ସଂକ୍ରମିତ ଦେଶମାନକଂରୁ ଫେରିଛନ୍ତି ସେମାନେ ଖୁବ୍ ଶିଘ୍ର ନିଜକୁ ଅନ୍ୟମାନକଂଠାରୁ ବୂରେଇ ରହିବା ସହ ସମ୍ପୃକ୍ତ ଅଧିକାରୀମାନକୁଂ ଜଣାନ୍ତୁ।</p> <p>ଆହୁରି ଜାଣିବା ପାଇଁ<a href=\"https://www.mohfw.gov.in\">government</a> guidelines.‌ </p><p>Government guidelines: <a href=\"https://www.mohfw.gov.in\" target=\"_blank\">https://www.mohfw.gov.in</a></p>",
+                "sources": ["https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html", "https://www.cdc.gov/coronavirus/2019-ncov/faq.html#protect"]
+        },
+        {
+                "importance": "5",
+                "question": "କେଉଁ କାମରୁ ନିବୃତ୍ତ ରହିବା ଉଚିତ୍ ?",
+                "answer": "<ul> <li><span class=\"bold\">ଅଯଥା ମାସ୍କ କିଣନ୍ତୁ ନାହିଁ।</span>ଯଦି ଆପଣ କିମ୍ବା ଆପଣକଂ କେଉଁ  ପାଖ ଲାେକର ଲକ୍ଷଣ ଦେଖାଯାଉଚି ତେବେ ମାସ୍କ ପିନ୍ଧନ୍ତୁ।</li> <li>କୌଣସି ଓୌଷଧ ଖାଇବା ପୂର୍ବରୁ ଡାକ୍ତରକଂ ପରାମର୍ଶ ନିଅନ୍ତୁ।</li> <li>ଭିଡରୁ ଦୂରେଇ ରୁହନ୍ତୁ। ସାମାଜିକ ଦୂରତା ହିଁ ରୋଗମୁକ୍ତିର ଏକମାତ୍ର ଉପାୟ।</li> <li>ବାରମ୍ବାର ହାତ ଧୁଅନ୍ତୁ। ମୁହଁ,ନାକ,ପାଟି ଓ ଆକ୍ଷି ଛୁଅଁନ୍ତୁ ନାହଁି।</li></ul> <p> ଲକ୍ଷ୍ୟଣ ଦେଖାଯାଏ ଯଦି ତା ହେଲେ ଡାକ୍ତରକଂ ପରାମର୍ଶ ନିଅନ୍ତୁ।</p> <p>ସରକାରୀ ସୁଚନା : <a href=\"https://www.mohfw.gov.in\" target=\"_blank\">https://www.mohfw.gov.in</a></p>",
+                "sources": ["https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html", "https://www.who.int/news-room/q-a-detail/q-a-coronaviruses", "https://www.nhs.uk/conditions/coronavirus-covid-19/"]
+        },
+        {
+                "importance": "4",
+                "question": "What'sApp  ମେସେଜ୍ ବିଶ୍ୱସନୀୟ କି?",
+                "answer": "<p>What'sApp କିମ୍ବା ଫେସ୍ ବୁକ୍ ରେ ଆସୁଥିବା ଭିଡିଓ କିମ୍ବା ତଥ୍ୟଗୁଡିକୁ ବିଶ୍ୱାସ କରନ୍ତୁ ନାହଁି। ଅନେକ ସମୟରେ ଟିଭି ଏବଂ ସୋସିଆଲ୍ ମିଡିଆରେ ମଧ୍ୟ ମିଥ୍ୟା ତଥ୍ୟ ଆସୁଛି। ନିମ୍ନଲିଖିତ ମାଧ୍ୟମ ଗୁଡିକ ବିଶ୍ୱସନୀୟ- </p> <ul> <li>The Ministry of Health and Welfare: <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\">https://www.mohfw.gov.in/</a></li> <li>The World Health Organization: <a target=\"_blank\" href=\"https://www.who.int/news-room/q-a-detail/q-a-coronaviruses\">https://www.who.int/news-room/q-a-detail/q-a-coronaviruses</a></li> <li>US Centers for Disease Control and Prevention: <a target=\"_blank\" href=\"https://www.cdc.gov/coronavirus/2019-ncov/index.html\">https://www.cdc.gov/coronavirus/2019-ncov/index.html</a></li> <li>UK National Health Service: <a target=\"_blank\" href=\"https://www.nhs.uk/conditions/coronavirus-covid-19/\">https://www.nhs.uk/conditions/coronavirus-covid-19/</a></li> <li>Johns Hopkins Coronavirus Resource Center: <a target=\"_blank\" href=\"https://coronavirus.jhu.edu/\">https://coronavirus.jhu.edu/</a></li> <li>Harvard Coronavirus Resource Center: <a target=\"_blank\" href=\"https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center\">https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center</a></li> </ul>",
+                "sources": []
+        },
+        {
+                "importance": "4",
+                "question": "ସାମାଜିକ ଦୂରତା କଣ ? ଏଥିରୁ କି ଲାଭ ମିଳିବ?",
+                "answer": "<p>ସାମାଜିକ ଦୂରତାର ଲକ୍ଷ ହେଉଚି ଜଣେ ରୋଗୀକୁ ସୁସ୍ଥ ଲୋକଠାରୁ ଦୂରରେ ରଖିବା। ନିମ୍ନ ଲିଖିତ ଉପାୟରେ ଆମେ ଦୂରତା ରଖି ପାରିବା :-</p><ul><li>ନିଜକୁ ଯେ କୌଣସି ସାମାଜିକ ବୈଠକରୁ ଦୂରେଇ ରଖିବା।</li><li>ମାର୍କେଟ,ମଲ୍ , ଭିଡ ଜାଗାକୁ ନ ଯିବା।</li><li>ଅତ୍ୟାବଶ୍ୟକ ନ ହେଲେ ଘରୁ ବାହାରକୁ ନ ଯିବା।</li><li>ହ୍ୟାଣ୍ଡସେକ୍, ଆଲିଂଗନ ନ କରିବା।ଅତି କମରେ ଅନ୍ୟ ଜଣକଂ ଠାରୁ ୨ ମିଟର୍ ଦୂରତା ରଖିବା।</li></ul>",
+                "sources": ["https://www.nhs.uk/conditions/coronavirus-covid-19/", "https://www.cdc.gov/coronavirus/2019-ncov/php/risk-assessment.html", "https://hub.jhu.edu/2020/03/13/what-is-social-distancing/"]
+
+
+        },
+        {
+                "importance": "4",
+                "question": "ସ୍ୱୟଂ ପୃଥିକରଣ କଣ?",
+                "answer": "<p>ଯଦି ସଂକ୍ରମିତ ବୋଲି ସନ୍ଦେହ ହୁଏ ତେବେ ନିଜକୁ ସଂପୂର୍ଣ ଭାବେ ଦୂରେଇ ରଖନ୍ତୁା ସ୍ୱପୃଥିକରଣ ଅର୍ଥ ସଂକ୍ରମଣ ନୁହେଁ।</p><p>ସାମାଜିକ ଦୂରତାର ଏହା ଏକ ଅତିରିକ୍ତ ରୂପାନ୍ତର।</p><p>ଘରେ ଏକ ସ୍ୱତନ୍ତ୍ର ରୁମରେ ରୁହନ୍ତୁ। ସଂପୂର୍ଣ ଭାବେ ଘର ଲୋକକଂଠାରୁ ଦୂରେଇ ରୁହନ୍ତୁ। ସୁବିଧା ଥିଲେ ଅଲଗା ବାଥରମ୍ ବ୍ୟବହାର କରନ୍ତୁ। < /p><p>ମାସ୍କ ପିନ୍ଧନ୍ତୁ ଏବଂ ନିଜର ବ୍ୟବହୃତ ଜିନିଷ ଅଲଗା ରଖିବାକୁ ଯଥା ସମ୍ଭବ ଚେଷ୍ଟା କରନ୍ତୁ।</p > ",
+                "sources": ["https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Prepare"]
+
+
+        },
+        {
+                "importance": "3",
+                "question": "ସଂକ୍ରମିତ ରୋଗୀକୁଂ କିପରି ସାହାଯ୍ୟ କରିପାରିବା?",
+                "answer": "<p>ଅଧିକାଂଶ ରୋଗୀକୁଂ  ହସ୍ପିଟାଲ୍ ରେ ଆଡ୍ମିଟ୍ କରିବା ଜରୁରୀ ହୋଇ ନ ଥାଏ। କିନ୍ତୁ ନିମ୍ନ ଲିଖିତ ବିଷୟ ଉପରେ ଦୃଷ୍ଟି ଦେବା ନିଶ୍ଚିତ ଦରକାର।</p> <ul> <li>ରୋଗୀକୁ ବହୁତ ବିଶ୍ରାମ ମିଳିବା ଦରକାର।</li> <li>ପ୍ରଚୁର ପାଣି ପିଇବା ଦରକାର।</li> <li>ଖାଉଥିବା ଔଷଧର ହିସାବ ରଖିବା ଉଚିତ୍।</li> </ul> <p>ରୋଗୀଠାରୁ ନିଜକୁ ଦୂରେଇ ରଖିବା ଉଚିତ୍।</p> <ul> <li>ରୋଗୀକୁଂ ଖୋଲା ପବନ କିମ୍ବା ଶୀତତାପଯନ୍ତ୍ର ଯୁକ୍ତ ରୁମ୍ ରେ ରଖିବା ଉଚିତ୍।</li> <li>ରୋଗୀ ପୀଇଁ ଅଲଗା ବିଛଣା,ଗାଧୁଆଘର,କପଡା,ବାସନକୁସନ ବ୍ୟବହାର କରିବା ନିହାତି ଜରୁରୀ।ଧ୍ୟାନ ଦେବା ଜରୁରୀ କି ରୋଗୀ ରହୁଥିବା ସ୍ଥାନ ଯେପରି ସଫା ସୂତୁରା ରହୁଥିବ।</li> <li>ବଡ ଝରକା ଏବଂ  ଖୋଲା ପବନ ରହିବା ଦରକାର। ହାତ ବାରମ୍ବାର ଧୋଇବା ଉଚିତ।</li> <li>If ରୋଗୀର ଯତ୍ନ ନେଉଥିବା ଲୋକ ମାସ୍କ ପିନ୍ଧିବା ସହ ସାବୁନରେ ବାରମ୍ବାର ହାତ ଧୋଇବା ଜରୁରୀ ଅଟେ।</li> <li>ସଂକ୍ରମିତ ବ୍ୟକ୍ତିକଂ କପଡା ଏବଂ ବ୍ୟବହୃତ ଜିନିଷ ପୃଥକ୍ ଭାବେ ବାରମ୍ବାର ସଫା ହେଉଥିବା ଦରକାର।</li> <li>ବ୍ୟବହୃତ ମାସ୍କ ,ଗ୍ଲୋ୍ବ ଏବଂ ସଂସ୍ପଶରେ ଆସିଥିବା ଜିନିଷ ଢାକଂୁଣୀ ଥିବା ଡବାରେ ଫୋପାଡିବା ଦରକାର। ସାଗେଂ ସାଗେଂ ହାତ ଧୋଇବା ଅତ୍ୟନ୍ତ ଜରୁରୀ।</li> </ul> <p>ଆହୁରି ଅଧିକ ତଥ୍ୟ ପାଇଁ ତଳେ ଥିବା ଲେଖା ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ -<a href=\"https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Caregivers\">https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Caregivers</a></p>",
+                "sources": ["https://www.health.harvard.edu/diseases-and-conditions/coronavirus-resource-center#Caregivers"]
+        },
+        {
+                "importance": "3",
+                "question": "ଗ୍ଲୋବ୍ ପିନ୍ଧିବା ଲାଭଦାୟକ କି?",
+                "answer": "<p>ନାଁ, ବହୁତ ଲୋକ ମୁହଁକୁ ବାରମ୍ବାର ଛୁଅଁନ୍ତି।</p><p>ଠିକ୍ ଢଂଗରେ ଗ୍ଲୋବ୍ ନ ଫୋପାଡିଲେ ଏହା ସଂକ୍ରମଣକୁ ବଢେଇଦିଏ। ମେଡିକାଲ୍ ପ୍ରଫେସନାଲ୍ ମାନକୁଂ ଛାଡି ଆଉ କେହି ଗ୍ଲୋବ୍ ପିନ୍ଧିବା ଦରକାର ନାହିଁ। କିନ୍ତୁ ଆପଣ ଯଦି ରୋଗୀର ଯତ୍ନ ନେଉଛନ୍ତି କିମ୍ବା କପଡାପତ୍ର ମାସ୍କ ଛୁଉଁଚନ୍ତି ତେବେ ଗ୍ଲୋବ୍ ପିନ୍ଧିବା ନିହାତି ଜରୁରୀ।</p>",
+                "sources": ["https://medical.mit.edu/news/2020/01/2019-novel-coronavirus-updates-1", "https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-prevent-spread.html"]
+        },
+        {
+                "importance": "3",
+                "question": "ଗୋଟିଏ ମାସ୍କ କେତେ ସମୟ ଯାଏଁ ବ୍ୟବହାର କରିହେବ?‌",
+                "answer": "<p>ଗୋଟିଏ ମାସ୍କ ଥରେମାତ୍ର ବ୍ୟବହାର କରିହେବ। ମାସ୍କ ଓଦାଳିଆ ହୋଇଗଲେ ଏହାକୁ ଡବା ଭିତରେ ଫୋପାଡିଦେବେ। ଧୁଆ ତୈଲିଆ ଭି ବ୍ୟବହାର କରାଯାଇପାରେ।</p>",
+                "sources": ["https://www.nytimes.com/2020/03/13/world/how-to-wash-your-hands-coronavirus.html"]
+        },
+        {
+                "importance": "1",
+                "question": "କରୋନାର ପ୍ରଭାବ କେତେଦିନ ରହିବ?",
+                "answer": "<p>ଆମେ ଜାଣିନାହୁଁ।</p> <p>କିନ୍ତୁ ରିସର୍ଚ ଅନୁସାରେ  <span class=\"bold\">ମେ ମାସ  ପ୍ରଥମ ସପ୍ତାହରେ</span>ଏହାର ସବୁଠୁ ବେଶୀ ପ୍ରଭାବ ରହିବ।. କିନ୍ତୁ ସଂକ୍ରମଣ ଶେଷ ହେବନାହିଁ।‌</p> <p>ଅନ୍ୟମାନକଂ ମତରେ ଏହା ଅନେକ ଦିନ ପର୍ଯୟନ୍ତ ପ୍ରଭାବ ବିସ୍ତାର କରିବ। ଯଦି ଆମେ କଟକଣା ନ ରଖିବା ତେବେ ଏହା ବହୁଳ ଭାବରେ ବଢି  ଚାଲିବ।</p>",
+                "sources": ["https://www.hongkongfp.com/2020/01/28/wuhan-coronavirus-experts-say-outbreak-will-last-months-tens-thousands-affected/", "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30260-9/fulltext", "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30551-1/fulltext", "https://www.bbc.com/news/health-51963486"]
+        },
+        {
+                "importance": "3",
+                "question": "ମୁଁ ଅସୁସ୍ଥ କିନ୍ତୁ କାଳେ ମତେ କିମ୍ବା ମୋ ପରିବାରକୁ ଅନ୍ୟମାନେ ଘୃଣା କରିବେ ସେଥିପାଇଁ ମୁଁ ପରୀକ୍ଷା କରିବାକୁ ଡରୁଚି।କଣ କରିବି?",
+                "answer": "<p>ସାମାଜିକ ଭାବନାକୁ ଏଡାଇ ଦିଆଯାଇ ନ ପାରେ। କିନ୍ତୁ ସେସବୁ ନ ଭାବି ସାଗେଂ ୨ ଡାକ୍ତରକଂ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ।</p><p>ଆପଣକଂ ସହଯୋଗ ଅମୂଲ୍ୟ ଯାହା ନିଜ ପରିବାର ଛଡା ସମାଜର ଅନେକ ଲୋକକୁଂ ସଂକ୍ରମଣରୁ ରକ୍ଷା କରି ପାରିବ।</p>",
+                "sources": []
+        },
+        {
+                "importance": "1",
+                "question": "ବାହାର ଜିନିଷ ଗ୍ରହଣ କରିବା ନିରାପଦ କି?",
+                "answer": "<p>ସଧାରଣତଃ ନିରାପଦ ନୁହେଁ। କିନ୍ତୁ ଖବରକାଗଜ ଯେପରି ପ୍ରସ୍ତୁତ ହୁଏ ଏବଂ ବିତରଣ ହୁଏ ସେଥିରେ ସଂକ୍ରମଣର ସମ୍ଭାବନା କମ୍ ରହେ।  </p><p>ସବୁଠୁ ଭଲ ବ୍ୟସ୍ତ ନ ହୋଇ ବାହାରୁ ମଗାଇ ଥିବା ଜିନିଷ ଗୋଟେ ଦିନ ପାଇଁ ନ ଛୁଇଁ ରଖିଦିଅନ୍ତୁ ପରେ ବ୍ୟବହାର କରନ୍ତୁ।</p><p>ଜିନିଷ ଗରମ କରି ମଧ୍ୟ ବ୍ୟବହାର କରିପାରିବେ।</p><p> ଖାବ୍ୟ ପଦାର୍ଥରେ ସଂକ୍ରମଣର କମ୍ ସଂଭାବନା ଥାଏ କିନ୍ତୁ ଅନ୍ୟ ଜାଗାରେ କାଢି କିଛି ସମୟ ଗରମ କରି ଖାଇପାରିବେ।</p>",
+                "sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses", "https://timesofindia.indiatimes.com/india/newspapers-are-safe-govt-says-uninterrupted-supply-of-newspapers-is-vital/articleshow/74788294.cms", "https://virologyj.biomedcentral.com/articles/10.1186/1743-422X-10-289"]
+        },
+        {
+                "importance": "1",
+                "question": "ପଶୁଜାତ ଦ୍ରବ୍ୟ(ଖିର, ମାଂସ) ଖାଇବା କିମ୍ବା ପଶୁକଂ ସଂସ୍ପର୍ଶରେ ଆସିବା ଉଚିତ୍ କି?",
+                "answer": "<p>ପ୍ରତ୍ୟକ୍ଷ ଭାବରେ ପଶୁପକ୍ଷୀ ସଂସ୍ପର୍ଶରେ ଆସନ୍ତୁ ନାହିଁ। କନ୍ଚାମାଂସ, କନ୍ଚାକ୍ଷୀର ଖାଆନ୍ତୁ ନାହିଁ।</p><p>ଆମିଷ ଭଲ ଭାବେ ରାନ୍ଧିକି ଖାଇପାରିବେ।</p>",
+                "sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+        },
+        {
+                "importance": "1",
+                "question": "ଏହି ରୋଗରେ ଆଣ୍ଟିବାଇଓଟିକ୍ କାମ ଦିଏ କି?",
+                "answer": "<p><span class=\"bold\">ନା, ଦିଏନାହିଁ।</span> ଆଣ୍ଟିବାଇଓଟିକ୍  ଜୀବାଣୁ ନଷ୍ଟ କରିପାରେ ଭୂତାଣୁ ନୁହେଁ।</p><p>କୋରୋନା ଏକ ଭୂତାଣୁ ଜନିତ ରୋଗ। ଆଣ୍ଟିବାଇଓଟିକ୍ ଏହାର ସମାଧାନ ନୁହେଁ। ସର୍ବଦା ଡାକ୍ତରକଂ ପରାମର୍ଶ ନିଅନ୍ତୁ।</p>",
+                "sources": ["https://www.who.int/news-room/q-a-detail/q-a-coronaviruses"]
+        }
+]

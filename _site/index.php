@@ -1,3 +1,29 @@
+<?php 
+
+include('utilfuncs.php');
+
+// load metadatafile
+$languageMetadata = loadJSONFile('assets/languages/metadata.txt');
+// get what is the current language
+$language = getLanguageInput();
+
+// if unsupported language, go to english
+if (!isSupportedLanguage($languageMetadata, $language)) {
+	header('Location: /?language=english');
+}
+
+// read files for this language
+$filePath = sprintf('assets/languages/%s/misc.txt', $language);
+$miscTranslations = loadJSONFile($filePath);
+
+// read english misc file for backup
+$miscEnglishTranslations = loadJSONFile('assets/languages/english/misc.txt');
+
+$filePath = sprintf('assets/languages/%s/nav.txt', $language);
+$navTranslations = loadJSONFile($filePath);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +72,7 @@
 	</script>
 </head>
 <body>
-	<?php echo("parsed"); ?>
+	
 	<script id="nav-template" type="text/x-handlebars-template">
 	
 	
@@ -416,7 +442,10 @@
 		<section class="row index-section faqs">
 			<div class="col-12 mb-4">
 				<h1 class="display-6 my-sec-heading">
-					Frequently Asked Questions
+					<?php
+					$value = $navTranslations['faqs']['fullform'];
+					echo ($value) ? $value : "Frequently Asked Questions";
+					 ?>
 				</h1>
 			</div>
 			
@@ -425,7 +454,13 @@
 			</div>
 
 			<div class="col-12 col-md-8 offset-md-2 mb-4 text-right">
-				<button class="btn btn-primary faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">Show All</button>
+				<button class="btn btn-primary faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">
+					<?php
+					$value = $miscTranslations['showall'];
+					$elseValue = $miscEnglishTranslations['showall'];
+					echo ($value) ? $value : $elseValue;
+					 ?>
+				</button>
 			</div>
 
 			<div class="col-12 col-md-8 offset-md-2">
@@ -474,7 +509,10 @@
 		<section class="row index-section advice">
 			<div class="col-12 mb-4">
 				<h1 class="display-6 my-sec-heading text-white">
-					Advice
+					<?php
+					$value = $navTranslations['advice']['text'];
+					echo ($value) ? $value : "Advice";
+					 ?>
 				</h1>
 			</div>
 
@@ -666,7 +704,10 @@ Keep informed and follow the advice of the local authorities, including any rest
 		<section class="row index-section graphs">
 			<div class="col-12 mb-4">
 				<h1 class="display-6 my-sec-heading">
-					Graphs
+					<?php
+					$value = $navTranslations['graphs']['text'];
+					echo ($value) ? $value : "Graphs";
+					 ?>
 				</h1>
 			</div>
 
@@ -674,7 +715,17 @@ Keep informed and follow the advice of the local authorities, including any rest
 				<div class="graph-overlay"></div>
 
 <h4 class="text-center" id="graph1-heading">
-    How are cases of COVID-19 growing in India compared to other countries? <sup><a href="https://ourworldindata.org/coronavirus-source-data">source</a></sup>
+    <?php
+        $value = $miscTranslations['graphs']['archit']['heading'];
+        $elseValue = $miscEnglishTranslations['graphs']['archit']['heading'];
+        echo ($value) ? $value : $elseValue;
+    ?> <sup><a href="https://ourworldindata.org/coronavirus-source-data">
+        <?php
+        $value = $miscTranslations['source'];
+        $elseValue = $miscEnglishTranslations['source'];
+        echo ($value) ? $value : $elseValue;
+         ?>
+    </a></sup>
 </h4>
 
 <div class='tableauPlaceholder' id='viz1585076590223' style='position: relative'>
@@ -718,7 +769,17 @@ Keep informed and follow the advice of the local authorities, including any rest
 				<div class="graph-overlay"></div>
 
 <h4 class="text-center" id="graph2-heading">
-    How much have different countries recovered from the virus? <sup><a href="https://www.worldometers.info/coronavirus/">source</a></sup>
+    <?php
+        $value = $miscTranslations['graphs']['aastha']['heading'];
+        $elseValue = $miscEnglishTranslations['graphs']['aastha']['heading'];
+        echo ($value) ? $value : $elseValue;
+    ?> <sup><a href="https://www.worldometers.info/coronavirus/">
+        <?php
+        $value = $miscTranslations['source'];
+        $elseValue = $miscEnglishTranslations['source'];
+        echo ($value) ? $value : $elseValue;
+         ?>
+    </a></sup>
 </h4>
 
 <div class='tableauPlaceholder' id='viz1585658580412' style='position: relative'>
@@ -763,7 +824,17 @@ Keep informed and follow the advice of the local authorities, including any rest
 				<div class="graph-overlay"></div>
 
 <h4 class="text-center" id="graph1-heading">
-    How many days does it take for cases to double? <sup><a href="https://ourworldindata.org/coronavirus-source-data">source</a></sup>
+    <?php
+        $value = $miscTranslations['graphs']['doubling']['heading'];
+        $elseValue = $miscEnglishTranslations['graphs']['doubling']['heading'];
+        echo ($value) ? $value : $elseValue;
+    ?> <sup><a href="https://ourworldindata.org/coronavirus-source-data">
+        <?php
+        $value = $miscTranslations['source'];
+        $elseValue = $miscEnglishTranslations['source'];
+        echo ($value) ? $value : $elseValue;
+         ?>
+    </a></sup>
 </h4>
 
 <div class='tableauPlaceholder' id='viz1585658448296' style='position: relative'>
@@ -810,8 +881,18 @@ Keep informed and follow the advice of the local authorities, including any rest
 		<footer class="row">
 	<div class="col-12">
 		<p class="text-center text-light py-4 px-2 px-md-4 m-0">
-			Contact us with questions: <a href="mailto:contact@ncovindia.com" class="text-warning">contact@ncovindia.com</a><br>
-			<a href="assets/data/suggested_citation.txt" target="_blank" class="text-warning">Cite us!</a>
+			<?php
+				$value = $miscTranslations['contactus'];
+				$elseValue = $miscEnglishTranslations['contactus'];
+				echo ($value) ? $value : $elseValue;
+			 ?>: <a href="mailto:contact@ncovindia.com" class="text-warning">contact@ncovindia.com</a><br>
+			<a href="assets/data/suggested_citation.txt" target="_blank" class="text-warning">
+				<?php
+					$value = $miscTranslations['citeus'];
+					$elseValue = $miscEnglishTranslations['citeus'];
+					echo ($value) ? $value : $elseValue;
+				 ?>!
+			</a> | <a href="https://creativecommons.org/licenses/by-nc/3.0/igo/" target="_blank" class="text-warning">CC-BY</a> 
 		</p>
 	</div>
 </footer>

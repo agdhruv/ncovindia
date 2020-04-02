@@ -101,13 +101,13 @@ var faqSearch = function () {
 
 var setCurrentLanguage = function (data) {
 	var supportedLanguages = data.supported,
-		$languageSelector = $("#language-selector"),
 		language = getUrlParameter('language');
 
 	if (language) {
 		language = language.toLowerCase();
 	}
 
+	// ### this will not happen anymore as being handled by PHP now.
 	// if the value was an unsupported language
 	// or if there was no "language" parameter at all
 	if (!supportedLanguages.includes(language)) {

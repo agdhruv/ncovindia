@@ -1,21 +1,22 @@
 {
 	"title": {
-		"text": "COVID-19"
+		"text": "कोविद-१९"
 	},
 	"advice": {
-		"text": "Advice",
+		"text": "सल्ला",
 		"href": "#advice"
 	},
 	"faqs": {
 		"text": "FAQs",
+		"fullform": "सतत विचारले जाणारे प्रश्न",
 		"href": "#faqs"
 	},
 	"graphs": {
-		"text": "Graphs",
+		"text": "आलेख",
 		"href": "#graphs"
 	},
 	"more": {
-		"text": "More...",
+		"text": "अधिक...",
 		"href": "#"
 	}
 }
