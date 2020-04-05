@@ -82,12 +82,12 @@ var faqSearch = function () {
     	var $seeAllButton = $('.faq-seeall-btn');
 
     	// if searchterm is empty and FAQs are expanded, collapse them
-    	if (!searchTerm && $seeAllButton.text() == 'Show Less') {
+    	if (!searchTerm && !$seeAllButton.hasClass('collapsed')) {
     		$('.faq-seeall-btn').click();
     	}
 
     	// if all FAQs are collapsed, show all, and then run the search
-    	if(searchTerm && $seeAllButton.text() == "Show All") {
+    	if(searchTerm && $seeAllButton.hasClass('collapsed')) {
     		$('.faq-seeall-btn').click();
     	}
     	
@@ -129,7 +129,7 @@ var simpleEventHandlers = function () {
 	// toggle value of faq "See All button"
 	$(".faq-seeall-btn").click(function () {
 		var $this = $(this);
-		var value = ($this.text() == "Show All") ? "Show Less" : "Show All";
+		var value = ($this.text().trim() == MISC_TRANSLATIONS.showall) ? MISC_TRANSLATIONS.showless : MISC_TRANSLATIONS.showall;
 		$this.text(value);
 	});
 };

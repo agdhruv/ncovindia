@@ -1,0 +1,22 @@
+{
+	"title": {
+		"text": "କୋରୋନା/କୋଭିଡ - ୧୯"
+	},
+	"advice": {
+		"text": "ପରାମର୍ଶ",
+		"href": "#advice"
+	},
+	"faqs": {
+		"text": "FAQs",
+		"fullform": "ସାଧାରଣ ପ୍ରଶ୍ନାବଳୀ",
+		"href": "#faqs"
+	},
+	"graphs": {
+		"text": "ଲେଖାଚିତ୍ର",
+		"href": "#graphs"
+	},
+	"more": {
+		"text": "ଇତ୍ୟାଦି...",
+		"href": "#"
+	}
+}

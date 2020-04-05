@@ -1,0 +1,22 @@
+{
+	"title": {
+		"text": "Covid-19"
+	},
+	"advice": {
+		"text": "পরামর্শ",
+		"href": "#advice"
+	},
+	"faqs": {
+		"text": "FAQs",
+		"fullform": "সাধারণত জিজ্ঞেস করা প্রশ্ন",
+		"href": "#faqs"
+	},
+	"graphs": {
+		"text": "গ্রাফ",
+		"href": "#graphs"
+	},
+	"more": {
+		"text": "আরো তথ্য...",
+		"href": "#"
+	}
+}

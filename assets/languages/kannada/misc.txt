@@ -12,7 +12,6 @@
 	"shoutmessage": "Obey the lockdown. Stay at home. Don't hoard.",
 	"source": "Source",
 	"showall": "Show All",
-	"showless": "Show Less",
 	"graphs": {
 		"archit": {
 			"heading": "How are cases of COVID-19 growing in India compared to other countries?"

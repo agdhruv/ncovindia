@@ -1,14 +1,29 @@
 {
-	"whatisthis": "This is an effort to fight misinformation surrounding COVID-19.",
-	"disclaimer": "We have worked hard to collate reliable data, but you should talk to your doctor for medical advice. Refer to <a href='https://www.mohfw.gov.in/' target='_blank' class='text-warning'>government guidelines</a> and call 1075 for help.",
-	"india": "India",
-	"world": "World",
-	"cases": "cases",
-	"deaths": "deaths",
-	"yesterday": "Yesterday",
-	"today": "Today",
-	"tomorrow": "Tomorrow",
-	"unverified": "Unverified",
-	"shoutmessage": "Obey the lockdown. Stay at home. Don't hoard.",
-	"source": "Source"
+	"whatisthis": "कोविद - १९ विषयी सत्यापित माहिती पसरवण्याचा हा प्रयत्न आहे.",
+	"disclaimer": "आम्ही विश्वासार्ह डेटा एकत्रित करण्यासाठी कठोर परिश्रम घेतले आहेत परंतु आपण वैद्यकीय सल्ल्यासाठी आपल्या डॉक्टरांशी बोलले पाहिजे. <a href='https://www.mohfw.gov.in/' target='_blank' class='text-warning'>सरकारच्या मार्गदर्शक सूचनांचा</a> संदर्भ घ्या आणि मदतीसाठी १०७५ वर कॉल करा.",
+	"india": "भारत",
+	"world": "विश्व",
+	"cases": "प्रकरणे",
+	"deaths": "मृत्यू",
+	"yesterday": "काल",
+	"today": "आज",
+	"tomorrow": "उद्या",
+	"unverified": "असत्यापित",
+	"shoutmessage": "लॉकडाउनचे पालन करा. घरीच राहा. आपल्या गरजेपेक्षा जास्त खरेदी करू नका.",
+	"source": "Source",
+	"showall": "सगळं दाखवा",
+	"showless": "कमी दाखवा",
+	"graphs": {
+		"archit": {
+			"heading": "भारतचे कोविड -१९ प्रकरण इतर देशांच्या तुलनेत कसे वाढत आहे??"
+		},
+		"aastha": {
+			"heading": "वेगवेगळ्या देश या वायर्सपासून किती बरे झाले आहे?"
+		},
+		"doubling": {
+			"heading": "प्रकरणे दुप्पट होण्यासाठी किती दिवस लागतात?"
+		}
+	},
+	"contactus": "प्रश्नांसह आमच्याशी संपर्क साधा",
+	"citeus": "आम्हाला संदर्भ द्या"
 }

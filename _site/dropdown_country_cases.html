@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+<body>
+    <select id="select_button">
+
+    </select>
+    <div id="graph">
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js">
+    </script>
+    <script>
+        var margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 2000 - margin.left - margin.right,
+    height = 766 - margin.top - margin.bottom;
+    const svg = d3.select("#graph")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv("total_cases.csv", 
+    function(d) {
+        if(d3.timeParse("%Y-%m-%d")(d.date) > d3.timeParse("%Y-%m-%d")("2020-02-01")) // only show feb onwards
+        {
+
+            result = {
+                date: d3.timeParse("%Y-%m-%d")(d.date),
+            }
+            for(element in d)
+            {
+                if(element != "date")
+                {
+                    if(d[element] == null)
+                        result[element] = 0;
+                    else
+                        result[element] = d[element];
+                }
+            }
+            return result;
+        }
+    }).then(
+        function(data) {
+            var groups = d3.keys(data[0]);
+            groups.shift();
+            var current_country = "India";
+
+            d3.select("#select_button")
+            .selectAll()
+            .data(groups)
+            .enter()
+            .append('option')
+            .text(function(d) { return d; })
+            .attr("value", function(d) { return d;})
+            .property("selected", function(d) { return d === "India" });
+
+
+
+            var x = d3.scaleTime()
+            .domain(d3.extent(data, function(d) {
+                return d.date;
+            }))
+            .range([0, width]);
+
+            let x_axis = svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+            var y = d3.scaleLinear()
+            .domain([0, d3.max(data, function(d) { return +d[current_country]})])
+            .range([height, 0]);
+
+            let y_axis = svg.append("g")
+                .call(d3.axisLeft(y));
+
+            console.log(data);
+
+            let line = svg.append("path")
+                .datum(data)
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 5)
+                .attr("d", d3.line()
+                .x(function(d) { return x(d.date)})
+                .y(function(d) { return y(d[current_country])})
+                );
+
+            let circles = svg.selectAll("circle")
+                .data(data)
+                .enter()
+                .append("circle")
+                .attr("fill", "steelblue")
+                .attr("stroke","black")
+                .attr("r", "5")
+                .attr("cx", function(d) {
+                    return x(d.date);
+                })
+                .attr("cy", function(d) {
+                    return y(d[current_country]);
+                });
+
+                
+            
+            const points = document.getElementsByTagName("circle");
+
+            const mouse_over = svg.append("g")
+            .attr("class", "mouse-over-effects");
+
+            mouse_over.append("path")
+            .attr("class", "mouse-line")
+            .style("stroke", "black")
+            .style("opacity", "0");
+
+            mouse_over.append("text")
+            .attr("class", "tooltip-text")
+            .style("opacity", 0)
+            .attr("font-size", "20px");
+
+            mouse_over.append("svg:rect")
+            .attr("width", width)
+            .attr("height", height)
+            .style("opacity", 0)
+            .on('mouseover', function() {
+                d3.select('.mouse-line')
+                .style("opacity", 1);
+                d3.select('.tooltip-text')
+                .style("opacity", 1);
+            })
+            .on('mouseout', function() {
+                d3.select('.mouse-line')
+                .style("opacity", 0);
+                d3.select(".tooltip-text")
+                .style("opacity", 0);
+                d3.selectAll("circle")
+                .attr("r", "5")
+                .attr("fill", "steelblue");
+            })
+            .on('mousemove', function() {
+                var mouse = d3.mouse(this);
+                const bisect = d3.bisector(function(d) {
+                    return d.date
+                }).left;
+                const date = x.invert(mouse[0]);
+                var index = bisect(data, date, 1);
+                const left_candidate = index-1;
+                const right_candidate = index;
+                const closest_index = date - data[left_candidate].date > data[right_candidate].date - date ? right_candidate : left_candidate;
+
+                const closest_data_point = data[closest_index];
+
+                const x_value = x(closest_data_point.date);
+                const y_value = closest_data_point[current_country];
+
+                d3.selectAll("circle")
+                .attr("r", "5")
+                .attr("fill", "steelblue"); // Little bit of a hack, first we clean up all previous circles that might have been red. 
+                
+                d3.select(points[closest_index]) // Then we color the current one red. This is slightly inefficient because we should just keep the "last visited" in a variable and only clean that one but eh who cares. Something to remember if efficiency becomes an issue. I suspect, though, that the asymptocity of curre
+                .attr("fill", "red")
+                .attr("r", "10");
+                // We'll use the y_value for the tooltip text and
+                // the y_coordinate to figure out _where_ to show it
+                const y_coordinate = y(y_value);
+                const y_start = y(y.invert(0));
+                const y_end = height;
+                d3.select(".mouse-line")
+                .attr("d", function() {
+                    var d = "M" + x_value + " " + y_start + "L " + x_value + " " + y_end;
+                    return d;
+                })
+                .style("opacity", 1);
+
+                var tooltip_x_value = x_value;
+                var tooltip_y_value = y_coordinate - 30;
+                if(closest_index > points.length/2) {
+                    tooltip_x_value -=75;
+                }
+                else {
+                    tooltip_x_value += 5;
+                }
+
+                d3.select(".tooltip-text")
+                .text(function() {
+                    return y_value;
+                })
+                .style("opacity", 1)
+                .attr("transform", "translate(" + tooltip_x_value + "," + tooltip_y_value + ")");
+            })
+            
+            function update(selected_country) {
+                var country_data = data.map(function(d) {
+                    return {
+                        date: d.date,
+                        value: d[selected_country],
+                    };
+                });
+
+                console.log(country_data);
+
+                var x = d3.scaleTime()
+                    .domain(d3.extent(country_data, function(d) {
+                        return d.date;
+                    }))
+                    .range([0, width]);
+
+                x_axis
+                    .transition()
+                    .duration(1000)
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x));
+
+                var y = d3.scaleLinear()
+                .domain([0, d3.max(country_data, function(d) { return +d.value})])
+                .range([height, 0]);
+
+                y_axis
+                    .transition()
+                    .duration(1000)
+                    .call(d3.axisLeft(y));
+
+                line.datum(country_data)
+                .transition()
+                .duration(1000)
+                .attr("d", d3.line()
+                .x(function(d) {
+                    return x(d.date);
+                })
+                .y(function(d) 
+                {
+                    return y(d.value);
+                }))
+                .attr("stroke", "steelblue");
+
+                svg.selectAll("circle")
+                    .data(country_data)
+                    .transition()
+                    .duration(1000)
+                    .attr("fill", "steelblue")
+                    .attr("stroke","black")
+                    .attr("r", "5")
+                    .attr("cx", function(d) {
+                        console.log("HI:");
+                        return x(d.date);
+                    })
+                    .attr("cy", function(d) {
+                        return y(d.value);
+                    });
+
+                current_country = selected_country;
+                
+            }
+
+            d3.select("#select_button").on("change", function(d) {
+                var selected_country = d3.select(this).property("value");
+                update(selected_country);
+            });
+        }
+    );
+
+    </script>
+</body>

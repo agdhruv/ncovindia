@@ -1,8 +1,18 @@
 <footer class="row">
 	<div class="col-12">
 		<p class="text-center text-light py-4 px-2 px-md-4 m-0">
-			Contact us with questions: <a href="mailto:contact@ncovindia.com" class="text-warning">contact@ncovindia.com</a><br>
-			<a href="assets/data/suggested_citation.txt" target="_blank" class="text-warning">Cite us!</a>
+			<?php
+				$value = $miscTranslations['contactus'];
+				$elseValue = $miscEnglishTranslations['contactus'];
+				echo ($value) ? $value : $elseValue;
+			 ?>: <a href="mailto:contact@ncovindia.com" class="text-warning">contact@ncovindia.com</a><br>
+			<a href="assets/data/suggested_citation.txt" target="_blank" class="text-warning">
+				<?php
+					$value = $miscTranslations['citeus'];
+					$elseValue = $miscEnglishTranslations['citeus'];
+					echo ($value) ? $value : $elseValue;
+				 ?>!
+			</a> | <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="text-warning">CC-BY</a> 
 		</p>
 	</div>
 </footer>

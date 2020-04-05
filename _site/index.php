@@ -453,16 +453,6 @@ $navTranslations = loadJSONFile($filePath);
 				<input class="form-control" type="text" placeholder="Search" id="faq-search-bar">
 			</div>
 
-			<div class="col-12 col-md-8 offset-md-2 mb-4 text-right">
-				<button class="btn btn-primary faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">
-					<?php
-					$value = $miscTranslations['showall'];
-					$elseValue = $miscEnglishTranslations['showall'];
-					echo ($value) ? $value : $elseValue;
-					 ?>
-				</button>
-			</div>
-
 			<div class="col-12 col-md-8 offset-md-2">
 				<script id="faqs-template" type="text/x-handlebars-template">
 	
@@ -501,6 +491,16 @@ $navTranslations = loadJSONFile($filePath);
 
 <div class="accordion" id="faq-accordion">
 </div>
+			</div>
+
+			<div class="col-12 col-md-8 offset-md-2 mt-4 text-center">
+				<button class="btn btn-primary btn-lg faq-seeall-btn" type="button" data-toggle="collapse" data-target="#collapse-faqs" aria-expanded="false" aria-controls="collapse-faqs">
+					<?php
+					$value = $miscTranslations['showall'];
+					$elseValue = $miscEnglishTranslations['showall'];
+					echo ($value) ? $value : $elseValue;
+					 ?>
+				</button>
 			</div>
 
 			
@@ -892,7 +892,7 @@ Keep informed and follow the advice of the local authorities, including any rest
 					$elseValue = $miscEnglishTranslations['citeus'];
 					echo ($value) ? $value : $elseValue;
 				 ?>!
-			</a> | <a href="https://creativecommons.org/licenses/by-nc/3.0/igo/" target="_blank" class="text-warning">CC-BY</a> 
+			</a> | <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="text-warning">CC-BY</a> 
 		</p>
 	</div>
 </footer>

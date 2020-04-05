@@ -1,7 +1,17 @@
 <div class="graph-overlay"></div>
 
 <h4 class="text-center" id="graph1-heading">
-    How many days does it take for cases to double? <sup><a href="https://ourworldindata.org/coronavirus-source-data">source</a></sup>
+    <?php
+        $value = $miscTranslations['graphs']['doubling']['heading'];
+        $elseValue = $miscEnglishTranslations['graphs']['doubling']['heading'];
+        echo ($value) ? $value : $elseValue;
+    ?> <sup><a href="https://ourworldindata.org/coronavirus-source-data">
+        <?php
+        $value = $miscTranslations['source'];
+        $elseValue = $miscEnglishTranslations['source'];
+        echo ($value) ? $value : $elseValue;
+         ?>
+    </a></sup>
 </h4>
 
 <div class='tableauPlaceholder' id='viz1585658448296' style='position: relative'>

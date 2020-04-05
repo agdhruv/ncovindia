@@ -157,6 +157,24 @@ sup {
 	font-size: .3rem;
 }
 
+/* barun's d3 graphs */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
 @media screen and (max-width: 767px) {
 	nav form {
 		margin-left: auto;
