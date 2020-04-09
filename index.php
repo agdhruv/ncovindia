@@ -117,15 +117,25 @@ $navTranslations = loadJSONFile($filePath);
 				</h1>
 			</div>
 
-			<div class="col-12 col-md-8 offset-md-2 mb-4">
+			<!-- <div class="col-12 col-md-8 offset-md-2 mb-4">
 				{% include graphs/archit.html %}
+			</div> -->
+			<div class="col-12 col-md-10 offset-md-1 mb-4">
+				{% include graphs/d3_greater_60.html %}
 			</div>
-			<div class="col-12 col-md-8 offset-md-2 mb-4">
+			<div class="col-12 col-md-10 offset-md-1 mb-4">
+				{% include graphs/d3_world_total_cases.html %}
+			</div>
+
+			<div class="col-12 col-md-10 offset-md-1 mb-4">
+				{% include graphs/d3_doubling_days.html %}
+			</div>
+			<!-- <div class="col-12 col-md-8 offset-md-2 mb-4">
 				{% include graphs/aastha.html %}
 			</div>
 			<div class="col-12 col-md-8 offset-md-2">
 				{% include graphs/doubling.html %}
-			</div>
+			</div> -->
 
 		</section>
 		
@@ -137,6 +147,8 @@ $navTranslations = loadJSONFile($filePath);
 	{% include imports/jquery.html %}
 	{% include imports/bootstrap_js.html %}
 	{% include imports/handlebars_js.html %}
+	{% include imports/d3_js.html %}
 	<script src="assets/js/index.js"></script>
+	<script src="assets/js/initgraphs.js"></script>
 </body>
 </html>

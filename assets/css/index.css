@@ -158,21 +158,50 @@ sup {
 }
 
 /* barun's d3 graphs */
-.axis path,
-.axis line {
+div.d3-graph-container .axis path, div.d3-graph-container .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-.x.axis path {
+div.d3-graph-container .x.axis path {
   display: none;
 }
 
-.line {
+div.d3-graph-container .line {
   fill: none;
   stroke: steelblue;
   stroke-width: 1.5px;
+}
+
+div.d3-graph {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+#graph_d3_greater_60-checkboxes, #graph_d3_doubling_days-checkboxes {
+	width: 100%;
+	overflow-x: hidden;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+
+	#graph_d3_greater_60-checkboxes .country-60-checkbox,
+	#graph_d3_doubling_days-checkboxes .country-checkbox {
+		position: relative;
+		margin-left: 5px;
+		margin-right: 10px;
+		top: -3px;
+	}
+
+	div.d3-graph text.temp-tooltip {
+		font-size: 1.4rem;
+	}
+
+.cursor-pointer {
+	cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -202,6 +231,11 @@ sup {
 
 	section.index-section.graphs div.graph-overlay {
 		display: flex;
+	}
+
+	/* d3 graphs */
+	#graph_d3_greater_60-checkboxes .country-60-checkbox, #graph_d3_doubling_days-checkboxes .country-checkbox {
+		top: 0px;
 	}
 }
 

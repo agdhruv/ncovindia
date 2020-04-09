@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+#checkboxes {
+    flex-grow: 1;
+}
+#graph {
+    flex-grow: 5;
+}
+
+</style>
+<body>
+    <div class="d3-graph-container">
+        <div id="graph_d3_doubling_days" class="d3-graph">
+        </div>
+        <div id="graph_d3_doubling_days-checkboxes"></div>
+    </div>
+
+    <div class="d3-graph-container">
+        <div id="graph_d3_greater_60" class="d3-graph">
+        </div>
+        <div id="graph_d3_greater_60-checkboxes"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js">
+    </script>
+    <script src="initGraphs.js"></script>
+</body>

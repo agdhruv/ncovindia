@@ -187,6 +187,9 @@ $navTranslations = loadJSONFile($filePath);
 		</p>
 		<p class="text-center m-0 px-2 px-md-4 text-light lead">
 			{{{whatisthis}}}
+			<a href="https://twitter.com/ncovindia" target="_blank">
+				<i class="fab fa-twitter" style="color: #00acee;"></i>
+			</a>
 		</p>
 		<p class="text-center text-light mb-4">
 			<small>
@@ -574,99 +577,10 @@ $navTranslations = loadJSONFile($filePath);
 		<div class="col-12 col-md-9">
 		  	<div class="tab-content bg-white p-4" id="advice-tabContent">
 				<div class="tab-pane fade show active" id="list-symptoms" role="tabpanel" aria-labelledby="list-symptoms-list">
-		    		<p>Fever, a dry cough, fatigue and difficulty breathing or shortness of breath.</p>
+		    		<p>Fever, a dry cough, fatigue, and difficulty breathing or shortness of breath. Sneezing is usually relatively mild/rare.</p>
 <p>The symptoms take 2-14 days to show up.</p>
-
-<div class="table-responsive" id="symptoms-table-container">
-	<table class="table mt-4 table-striped table-bordered table-sm">
-	    <thead>
-	        <tr>
-	            <th>Symptom</th>
-	            <th>COVID-19</th>
-	            <th>Common Cold</th>
-	            <th>Flu</th>
-	            <th>Allergies</th>
-	        </tr>
-	    </thead>
-	    <tbody>
-	        <tr>
-	            <td>Sneezing</td>
-	            <td>Mild</td>
-	            <td>Common</td>
-	            <td>No</td>
-	            <td>Common</td>
-	        </tr>
-	        <tr>
-	            <td>Runny nose</td>
-	            <td>Rare</td>
-	            <td>Common</td>
-	            <td>Sometimes</td>
-	            <td>Common</td>
-	        </tr>
-	        <tr>
-	            <td>Fever</td>
-	            <td>Common</td>
-	            <td>Rare</td>
-	            <td>Common</td>
-	            <td>Sometimes</td>
-	        </tr>
-	        <tr>
-	            <td>Dry Cough</td>
-	            <td>Common</td>
-	            <td>Mild</td>
-	            <td>Common</td>
-	            <td>Sometimes</td>
-	        </tr>
-	        <tr>
-	            <td>Shortness of breath</td>
-	            <td>Common</td>
-	            <td>No</td>
-	            <td>No</td>
-	            <td>Common</td>
-	        </tr>
-	        <tr>
-	            <td>Headaches</td>
-	            <td>Sometimes</td>
-	            <td>Rare</td>
-	            <td>Common</td>
-	            <td>Sometimes</td>
-	        </tr>
-	        <tr>
-	            <td>Aches and pains</td>
-	            <td>Sometimes</td>
-	            <td>Common </td>
-	            <td>Common</td>
-	            <td>No</td>
-	        </tr>
-	        <tr>
-	            <td>Sore throat</td>
-	            <td>Sometimes</td>
-	            <td>Common</td>
-	            <td>Common</td>
-	            <td>No</td>
-	        </tr>
-	        <tr>
-	            <td>Fatigue</td>
-	            <td>Sometimes</td>
-	            <td>Sometimes</td>
-	            <td>Common</td>
-	            <td>Sometimes</td>
-	        </tr>
-	        <tr>
-	            <td>Diarrhea</td>
-	            <td>Rare</td>
-	            <td>No</td>
-	            <td>Sometimes</td>
-	            <td>No</td>
-	        </tr>
-	    </tbody>
-	</table>
-</div>
-
 <p>These symptoms are usually mild. Some don't develop any symptoms; about 80% recover from the disease without needing treatment.</p>
-
 <p>Around 1 in 6 become seriously ill and develop difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems, or diabetes, are more susceptible.</p>
-
 		    	</div>
 		    	<div class="tab-pane fade" id="list-adveveryone" role="tabpanel" aria-labelledby="list-adveveryone-list">
 		    		You should:
@@ -711,10 +625,10 @@ Keep informed and follow the advice of the local authorities, including any rest
 				</h1>
 			</div>
 
-			<div class="col-12 col-md-8 offset-md-2 mb-4">
+			<!-- <div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
-<h4 class="text-center" id="graph1-heading">
+<h4 class="text-center">
     <?php
         $value = $miscTranslations['graphs']['archit']['heading'];
         $elseValue = $miscEnglishTranslations['graphs']['archit']['heading'];
@@ -764,11 +678,60 @@ Keep informed and follow the advice of the local authorities, including any rest
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
+			</div> -->
+			<div class="col-12 col-md-10 offset-md-1 mb-4">
+				<h4 class="text-center">
+    <?php
+        $value = $miscTranslations['graphs']['archit']['heading'];
+        $elseValue = $miscEnglishTranslations['graphs']['archit']['heading'];
+        echo ($value) ? $value : $elseValue;
+    ?> <sup><a href="https://ourworldindata.org/coronavirus-source-data">
+        <?php
+        $value = $miscTranslations['source'];
+        $elseValue = $miscEnglishTranslations['source'];
+        echo ($value) ? $value : $elseValue;
+         ?>
+    </a></sup>
+</h4>
+
+<div class="d3-graph-container">
+    <div id="graph_d3_greater_60" class="d3-graph">
+    </div>
+    <div id="graph_d3_greater_60-checkboxes"></div>
+</div>
 			</div>
-			<div class="col-12 col-md-8 offset-md-2 mb-4">
+			<div class="col-12 col-md-10 offset-md-1 mb-4">
+				<div class="d3-graph-container">
+    <div id="graph_d3_world_total1" class="d3-graph">
+    </div>
+</div>
+			</div>
+
+			<div class="col-12 col-md-10 offset-md-1 mb-4">
+				<h4 class="text-center">
+    <?php
+        $value = $miscTranslations['graphs']['doubling']['heading'];
+        $elseValue = $miscEnglishTranslations['graphs']['doubling']['heading'];
+        echo ($value) ? $value : $elseValue;
+    ?> <sup><a href="https://ourworldindata.org/coronavirus-source-data">
+        <?php
+        $value = $miscTranslations['source'];
+        $elseValue = $miscEnglishTranslations['source'];
+        echo ($value) ? $value : $elseValue;
+         ?>
+    </a></sup>
+</h4>
+
+<div class="d3-graph-container">
+    <div id="graph_d3_doubling_days" class="d3-graph">
+    </div>
+    <div id="graph_d3_doubling_days-checkboxes"></div>
+</div>
+			</div>
+			<!-- <div class="col-12 col-md-8 offset-md-2 mb-4">
 				<div class="graph-overlay"></div>
 
-<h4 class="text-center" id="graph2-heading">
+<h4 class="text-center">
     <?php
         $value = $miscTranslations['graphs']['aastha']['heading'];
         $elseValue = $miscEnglishTranslations['graphs']['aastha']['heading'];
@@ -823,7 +786,7 @@ Keep informed and follow the advice of the local authorities, including any rest
 			<div class="col-12 col-md-8 offset-md-2">
 				<div class="graph-overlay"></div>
 
-<h4 class="text-center" id="graph1-heading">
+<h4 class="text-center">
     <?php
         $value = $miscTranslations['graphs']['doubling']['heading'];
         $elseValue = $miscEnglishTranslations['graphs']['doubling']['heading'];
@@ -874,7 +837,7 @@ Keep informed and follow the advice of the local authorities, including any rest
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
-			</div>
+			</div> -->
 
 		</section>
 		
@@ -907,6 +870,9 @@ Keep informed and follow the advice of the local authorities, including any rest
 	<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
 	<!-- import handlebars -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+	<!-- import d3 -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="assets/js/index.js"></script>
+	<script src="assets/js/initgraphs.js"></script>
 </body>
 </html>

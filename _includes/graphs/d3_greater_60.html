@@ -1,0 +1,19 @@
+<h4 class="text-center">
+    <?php
+        $value = $miscTranslations['graphs']['archit']['heading'];
+        $elseValue = $miscEnglishTranslations['graphs']['archit']['heading'];
+        echo ($value) ? $value : $elseValue;
+    ?> <sup><a href="https://ourworldindata.org/coronavirus-source-data">
+        <?php
+        $value = $miscTranslations['source'];
+        $elseValue = $miscEnglishTranslations['source'];
+        echo ($value) ? $value : $elseValue;
+         ?>
+    </a></sup>
+</h4>
+
+<div class="d3-graph-container">
+    <div id="graph_d3_greater_60" class="d3-graph">
+    </div>
+    <div id="graph_d3_greater_60-checkboxes"></div>
+</div>
