@@ -211,74 +211,92 @@ div.d3-graph-container select.d3_country_dropdown {
 }
 
 
-.world-map-names {
-    fill: none;
-    stroke: #fff;
-    stroke-linejoin: round;
-  }
-  
-  /* Tooltip CSS */
-  .d3-tip {
-    line-height: 1.5;
-    font-weight: 400;
-    font-family:"avenir next", Arial, sans-serif;
-    padding: 6px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #FFA500;
-    border-radius: 1px;
+#world-map-container .country {
+  fill: #ccc;
+  stroke: #666;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+}
+
+#world-map-container .graticule {
+  fill: none;
+  stroke: #666;
+  stroke-width: .5px;
+  stroke-dasharray: 2,2;
+}
+
+#world-map-container .outline {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+#world-map-container .foreground {
+  fill: none;
+}         
+          
+#world-map-container .key {
+  font: 10px sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#world-map-container .rotsel {
     pointer-events: none;
-  }
-
-  /* Creates a small triangle extender for the tooltip */
-.d3-tip:after {      
-	box-sizing: border-box;
-	display: inline;
-	font-size: 8px;
-	width: 100%;
-	line-height: 1.5;
-	color: rgba(0, 0, 0, 0.6);
-	position: absolute;
-	pointer-events: none;
+}
+#world-map-container .rotbox {
+    stroke: #000;
+    stroke-width: 1px;
+    fill: none;
+    pointer-events: all;
 }
 
-/* Northward tooltips */
-.d3-tip.n:after {
-	content: "\25BC";
-	margin: -1px 0 0 0;
-	top: 100%;
-	left: 0;
-	text-align: center;
+#world-map-container .caption {
+  font: 12px sans-serif;
+  font-weight: bold;
 }
 
-/* Eastward tooltips */
-.d3-tip.e:after {
-	content: "\25C0";
-	margin: -4px 0 0 0;
-	top: 50%;
-	left: -8px;
+#world-map-container .key path {
+  display: none;
 }
 
-/* Southward tooltips */
-.d3-tip.s:after {
-	content: "\25B2";
-	margin: 0 0 1px 0;
-	top: -8px;
-	left: 0;
-	text-align: center;
+#world-map-container .key line {
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
 
-/* Westward tooltips */
-.d3-tip.w:after {
-	content: "\25B6";
-	margin: -4px 0 0 -1px;
-	top: 50%;
-	left: 100%;
+#world-map-container .sea {
+    fill: rgba(166,206,245,.5);
 }
 
-.details{
-	color: white;
+#world-map-container .tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+  font: 11px sans-serif;
+  background: #ddd;
+  border: solid 1px #aaa;
+  border-radius: 8px;
+  pointer-events: none;
 }
 
+#world-map-container {
+    position: relative;
+}
+
+#world-map-container-footer {
+    position: absolute;
+    font: 12px sans-serif;
+    bottom: 22px;
+    right: 150px;
+    z-index: 1;
+    text-align: right;
+    visibility: hidden;
+}
+
+#world-map-container .hint {
+    color: #999;
+}
 
 @media screen and (max-width: 767px) {
 	nav form {

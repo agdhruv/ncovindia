@@ -191,6 +191,10 @@ $navTranslations = loadJSONFile($filePath);
 				<i class="fab fa-twitter" style="color: #00acee;"></i>
 			</a>
 		</p>
+		<p class="text-center mx-0 mt-4 mb-0">
+			<iframe src="globe/globe.html" frameborder="0" height="300px" width="100%"></iframe>
+		</p>
+		
 		<p class="text-center text-light mb-4">
 			<small>
 				{{{disclaimer}}}
@@ -328,117 +332,6 @@ $navTranslations = loadJSONFile($filePath);
 </script>
 
 <section class="row index-section about-us">
-	
-	<!-- <div class="col-12">
-		<p class="text-center m-0 px-2 px-md-4 text-light lead">
-			This is an effort to fight misinformation surrounding COVID-19 by students, faculty, and alumni of <a href="https://ashoka.edu.in" target="_blank" class="text-warning">Ashoka University</a>.
-		</p>
-		<p class="text-center text-light mb-4">
-			<small>
-				We have worked hard to collate reliable data, but you should talk to your doctor for medical advice. Refer to <a href="https://www.mohfw.gov.in/" target="_blank" class="text-warning">government guidelines</a> and call 1075 for help.
-			</small>
-		</p>
-	</div>
-
-	<div class="col-12">
-		<div class="row" id="ticker-container">
-			<div class="col-12 col-sm-5 offset-sm-1 col-md-3 offset-md-3 mb-3 mb-sm-0">
-				<div class="card border-danger" id="ticker-india">
-					<div class="card-header">
-						India Cases
-					</div>
-					<div class="card-body">
-						<div class="row no-gutters">
-							<div class="col yesterday">
-								<div class="ticker-number cases">
-									519
-								</div>
-								<div class="ticker-day">
-									Yesterday
-								</div>
-								<div class="ticker-number deaths">
-									-
-								</div>
-							</div>
-							<div class="col today">
-								<div class="ticker-number cases">
-									562
-								</div>
-								<div class="ticker-day">
-									Today
-								</div>
-								<div class="ticker-number deaths">
-									-
-								</div>
-							</div>
-							<div class="col unverified">
-								<div class="ticker-number cases">
-									612
-								</div>
-								<div class="ticker-day">
-									Unverified
-								</div>
-								<div class="ticker-number deaths">
-									-
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card-header">
-						India Deaths
-					</div>
-				</div>
-			</div>
-
-			<div class="col-12 col-sm-5 col-md-3">
-				<div class="card border-danger" id="ticker-world">
-					<div class="card-header">
-						World Cases
-					</div>
-					<div class="card-body">
-						<div class="row no-gutters">
-							<div class="col yesterday">
-								<div class="ticker-number cases">
-									-
-								</div>
-								<div class="ticker-day">
-									Yesterday
-								</div>
-								<div class="ticker-number deaths">
-									-
-								</div>
-							</div>
-							<div class="col today">
-								<div class="ticker-number cases">
-									-
-								</div>
-								<div class="ticker-day">
-									Today
-								</div>
-								<div class="ticker-number deaths">
-									-
-								</div>
-							</div>
-							<div class="col unverified">
-								<div class="ticker-number cases">
-									-
-								</div>
-								<div class="ticker-day">
-									Unverified
-								</div>
-								<div class="ticker-number deaths">
-									-
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card-header">
-						World Deaths
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
 
 </section>
 
@@ -877,20 +770,10 @@ Keep informed and follow the advice of the local authorities, including any rest
 	</div>
 	
 	<!-- rest of js -->
-		<!-- import jquery -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-		<!-- import bootstrap js -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-	<!-- import handlebars -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
-	<!-- import d3 -->
-<script src="https://d3js.org/d3.v5.min.js"></script>
-
-<script src="assets/js/mapmap_files/topojson.js"></script>
-<script src="assets/js/mapmap_files/d3-geo-projection.js"></script>
-<script src="assets/js/mapmap_files/d3-tip.js"></script>
-<script src="assets/js/mapmap_files/babel.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="assets/js/index.js"></script>
 	<script src="assets/js/initgraphs.js"></script>
 </body>

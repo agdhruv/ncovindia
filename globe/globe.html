@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <style>
+    body {
+      margin: 0;
+      text-align: center;
+    }
+    .point-mouse {
+      fill: steelblue;
+    }
+    #glb-rotation {
+      display: none;
+      position: absolute;
+      font-family: monospace;
+      padding: 10px;
+      background: rgba(255, 255, 255, .5);
+    }
+    #glb-rotation input {
+      width: 300px;
+    }
+    #glb-tooltip {
+      height: 40px;
+      display: block;
+      background: transparent;
+      margin: auto;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+    .glb-blue {
+      fill:blue!important;
+      stroke: black!important;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="glb-rotation"></div>
+    <div id="glb-main"></div>
+    <div id="glb-tooltip">Hover over the globe!</div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://unpkg.com/versor@0.0.3/build/versor.min.js"></script>
+    <script>
+
+const colourBuckets = d3.scaleThreshold()
+  .domain([
+    0,
+    3,
+    6,
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    27
+  ])
+  .range([
+    'rgb(255, 230, 230)',
+    'rgb(255, 204, 204)', 
+    'rgb(255, 179, 179)', 
+    'rgb(255, 128, 128)',
+    'rgb(255, 102, 102)',
+    'rgb(255, 77, 77)',
+    'rgb(255, 0, 0)',
+    'rgb(204, 26, 26)',
+    'rgb(128, 0, 0)',
+    'rgb(102, 0, 0)'
+  ]);
+
+var angles = ["λ", "φ", "γ"];
+angles.forEach(function(angle, index){
+  d3.select("#glb-rotation").append("div")
+    .attr("class", "angle-label angle-label-" + index)
+    .html(angle + ": <span>0</span>")
+
+  d3.select("#glb-rotation").append("input")
+    .attr("type", "range")
+    .attr("class", "angle angle-" + index)
+    .attr("min", "-180")
+    .attr("max", "180")
+    .attr("step", "1")
+    .attr("value", "0");
+});
+
+var width = window.innerWidth, height = window.innerHeight - 50;
+
+var svg = d3.select("#glb-main").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var projection = d3.geoOrthographic()
+    .scale(d3.min([width / 2, height / 2]))
+    .translate([width / 2, height / 2])
+    .precision(1);
+
+var path = d3.geoPath()
+    .projection(projection);
+
+var graticule = d3.geoGraticule()
+    .step([10, 10]);
+
+var rCurrent = [0,0,0];
+
+var v0, // Mouse position in Cartesian coordinates at start of drag gesture.
+  r0, // Projection rotation as Euler angles at start.
+  q0; // Projection rotation as versor at start.
+
+svg.append("path")
+    .datum(graticule)
+    .attr("class", "graticule")
+    .attr("d", path)
+    .style("fill", "none")
+    .style("stroke", "#ccc");
+
+var drag = d3.drag()
+  .on("start", dragstarted)
+  .on("drag", dragged)
+  .on("end", dragended);
+
+svg.call(drag);
+
+    function dragstarted(){
+
+      var mouse_pos = d3.mouse(this);
+
+      v0 = versor.cartesian(projection.invert(mouse_pos));
+      r0 = projection.rotate();
+      q0 = versor(r0);
+
+      svg.insert("path")
+        .datum({type: "Point", coordinates: projection.invert(mouse_pos)})
+        .attr("class", "point point-mouse")
+        .attr("d", path); 
+
+    }
+
+    function dragged(){
+
+      var mouse_pos = d3.mouse(this);
+
+      var v1 = versor.cartesian(projection.rotate(r0).invert(mouse_pos)),
+      q1 = versor.multiply(q0, versor.delta(v0, v1)),
+      r1 = versor.rotation(q1);
+
+      if (r1){
+        update(r1);
+
+        svg.selectAll("path").attr("d", path);
+
+        svg.selectAll(".point-mouse")
+             .datum({type: "Point", coordinates: projection.invert(mouse_pos)});
+      }
+
+    }
+
+    function dragended(){
+      svg.selectAll(".point").remove();
+    }
+
+    d3.selectAll("input").on("input", function(){
+      // get all values
+      var nums = [];
+      d3.selectAll("input").each(function(d, i){
+        nums.push(+d3.select(this).property("value"));
+      });
+      update(nums);
+      
+      svg.selectAll("path").attr("d", path);  
+      
+    });
+    
+
+    function update(eulerAngles){
+      rCurrent = [eulerAngles[0],eulerAngles[1],eulerAngles[2]] ;
+      angles.forEach(function(angle, index){
+        d3.select(".angle-label-" + index + " span").html(Math.round(eulerAngles[index]))
+        d3.select(".angle-" + index).property("value", eulerAngles[index])
+      });
+
+      projection.rotate(eulerAngles);
+    }
+
+    Promise.all([
+        d3.json("countries.json"),
+        d3.csv("worldmap.csv"),
+    ]).then(function(files) {
+        countries = files[0] // files[0] will contain file1
+        rateData  = files[1] // files[1] will contain file2
+
+        c2 = new Object();
+        for(x of rateData) {
+          c2[x.country] = parseFloat(x.data);
+        }
+
+        // Code from your callback goes here...
+        svg.selectAll(".subunit")
+          .data(topojson.feature(countries, countries.objects.polygons).features)
+        .enter().append("path")
+          .attr("d", path)
+          .style("stroke", "#fff")
+          .style("stroke-width", "1px")
+          .style("fill", function(x){
+            colour = "#ccc";
+            cname  = x.properties.name.trim();
+            if( c2.hasOwnProperty(cname) ) {
+              colour = colourBuckets( c2[cname] );
+            }
+            return colour;
+          })
+          .on("mouseover", function(d){
+            // show tooltip
+            d3.select(this).classed('glb-blue', true);
+            cname  = d.properties.name.trim();
+            if( c2.hasOwnProperty(cname) ) {
+              d3.select("#glb-tooltip").html(cname +": "+c2[cname] + "%.")
+            }
+          })
+          .on('mouseout', function(d){
+            // hide tooltip
+            d3.select(this).classed('glb-blue', false);
+          });
+
+      // do the timeout
+
+
+    }).catch(function(err) {
+        // handle error here
+        alert(error);
+    });
+
+    setInterval(function () {
+      rCurrent[0] = rCurrent[0] - 1;
+      if(rCurrent[0]<-180) {rCurrent[0] = rCurrent[0] + 360;}
+      update(rCurrent);
+      svg.selectAll("path").attr("d", path);
+    }, 300);
+
+    </script>
+  </body>
+</html>
