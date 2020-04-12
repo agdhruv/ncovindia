@@ -1,0 +1,243 @@
+id	name	population
+CHN	China	0.09
+IND	India	12.76
+USA	United States	7.94
+IDN	Indonesia	8.65
+BRA	Brazil	12.71
+PAK	Pakistan	5.55
+BGD	Bangladesh	37.25
+NGA	Nigeria	6.29
+RUS	Russia	16.71
+JPN	Japan	11.03
+MEX	Mexico	11.34
+PHL	Philippines	2.69
+VNM	Vietnam	0.53
+ETH	Ethiopia	7.72
+DEU	Germany	4.46
+EGY	Egypt	10.71
+TUR	Turkey	11.3
+COD	Congo, Democratic Republic of the	
+IRN	Iran	2.9
+THA	Thailand	2.05
+FRA	France	5.07
+GBR	United Kingdom	8.35
+ITA	Italy	2.87
+MMR	Burma	
+ZAF	South Africa	4.62
+KOR	Korea, South	
+UKR	Ukraine	14.65
+COL	Colombia	11.58
+SDN	Sudan	2.33
+TZA	Tanzania	10.06
+ARG	Argentina	4.82
+ESP	Spain	3.77
+KEN	Kenya	3.19
+POL	Poland	7.1
+DZA	Algeria	6.25
+CAN	Canada	7.37
+UGA	Uganda	0.64
+MAR	Morocco	6.94
+PER	Peru	25.91
+IRQ	Iraq	7.45
+SAU	Saudi Arabia	9.31
+AFG	Afghanistan	12.39
+NPL	Nepal	0.0
+UZB	Uzbekistan	7.38
+VEN	Venezuela	1.78
+MYS	Malaysia	3.12
+GHA	Ghana	9.61
+YEM	Yemen	100.0
+TWN	Taiwan	0.35
+PRK	Korea, North	
+SYR	Syria	0.0
+ROU	Romania	7.37
+MOZ	Mozambique	25.99
+AUS	Australia	1.55
+LKA	Sri Lanka	2.12
+MDG	Madagascar	6.27
+CIV	Cote d'Ivoire	11.21
+CMR	Cameroon	5.44
+NLD	Netherlands	5.66
+CHL	Chile	8.31
+BFA	Burkina Faso	5.27
+NER	Niger	16.36
+KAZ	Kazakhstan	6.06
+MWI	Malawi	4.0
+ECU	Ecuador	21.47
+KHM	Cambodia	0.85
+SEN	Senegal	3.79
+MLI	Mali	15.82
+GTM	Guatemala	19.64
+AGO	Angola	3.78
+ZMB	Zambia	0.85
+ZWE	Zimbabwe	3.23
+CUB	Cuba	12.51
+RWA	Rwanda	3.97
+GRC	Greece	3.16
+PRT	Portugal	7.54
+TUN	Tunisia	4.03
+TCD	Chad	6.92
+BEL	Belgium	6.31
+GIN	Guinea	13.76
+CZE	Czech Republic	4.54
+SOM	Somalia	37.95
+BOL	Bolivia	9.54
+HUN	Hungary	13.54
+BDI	Burundi	0.0
+DOM	Dominican Republic	10.23
+BLR	Belarus	32.02
+HTI	Haiti	7.43
+SWE	Sweden	7.98
+BEN	Benin	10.42
+AZE	Azerbaijan	11.39
+AUT	Austria	2.37
+HND	Honduras	7.91
+CHE	Switzerland	3.01
+TJK	Tajikistan	
+ISR	Israel	4.02
+SRB	Serbia	8.26
+BGR	Bulgaria	3.24
+HKG	Hong Kong	
+LAO	Laos	10.06
+LBY	Libya	8.1
+JOR	Jordan	2.15
+PRY	Paraguay	4.97
+TGO	Togo	5.35
+PNG	Papua New Guinea	0.0
+SLV	El Salvador	14.8
+NIC	Nicaragua	0.0
+ERI	Eritrea	3.13
+DNK	Denmark	4.69
+KGZ	Kyrgyzstan	7.88
+SVK	Slovakia	7.16
+FIN	Finland	6.26
+SLE	Sierra Leone	10.06
+ARE	United Arab Emirates	12.51
+TKM	Turkmenistan	
+CAF	Central African Republic	6.92
+SGP	Singapore	8.83
+NOR	Norway	2.12
+BIH	Bosnia and Herzegovina	4.88
+GEO	Georgia	6.08
+CRI	Costa Rica	4.93
+HRV	Croatia	5.26
+MDA	Moldova	10.84
+NZL	New Zealand	2.22
+IRL	Ireland	12.32
+COG	Congo, Republic of the	
+LBN	Lebanon	3.58
+PRI	Puerto Rico	8.16
+LBR	Liberia	38.26
+ALB	Albania	2.79
+LTU	Lithuania	4.32
+URY	Uruguay	5.23
+PAN	Panama	9.76
+MRT	Mauritania	5.27
+MNG	Mongolia	2.17
+OMN	Oman	4.92
+ARM	Armenia	3.18
+JAM	Jamaica	1.05
+KWT	Kuwait	10.15
+PSE	West Bank	
+LVA	Latvia	3.75
+NAM	Namibia	0.0
+MKD	Macedonia	5.88
+BWA	Botswana	29.4
+SVN	Slovenia	3.21
+LSO	Lesotho	
+GMB	Gambia, The	
+KWT	Kosovo	10.76
+149	Gaza Strip	
+GNB	Guinea-Bissau	1.98
+GAB	Gabon	15.31
+SWZ	Swaziland	6.27
+153	Mauritius	5.87
+EST	Estonia	3.07
+TTO	Trinidad and Tobago	0.62
+TLS	Timor-Leste	
+CYP	Cyprus	6.4
+FJI	Fiji	2.17
+QAT	Qatar	6.89
+160	Comoros	
+GUY	Guyana	6.62
+DJI	Djibouti	7.42
+163	Bahrain	7.16
+BTN	Bhutan	0.0
+MNE	Montenegro	2.17
+GNQ	Equatorial Guinea	4.0
+SLB	Solomon Islands	
+168	Macau	
+169	Cape Verde	0.0
+LUX	Luxembourg	2.76
+ESH	Western Sahara	
+SUR	Suriname	0.0
+173	Malta	6.1
+174	Maldives	0.0
+BRN	Brunei	0.25
+BLZ	Belize	12.62
+BHS	Bahamas, The	
+ISL	Iceland	1.84
+179	French Polynesia	2.76
+180	Barbados	2.07
+181	Mayotte	
+NCL	New Caledonia	0.0
+183	Netherlands Antilles	
+VUT	Vanuatu	
+185	Samoa	
+186	Sao Tome and Principe	100.0
+187	Saint Lucia	2.33
+188	Tonga	
+189	Virgin Islands	
+190	Grenada	5.27
+191	Micronesia, Federated States of	
+192	Aruba	5.14
+193	Saint Vincent and the Grenadines	14.47
+194	Kiribati	
+195	Jersey	5.21
+196	Seychelles	0.0
+197	Antigua and Barbuda	11.87
+198	Andorra	3.31
+199	Isle of Man	10.25
+DOM	Dominica	2.17
+201	Bermuda	7.17
+202	American Samoa	
+203	Marshall Islands	
+204	Guernsey	6.41
+GRL	Greenland	0.0
+206	Cayman Islands	0.0
+207	Saint Kitts and Nevis	2.94
+208	Faroe Islands	
+209	Northern Mariana Islands	11.2
+210	Liechtenstein	0.85
+211	San Marino	7.23
+212	Monaco	4.44
+213	Saint Martin	
+214	Gibraltar	3.97
+215	British Virgin Islands	0.0
+216	Turks and Caicos Islands	4.0
+217	Palau	
+218	Akrotiri	
+219	Dhekelia	
+220	Wallis and Futuna	
+221	Anguilla	0.0
+222	Nauru	
+223	Cook Islands	
+224	Tuvalu	
+225	Saint Helena, Ascension, and Tristan da Cunha	
+226	Saint Barthelemy	
+227	Saint Pierre and Miquelon	
+228	Montserrat	14.47
+FLK	Falkland Islands (Islas Malvinas)	
+230	Norfolk Island	
+231	Svalbard	
+232	Christmas Island	
+233	Tokelau	
+234	Niue	
+235	Holy See (Vatican City)	
+236	Cocos (Keeling) Islands	
+237	Pitcairn Islands	
+ATA	Antarctica	
+ATF	French Southern and Antarctic Lands	
+SDS	South Sudan	44.22
+ABV	Somaliland	
+OSA	Kosovo	10.76

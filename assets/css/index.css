@@ -196,12 +196,106 @@ div.d3-graph {
 		top: -3px;
 	}
 
-	div.d3-graph text.temp-tooltip {
-		font-size: 1.4rem;
-	}
+div.d3-graph text.temp-tooltip {
+	font-size: 1.4rem;
+}
+
+div.d3-graph-container select.d3_country_dropdown {
+	margin-bottom: 10px;
+	padding: 0 1.75rem 0 .75rem;
+	font-size: 0.8rem;
+}
 
 .cursor-pointer {
 	cursor: pointer;
+}
+
+
+#world-map-container .country {
+  fill: #ccc;
+  stroke: #666;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+}
+
+#world-map-container .graticule {
+  fill: none;
+  stroke: #666;
+  stroke-width: .5px;
+  stroke-dasharray: 2,2;
+}
+
+#world-map-container .outline {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+#world-map-container .foreground {
+  fill: none;
+}         
+          
+#world-map-container .key {
+  font: 10px sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#world-map-container .rotsel {
+    pointer-events: none;
+}
+#world-map-container .rotbox {
+    stroke: #000;
+    stroke-width: 1px;
+    fill: none;
+    pointer-events: all;
+}
+
+#world-map-container .caption {
+  font: 12px sans-serif;
+  font-weight: bold;
+}
+
+#world-map-container .key path {
+  display: none;
+}
+
+#world-map-container .key line {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#world-map-container .sea {
+    fill: rgba(166,206,245,.5);
+}
+
+#world-map-container .tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+  font: 11px sans-serif;
+  background: #ddd;
+  border: solid 1px #aaa;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#world-map-container {
+    position: relative;
+}
+
+#world-map-container-footer {
+    position: absolute;
+    font: 12px sans-serif;
+    bottom: 22px;
+    right: 150px;
+    z-index: 1;
+    text-align: right;
+    visibility: hidden;
+}
+
+#world-map-container .hint {
+    color: #999;
 }
 
 @media screen and (max-width: 767px) {
@@ -236,6 +330,9 @@ div.d3-graph {
 	/* d3 graphs */
 	#graph_d3_greater_60-checkboxes .country-60-checkbox, #graph_d3_doubling_days-checkboxes .country-checkbox {
 		top: 0px;
+	}
+	div.d3-graph text.temp-tooltip {
+		font-size: 1.8rem;
 	}
 }
 

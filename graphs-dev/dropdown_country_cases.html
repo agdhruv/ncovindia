@@ -25,8 +25,10 @@ body {
 
 </style>
 <body>
-    <div id="graph"
-    style="width: 50%; overflow: hidden;">
+    <select id="select_button">
+
+    </select>
+    <div id="graph">
     </div>
     <script src="https://d3js.org/d3.v5.min.js">
     </script>
@@ -34,24 +36,50 @@ body {
         var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 2000 - margin.left - margin.right,
     height = 766 - margin.top - margin.bottom;
-
     const svg = d3.select("#graph")
     .append("svg")
-        // .attr("width", width + margin.left + margin.right)
-        // .attr("height", height + margin.top + margin.bottom)
-        .attr("viewBox", `0 0 2000 766`)
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
     .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
+
     d3.csv("total_cases.csv", 
     function(d) {
         if(d3.timeParse("%Y-%m-%d")(d.date) > d3.timeParse("%Y-%m-%d")("2020-02-01")) // only show feb onwards
-        return {
-            date: d3.timeParse("%Y-%m-%d")(d.date),
-            value: d.World,
-        };
+        {
+
+            result = {
+                date: d3.timeParse("%Y-%m-%d")(d.date),
+            }
+            for(element in d)
+            {
+                if(element != "date")
+                {
+                    if(d[element] == null)
+                        result[element] = 0;
+                    else
+                        result[element] = d[element];
+                }
+            }
+            return result;
+        }
     }).then(
         function(data) {
+            var groups = d3.keys(data[0]);
+            groups.shift();
+            var current_country = "India";
+
+            d3.select("#select_button")
+            .selectAll()
+            .data(groups)
+            .enter()
+            .append('option')
+            .text(function(d) { return d; })
+            .attr("value", function(d) { return d;})
+            .property("selected", function(d) { return d === "India" });
+
+
 
             var x = d3.scaleTime()
             .domain(d3.extent(data, function(d) {
@@ -59,28 +87,30 @@ body {
             }))
             .range([0, width]);
 
-            svg.append("g")
+            let x_axis = svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x));
 
             var y = d3.scaleLinear()
-            .domain([0, d3.max(data, function(d) { return +d.value})])
+            .domain([0, d3.max(data, function(d) { return +d[current_country]})])
             .range([height, 0]);
 
-            svg.append("g")
+            let y_axis = svg.append("g")
                 .call(d3.axisLeft(y));
 
-            svg.append("path")
+            console.log(data);
+
+            let line = svg.append("path")
                 .datum(data)
                 .attr("fill", "none")
                 .attr("stroke", "steelblue")
                 .attr("stroke-width", 5)
                 .attr("d", d3.line()
                 .x(function(d) { return x(d.date)})
-                .y(function(d) { return y(d.value)})
+                .y(function(d) { return y(d[current_country])})
                 );
 
-            svg.selectAll("circle")
+            let circles = svg.selectAll("circle")
                 .data(data)
                 .enter()
                 .append("circle")
@@ -91,7 +121,7 @@ body {
                     return x(d.date);
                 })
                 .attr("cy", function(d) {
-                    return y(d.value);
+                    return y(d[current_country]);
                 });
 
                 
@@ -144,13 +174,13 @@ body {
                 const closest_data_point = data[closest_index];
 
                 const x_value = x(closest_data_point.date);
-                const y_value = closest_data_point.value;
+                const y_value = closest_data_point[current_country];
 
-                svg.selectAll("circle")
+                d3.selectAll("circle")
                 .attr("r", "5")
                 .attr("fill", "steelblue"); // Little bit of a hack, first we clean up all previous circles that might have been red. 
                 
-                svg.select(points[closest_index]) // Then we color the current one red. This is slightly inefficient because we should just keep the "last visited" in a variable and only clean that one but eh who cares. Something to remember if efficiency becomes an issue. I suspect, though, that the asymptocity of curre
+                d3.select(points[closest_index]) // Then we color the current one red. This is slightly inefficient because we should just keep the "last visited" in a variable and only clean that one but eh who cares. Something to remember if efficiency becomes an issue. I suspect, though, that the asymptocity of curre
                 .attr("fill", "red")
                 .attr("r", "10");
                 // We'll use the y_value for the tooltip text and
@@ -158,7 +188,7 @@ body {
                 const y_coordinate = y(y_value);
                 const y_start = y(y.invert(0));
                 const y_end = height;
-                svg.select(".mouse-line")
+                d3.select(".mouse-line")
                 .attr("d", function() {
                     var d = "M" + x_value + " " + y_start + "L " + x_value + " " + y_end;
                     return d;
@@ -173,7 +203,7 @@ body {
                 else {
                     tooltip_x_value += 5;
                 }
-                console.log(tooltip_y_value);
+
                 svg.select(".tooltip-text")
                 .text(function() {
                     return y_value;
@@ -182,7 +212,73 @@ body {
                 .attr("transform", "translate(" + tooltip_x_value + "," + tooltip_y_value + ")");
             })
             
+            function update(selected_country) {
+                var country_data = data.map(function(d) {
+                    return {
+                        date: d.date,
+                        value: d[selected_country],
+                    };
+                });
 
+                console.log(country_data);
+
+                var x = d3.scaleTime()
+                    .domain(d3.extent(country_data, function(d) {
+                        return d.date;
+                    }))
+                    .range([0, width]);
+
+                x_axis
+                    .transition()
+                    .duration(1000)
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x));
+
+                var y = d3.scaleLinear()
+                .domain([0, d3.max(country_data, function(d) { return +d.value})])
+                .range([height, 0]);
+
+                y_axis
+                    .transition()
+                    .duration(1000)
+                    .call(d3.axisLeft(y));
+
+                line.datum(country_data)
+                .transition()
+                .duration(1000)
+                .attr("d", d3.line()
+                .x(function(d) {
+                    return x(d.date);
+                })
+                .y(function(d) 
+                {
+                    return y(d.value);
+                }))
+                .attr("stroke", "steelblue");
+
+                svg.selectAll("circle")
+                    .data(country_data)
+                    .transition()
+                    .duration(1000)
+                    .attr("fill", "steelblue")
+                    .attr("stroke","black")
+                    .attr("r", "5")
+                    .attr("cx", function(d) {
+                        console.log("HI:");
+                        return x(d.date);
+                    })
+                    .attr("cy", function(d) {
+                        return y(d.value);
+                    });
+
+                current_country = selected_country;
+                
+            }
+
+            d3.select("#select_button").on("change", function(d) {
+                var selected_country = d3.select(this).property("value");
+                update(selected_country);
+            });
         }
     );
 

@@ -124,9 +124,8 @@ $navTranslations = loadJSONFile($filePath);
 				{% include graphs/d3_greater_60.html %}
 			</div>
 			<div class="col-12 col-md-10 offset-md-1 mb-4">
-				{% include graphs/d3_world_total_cases.html %}
+				{% include graphs/d3_dropdown_country_cases.html %}
 			</div>
-
 			<div class="col-12 col-md-10 offset-md-1 mb-4">
 				{% include graphs/d3_doubling_days.html %}
 			</div>

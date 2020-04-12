@@ -701,12 +701,26 @@ Keep informed and follow the advice of the local authorities, including any rest
 </div>
 			</div>
 			<div class="col-12 col-md-10 offset-md-1 mb-4">
-				<div class="d3-graph-container">
-    <div id="graph_d3_world_total1" class="d3-graph">
-    </div>
-</div>
-			</div>
+				<div class="row no-gutters">
+	
+	<div class="col-6 pr-1">
+		<div class="d3-graph-container">
+			<select id="graph_d3_dropdown_country1_select_button" class="custom-select d3_country_dropdown"></select>
+		    <div id="graph_d3_dropdown_country1" class="d3-graph">
+		    </div>
+		</div>
+	</div>
+	<div class="col-6 pl-1">
+		<div class="d3-graph-container">
+			<select id="graph_d3_dropdown_country2_select_button" class="custom-select d3_country_dropdown"></select>
+		    <div id="graph_d3_dropdown_country2" class="d3-graph">
+		    </div>
+		</div>
+	</div>
 
+</div>
+
+			</div>
 			<div class="col-12 col-md-10 offset-md-1 mb-4">
 				<h4 class="text-center">
     <?php
@@ -872,6 +886,11 @@ Keep informed and follow the advice of the local authorities, including any rest
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
 	<!-- import d3 -->
 <script src="https://d3js.org/d3.v5.min.js"></script>
+
+<script src="assets/js/mapmap_files/topojson.js"></script>
+<script src="assets/js/mapmap_files/d3-geo-projection.js"></script>
+<script src="assets/js/mapmap_files/d3-tip.js"></script>
+<script src="assets/js/mapmap_files/babel.js"></script>
 	<script src="assets/js/index.js"></script>
 	<script src="assets/js/initgraphs.js"></script>
 </body>
