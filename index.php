@@ -149,5 +149,6 @@ $navTranslations = loadJSONFile($filePath);
 	{% include imports/d3_js.html %}
 	<script src="assets/js/index.js"></script>
 	<script src="assets/js/initgraphs.js"></script>
+	<script src="assets/js/handle_iframes.js"></script>
 </body>
 </html>

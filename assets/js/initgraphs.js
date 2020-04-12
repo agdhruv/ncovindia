@@ -77,7 +77,7 @@ function init_world_total (selector, currentCountry) {
 							.style("font", "30px times")
 							.call(d3.axisLeft(y));
 
-					console.log(data);
+					// console.log(data);
 
 					let line = svg.append("path")
 							.datum(data)

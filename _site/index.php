@@ -185,14 +185,14 @@ $navTranslations = loadJSONFile($filePath);
 		<p class="text-center m-0 px-2 px-md-4 text-light mb-4 shout-message">
 			{{shoutmessage}}
 		</p>
-		<p class="text-center m-0 px-2 px-md-4 text-light lead">
+		<p class="text-center mx-0 mt-0 px-2 px-md-4 text-light lead" style="margin-bottom: -40px;">
 			{{{whatisthis}}}
 			<a href="https://twitter.com/ncovindia" target="_blank">
 				<i class="fab fa-twitter" style="color: #00acee;"></i>
 			</a>
 		</p>
-		<p class="text-center mx-0 mt-4 mb-0">
-			<iframe src="globe/globe.html" frameborder="0" height="300px" width="100%"></iframe>
+		<p class="text-center mx-0 mt-2 mb-0">
+			<iframe src="worldmap/mapmap.html" frameborder="0" onload="resizeIFrameToFitContent(this, 20);" id="worldmap-iframe"></iframe>
 		</p>
 		
 		<p class="text-center text-light mb-4">
@@ -776,5 +776,6 @@ Keep informed and follow the advice of the local authorities, including any rest
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="assets/js/index.js"></script>
 	<script src="assets/js/initgraphs.js"></script>
+	<script src="assets/js/handle_iframes.js"></script>
 </body>
 </html>
